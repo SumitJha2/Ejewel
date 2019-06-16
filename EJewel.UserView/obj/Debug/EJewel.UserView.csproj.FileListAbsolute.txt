@@ -1,0 +1,33 @@
+D:\live\EJewel\EJewel.UserView\bin\EJewel.UserView.dll
+D:\live\EJewel\EJewel.UserView\bin\EJewel.UserView.pdb
+D:\live\EJewel\EJewel.UserView\bin\EJewel.Controller.dll
+D:\live\EJewel\EJewel.UserView\bin\EJewel.DAL.dll
+D:\live\EJewel\EJewel.UserView\bin\EJewel.Model.dll
+D:\live\EJewel\EJewel.UserView\bin\EJewel.Controller.pdb
+D:\live\EJewel\EJewel.UserView\bin\EJewel.Model.pdb
+D:\live\EJewel\EJewel.UserView\bin\EJewel.DAL.pdb
+D:\live\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.csprojResolveAssemblyReference.cache
+D:\live\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.dll
+D:\live\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.pdb
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.UserView.dll
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.UserView.pdb
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.Controller.dll
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.DAL.dll
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.Model.dll
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.Controller.pdb
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.Model.pdb
+E:\Project\EJewel\EJewel.UserView\bin\EJewel.DAL.pdb
+E:\Project\EJewel\EJewel.UserView\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.dll
+E:\Project\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.UserView.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.UserView.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.Controller.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.DAL.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.Model.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.Controller.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.Model.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\bin\EJewel.DAL.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.UserView\obj\Debug\EJewel.UserView.pdb

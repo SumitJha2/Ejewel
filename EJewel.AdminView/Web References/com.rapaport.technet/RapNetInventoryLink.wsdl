@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://technet.rapaport.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://technet.rapaport.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://technet.rapaport.com/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuthenticationTicketHeader" type="tns:AuthenticationTicketHeader" />
+      <s:complexType name="AuthenticationTicketHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Ticket" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="Init">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InitResult" type="tns:RapNetInventoryLinkParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RapNetInventoryLinkParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RapSpecCollection" type="tns:ArrayOfRapSpecs" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClarityCollection" type="tns:ArrayOfClarities" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuletConditionCollection" type="tns:ArrayOfCuletConditions" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuletSizeCollection" type="tns:ArrayOfCuletSizes" />
+          <s:element minOccurs="0" maxOccurs="1" name="ColorCollection" type="tns:ArrayOfColors" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShapeCollection" type="tns:ArrayOfShapes" />
+          <s:element minOccurs="0" maxOccurs="1" name="CutCollection" type="tns:ArrayOfCuts" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolishCollection" type="tns:ArrayOfPolishes" />
+          <s:element minOccurs="0" maxOccurs="1" name="GirdleCollection" type="tns:ArrayOfGirdles" />
+          <s:element minOccurs="0" maxOccurs="1" name="LabCollection" type="tns:ArrayOfLabs" />
+          <s:element minOccurs="0" maxOccurs="1" name="SymmetryCollection" type="tns:ArrayOfSymmetries" />
+          <s:element minOccurs="0" maxOccurs="1" name="FancyColorCollection" type="tns:ArrayOfFancyColors" />
+          <s:element minOccurs="0" maxOccurs="1" name="FancyIntensityCollection" type="tns:ArrayOfFancyIntensities" />
+          <s:element minOccurs="0" maxOccurs="1" name="FancyOvertoneCollection" type="tns:ArrayOfFancyOvertones" />
+          <s:element minOccurs="0" maxOccurs="1" name="TreatmentCollection" type="tns:ArrayOfTreatments" />
+          <s:element minOccurs="0" maxOccurs="1" name="FluorescenceColorCollection" type="tns:ArrayOfFluorescenceColors" />
+          <s:element minOccurs="0" maxOccurs="1" name="FluorescenceIntensityCollection" type="tns:ArrayOfFluorescenceIntensities" />
+          <s:element minOccurs="0" maxOccurs="1" name="IncludeMemberCollection" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExcludeMemberCollection" type="tns:ArrayOfInt" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinSize" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxSize" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinTablePercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTablePercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDepthPercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDepthPercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementDepthMin" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementDepthMax" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementWidthMin" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementWidthMax" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementLengthMin" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MeasurementLengthMax" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinTotalPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxTotalPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinCaratPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxCaratPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDiscountPercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDiscountPercent" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinRatio" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxRatio" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Markup" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiamondID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyGuaranteed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludesCert" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Includes3DFile" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludesImage" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyMatchedPair" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyMatchedPairSeparable" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludeTreatments" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyTreatments" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludeWhiteDiamonds" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludeFancyDiamonds" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludeParcelDiamonds" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Location" type="tns:Locations" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRapSpecs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RapSpecs" type="tns:RapSpecs" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="RapSpecs">
+        <s:restriction base="s:string">
+          <s:enumeration value="RAPSPEC_1" />
+          <s:enumeration value="RAPSPEC_2" />
+          <s:enumeration value="RAPSPEC_3" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfClarities">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Clarities" type="tns:Clarities" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Clarities">
+        <s:restriction base="s:string">
+          <s:enumeration value="FL" />
+          <s:enumeration value="IF" />
+          <s:enumeration value="VVS1" />
+          <s:enumeration value="VVS2" />
+          <s:enumeration value="VS1" />
+          <s:enumeration value="VS2" />
+          <s:enumeration value="SI1" />
+          <s:enumeration value="SI2" />
+          <s:enumeration value="SI3" />
+          <s:enumeration value="I1" />
+          <s:enumeration value="I2" />
+          <s:enumeration value="I3" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCuletConditions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CuletConditions" type="tns:CuletConditions" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CuletConditions">
+        <s:restriction base="s:string">
+          <s:enumeration value="Pointed" />
+          <s:enumeration value="Chipped" />
+          <s:enumeration value="Abraded" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCuletSizes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CuletSizes" type="tns:CuletSizes" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CuletSizes">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Large" />
+          <s:enumeration value="Medium" />
+          <s:enumeration value="Small" />
+          <s:enumeration value="Very_Small" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfColors">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Colors" type="tns:Colors" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Colors">
+        <s:restriction base="s:string">
+          <s:enumeration value="D" />
+          <s:enumeration value="E" />
+          <s:enumeration value="F" />
+          <s:enumeration value="G" />
+          <s:enumeration value="H" />
+          <s:enumeration value="I" />
+          <s:enumeration value="J" />
+          <s:enumeration value="K" />
+          <s:enumeration value="L" />
+          <s:enumeration value="M" />
+          <s:enumeration value="N" />
+          <s:enumeration value="O" />
+          <s:enumeration value="P" />
+          <s:enumeration value="Q" />
+          <s:enumeration value="R" />
+          <s:enumeration value="S" />
+          <s:enumeration value="T" />
+          <s:enumeration value="U" />
+          <s:enumeration value="V" />
+          <s:enumeration value="W" />
+          <s:enumeration value="X" />
+          <s:enumeration value="Y" />
+          <s:enumeration value="Z" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfShapes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Shapes" type="tns:Shapes" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Shapes">
+        <s:restriction base="s:string">
+          <s:enumeration value="ROUND" />
+          <s:enumeration value="PEAR" />
+          <s:enumeration value="PRINCESS" />
+          <s:enumeration value="SQ_EMERALD" />
+          <s:enumeration value="MARQUISE" />
+          <s:enumeration value="OVAL" />
+          <s:enumeration value="RADIANT" />
+          <s:enumeration value="EMERALD" />
+          <s:enumeration value="TRILLIANT" />
+          <s:enumeration value="HEART" />
+          <s:enumeration value="EUROPEAN_CUT" />
+          <s:enumeration value="OLD_MINER" />
+          <s:enumeration value="FLANDERS" />
+          <s:enumeration value="CUSHION" />
+          <s:enumeration value="CUSHION_MODIFIED" />
+          <s:enumeration value="ASSCHER" />
+          <s:enumeration value="BAGUETTE" />
+          <s:enumeration value="KITE" />
+          <s:enumeration value="STAR" />
+          <s:enumeration value="OTHER" />
+          <s:enumeration value="HALF_MOON" />
+          <s:enumeration value="TRAPEZOID" />
+          <s:enumeration value="BULLETS" />
+          <s:enumeration value="HEXAGONAL" />
+          <s:enumeration value="LOZENGE" />
+          <s:enumeration value="PENTAGONAL" />
+          <s:enumeration value="ROSE" />
+          <s:enumeration value="SHIELD" />
+          <s:enumeration value="SQUARE" />
+          <s:enumeration value="TRIANGULAR" />
+          <s:enumeration value="BRIOLETTE" />
+          <s:enumeration value="OCTAGONAL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCuts">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cuts" type="tns:Cuts" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Cuts">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ideal" />
+          <s:enumeration value="Excellent" />
+          <s:enumeration value="Very_Good" />
+          <s:enumeration value="Good" />
+          <s:enumeration value="Fair" />
+          <s:enumeration value="Poor" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfPolishes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Polishes" type="tns:Polishes" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Polishes">
+        <s:restriction base="s:string">
+          <s:enumeration value="Ideal" />
+          <s:enumeration value="Excellent" />
+          <s:enumeration value="Very_Good" />
+          <s:enumeration value="Good" />
+          <s:enumeration value="Fair" />
+          <s:enumeration value="Poor" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfGirdles">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Girdles" type="tns:Girdles" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Girdles">
+        <s:restriction base="s:string">
+          <s:enumeration value="Extr_Thin" />
+          <s:enumeration value="Very_Thin" />
+          <s:enumeration value="Thin" />
+          <s:enumeration value="Slightly_Thin" />
+          <s:enumeration value="Medium" />
+          <s:enumeration value="Slightly_Thick" />
+          <s:enumeration value="Thick" />
+          <s:enumeration value="Very_Thick" />
+          <s:enumeration value="Extr_Thick" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfLabs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Labs" type="tns:Labs" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Labs">
+        <s:restriction base="s:string">
+          <s:enumeration value="GIA" />
+          <s:enumeration value="IGI" />
+          <s:enumeration value="EGL" />
+          <s:enumeration value="AGS" />
+          <s:enumeration value="HRD" />
+          <s:enumeration value="PGS" />
+          <s:enumeration value="DCLA" />
+          <s:enumeration value="WGI" />
+          <s:enumeration value="VGR" />
+          <s:enumeration value="EGL_USA" />
+          <s:enumeration value="EGL_ISRAEL" />
+          <s:enumeration value="EGL_Belgium" />
+          <s:enumeration value="EGL_international_" />
+          <s:enumeration value="EGL_South_Africa" />
+          <s:enumeration value="EGL_Precert" />
+          <s:enumeration value="NONE" />
+          <s:enumeration value="OTHER" />
+          <s:enumeration value="CEGL" />
+          <s:enumeration value="GCAL" />
+          <s:enumeration value="CLG" />
+          <s:enumeration value="IGC" />
+          <s:enumeration value="IGI_USA" />
+          <s:enumeration value="IGI_BLG" />
+          <s:enumeration value="OWN" />
+          <s:enumeration value="EDGL" />
+          <s:enumeration value="IDL" />
+          <s:enumeration value="AGA" />
+          <s:enumeration value="AGL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSymmetries">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Symmetries" type="tns:Symmetries" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Symmetries">
+        <s:restriction base="s:string">
+          <s:enumeration value="Excellent" />
+          <s:enumeration value="Very_Good" />
+          <s:enumeration value="Good" />
+          <s:enumeration value="Fair" />
+          <s:enumeration value="Poor" />
+          <s:enumeration value="Ideal" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfFancyColors">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FancyColors" type="tns:FancyColors" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FancyColors">
+        <s:restriction base="s:string">
+          <s:enumeration value="Yellow" />
+          <s:enumeration value="Pink" />
+          <s:enumeration value="Blue" />
+          <s:enumeration value="Red" />
+          <s:enumeration value="Green" />
+          <s:enumeration value="Purple" />
+          <s:enumeration value="Orange" />
+          <s:enumeration value="Violet" />
+          <s:enumeration value="Gray" />
+          <s:enumeration value="Black" />
+          <s:enumeration value="Brown" />
+          <s:enumeration value="Champagne" />
+          <s:enumeration value="Cognac" />
+          <s:enumeration value="Other" />
+          <s:enumeration value="Chameleon" />
+          <s:enumeration value="White" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfFancyIntensities">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FancyIntensities" type="tns:FancyIntensities" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FancyIntensities">
+        <s:restriction base="s:string">
+          <s:enumeration value="Faint" />
+          <s:enumeration value="Very_Light" />
+          <s:enumeration value="Light" />
+          <s:enumeration value="Fancy_Ligh" />
+          <s:enumeration value="Fancy" />
+          <s:enumeration value="Fancy_Dark" />
+          <s:enumeration value="Fancy_Inte" />
+          <s:enumeration value="Fancy_Vivi" />
+          <s:enumeration value="Fancy_Deep" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfFancyOvertones">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FancyOvertones" type="tns:FancyOvertones" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FancyOvertones">
+        <s:restriction base="s:string">
+          <s:enumeration value="Brownish" />
+          <s:enumeration value="Greenish" />
+          <s:enumeration value="Yellowish" />
+          <s:enumeration value="Pinkish" />
+          <s:enumeration value="Purplish" />
+          <s:enumeration value="Grayish" />
+          <s:enumeration value="Orangey" />
+          <s:enumeration value="Reddish" />
+          <s:enumeration value="Bluish" />
+          <s:enumeration value="None" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfTreatments">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Treatments" type="tns:Treatments" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Treatments">
+        <s:restriction base="s:string">
+          <s:enumeration value="Laser_Drilled" />
+          <s:enumeration value="Irradiated" />
+          <s:enumeration value="Clarity_Enhanced" />
+          <s:enumeration value="Color_Enhanced" />
+          <s:enumeration value="HPHT" />
+          <s:enumeration value="Other" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfFluorescenceColors">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FluorescenceColors" type="tns:FluorescenceColors" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FluorescenceColors">
+        <s:restriction base="s:string">
+          <s:enumeration value="Blue" />
+          <s:enumeration value="Yellow" />
+          <s:enumeration value="Green" />
+          <s:enumeration value="Red" />
+          <s:enumeration value="Orange" />
+          <s:enumeration value="White" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfFluorescenceIntensities">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FluorescenceIntensities" type="tns:FluorescenceIntensities" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FluorescenceIntensities">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Very_Slight" />
+          <s:enumeration value="Faint" />
+          <s:enumeration value="Medium" />
+          <s:enumeration value="Strong" />
+          <s:enumeration value="Very_Strong" />
+          <s:enumeration value="Slight" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Locations">
+        <s:restriction base="s:string">
+          <s:enumeration value="USA" />
+          <s:enumeration value="New_York" />
+          <s:enumeration value="Los_Angeles" />
+          <s:enumeration value="Chicago" />
+          <s:enumeration value="India" />
+          <s:enumeration value="Israel" />
+          <s:enumeration value="Europe" />
+          <s:enumeration value="Belgium" />
+          <s:enumeration value="Hong_Kong" />
+          <s:enumeration value="China" />
+          <s:enumeration value="All" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetDiamonds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Params" type="tns:RapNetInventoryLinkParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiamondsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDiamondsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiamond">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DiamondID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiamondResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDiamondResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginAuthenticationTicketHeader">
+    <wsdl:part name="AuthenticationTicketHeader" element="tns:AuthenticationTicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="InitSoapIn">
+    <wsdl:part name="parameters" element="tns:Init" />
+  </wsdl:message>
+  <wsdl:message name="InitSoapOut">
+    <wsdl:part name="parameters" element="tns:InitResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitAuthenticationTicketHeader">
+    <wsdl:part name="AuthenticationTicketHeader" element="tns:AuthenticationTicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDiamonds" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDiamondsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondsAuthenticationTicketHeader">
+    <wsdl:part name="AuthenticationTicketHeader" element="tns:AuthenticationTicketHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDiamond" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDiamondResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDiamondAuthenticationTicketHeader">
+    <wsdl:part name="AuthenticationTicketHeader" element="tns:AuthenticationTicketHeader" />
+  </wsdl:message>
+  <wsdl:portType name="RapNetInventoryLinkSoap">
+    <wsdl:operation name="Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method must be called before any other methods.</wsdl:documentation>
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Init">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method return the parameters class.  must be called before the GetDiamonds method.</wsdl:documentation>
+      <wsdl:input message="tns:InitSoapIn" />
+      <wsdl:output message="tns:InitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamonds">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Call this method to download RapNet listings.&lt;br /&gt; Parameter descriptions:&lt;br /&gt;1) Markup: Enter a 3 digit figure used to add a markup to the diamond's price in the results list. E.g. 120  = +20% markup</wsdl:documentation>
+      <wsdl:input message="tns:GetDiamondsSoapIn" />
+      <wsdl:output message="tns:GetDiamondsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamond">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a single diamond.</wsdl:documentation>
+      <wsdl:input message="tns:GetDiamondSoapIn" />
+      <wsdl:output message="tns:GetDiamondSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RapNetInventoryLinkSoap" type="tns:RapNetInventoryLinkSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://technet.rapaport.com/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:LoginAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Init">
+      <soap:operation soapAction="http://technet.rapaport.com/Init" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InitAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamonds">
+      <soap:operation soapAction="http://technet.rapaport.com/GetDiamonds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDiamondsAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamond">
+      <soap:operation soapAction="http://technet.rapaport.com/GetDiamond" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDiamondAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RapNetInventoryLinkSoap12" type="tns:RapNetInventoryLinkSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://technet.rapaport.com/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LoginAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Init">
+      <soap12:operation soapAction="http://technet.rapaport.com/Init" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InitAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamonds">
+      <soap12:operation soapAction="http://technet.rapaport.com/GetDiamonds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDiamondsAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiamond">
+      <soap12:operation soapAction="http://technet.rapaport.com/GetDiamond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDiamondAuthenticationTicketHeader" part="AuthenticationTicketHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RapNetInventoryLink">
+    <wsdl:port name="RapNetInventoryLinkSoap" binding="tns:RapNetInventoryLinkSoap">
+      <soap:address location="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RapNetInventoryLinkSoap12" binding="tns:RapNetInventoryLinkSoap12">
+      <soap12:address location="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

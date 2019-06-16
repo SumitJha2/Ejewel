@@ -1,0 +1,11 @@
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.AdminView.dll
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.AdminView.pdb
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.Controller.dll
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.Model.dll
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.DAL.dll
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.Controller.pdb
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.Model.pdb
+E:\Project\EJewel\EJewel.AdminView\bin\EJewel.DAL.pdb
+E:\Project\EJewel\EJewel.AdminView\obj\Release\ResolveAssemblyReference.cache
+E:\Project\EJewel\EJewel.AdminView\obj\Release\EJewel.AdminView.dll
+E:\Project\EJewel\EJewel.AdminView\obj\Release\EJewel.AdminView.pdb

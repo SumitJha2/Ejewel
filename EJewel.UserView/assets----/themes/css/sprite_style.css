@@ -1,0 +1,52 @@
+﻿/*
+@ FD17-05-13
+Sprite image calculation for metal
+*/
+.metal
+{
+    width: 26px; 
+    height: 24px;
+    display:inline-block;
+    text-decoration:none;
+    
+}
+.rosegold_14k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 243px;
+}
+.whitegold_14k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 181px;
+}
+.rosegold_18k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 212px;
+}
+.whitegold_18k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 150px;
+}
+.platinum
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 119px;
+}
+.silver
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 83px;
+}
+.yellowgold_14k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 55px;
+}
+.yellowgold_18k
+{
+    background-image: url('../img/sprite/metal.png');
+    background-position: 0px 25px;
+}

@@ -1,0 +1,59 @@
+﻿.swatch-stone-950-sterling-silver, 
+.swatch-stone-18k-white-gold, 
+.swatch-stone-18k-rose-gold, 
+.swatch-stone-14k-white-gold, 
+.swatch-stone-14k-rose-gold,
+.swatch-stone-14k-yellow-gold, 
+.swatch-stone-950-platinum, 
+.swatch-stone-18k-yellow-gold, 
+.swatch-stone-cushion, 
+.swatch-stone-asscher,
+.swatch-stone-blue-sapphire, 
+.swatch-stone-baguette, 
+.swatch-stone-round, 
+.swatch-stone-green-emerald, 
+.swatch-stone-radiant,
+.swatch-stone-yellow-citrine, 
+.swatch-stone-emerald, 
+.swatch-stone-red-ruby, 
+.swatch-stone-oval, 
+.swatch-stone-pear,
+.swatch-stone-pink-sapphire, 
+.swatch-stone-heart, 
+.swatch-stone-marquise, 
+.swatch-stone-trillian, 
+.swatch-stone-princess,
+.swatch-stone-white-diamond
+{ display: block; 
+  background: url('../img/sprite/diamond_sprite.png') no-repeat;
+  display:inline-block;
+  cursor:pointer;
+  padding-right:5px;
+}
+ 
+.swatch-stone-950-sterling-silver { background-position: -2px -0px; width: 38px; height: 38px; }
+.swatch-stone-18k-white-gold { background-position: -2px -40px; width: 38px; height: 38px; }
+.swatch-stone-18k-rose-gold { background-position: -2px -80px; width: 38px; height: 38px; }
+.swatch-stone-14k-white-gold { background-position: -2px -120px; width: 38px; height: 38px; }
+.swatch-stone-14k-rose-gold { background-position: -2px -160px; width: 38px; height: 38px; }
+.swatch-stone-14k-yellow-gold { background-position: -2px -200px; width: 38px; height: 38px; }
+.swatch-stone-950-platinum { background-position: -2px -240px; width: 38px; height: 38px; }
+.swatch-stone-18k-yellow-gold { background-position: -2px -280px; width: 38px; height: 38px; }
+.swatch-stone-cushion { background-position: -2px -320px; width: 36px; height: 36px; }
+.swatch-stone-asscher { background-position: -2px -358px; width: 36px; height: 36px; }
+.swatch-stone-blue-sapphire { background-position: -2px -396px; width: 36px; height: 36px; }
+.swatch-stone-baguette { background-position: -2px -434px; width: 36px; height: 36px; }
+.swatch-stone-round { background-position: -2px -472px; width: 36px; height: 36px; }
+.swatch-stone-green-emerald { background-position: -2px -510px; width: 36px; height: 36px; }
+.swatch-stone-radiant { background-position: -2px -548px; width: 36px; height: 36px; }
+.swatch-stone-yellow-citrine { background-position: -2px -586px; width: 36px; height: 36px; }
+.swatch-stone-emerald { background-position: -2px -624px; width: 36px; height: 36px; }
+.swatch-stone-red-ruby { background-position: -2px -662px; width: 36px; height: 36px; }
+.swatch-stone-oval { background-position: -2px -700px; width: 36px; height: 36px; }
+.swatch-stone-pear { background-position: -2px -738px; width: 36px; height: 36px; }
+.swatch-stone-pink-sapphire { background-position: -2px -776px; width: 36px; height: 36px; }
+.swatch-stone-heart { background-position: -2px -814px; width: 36px; height: 36px; }
+.swatch-stone-marquise { background-position: -2px -852px; width: 36px; height: 36px; }
+.swatch-stone-trillian { background-position: -2px -890px; width: 36px; height: 36px; }
+.swatch-stone-princess { background-position: -2px -928px; width: 36px; height: 36px; }
+.swatch-stone-white-diamond { background-position: -2px -966px; width: 36px; height: 36px; }

@@ -1,0 +1,1233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ejewelModelStoreContainer" CdmEntityContainer="EJewelEntities">
+    <FunctionImportMapping FunctionImportName="SP_GetStoneClarity" FunctionName="ejewelModel.Store.SP_GetStoneClarity" />
+    <FunctionImportMapping FunctionImportName="GetCustomerDetailsByCustomerID" FunctionName="ejewelModel.Store.GetCustomerDetailsByCustomerID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ejewelModel.GetCustomerDetailsByCustomerID_Result">
+          <ScalarProperty Name="CustomerDetailsID" ColumnName="CustomerDetailsID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerMiddleName" ColumnName="CustomerMiddleName" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerFaxNumber" ColumnName="CustomerFaxNumber" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ZipCodeID" ColumnName="ZipCodeID" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="IsDefaultAddress" ColumnName="IsDefaultAddress" />
+          <ScalarProperty Name="CustomerAccountModifiedDateTime" ColumnName="CustomerAccountModifiedDateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ej_AttributeTitle">
+      <EntityTypeMapping TypeName="ejewelModel.ej_AttributeTitle">
+        <MappingFragment StoreEntitySet="ej_AttributeTitle">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AttributeTitle" ColumnName="AttributeTitle" />
+          <ScalarProperty Name="AttributeTitleId" ColumnName="AttributeTitleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_BestSelling">
+      <EntityTypeMapping TypeName="ejewelModel.ej_BestSelling">
+        <MappingFragment StoreEntitySet="ej_BestSelling">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BestSellingId" ColumnName="BestSellingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CenterStone">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CenterStone">
+        <MappingFragment StoreEntitySet="ej_CenterStone">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CertificationFile" ColumnName="CertificationFile" />
+          <ScalarProperty Name="CertificateCertificationLabId" ColumnName="CertificateCertificationLabId" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+          <ScalarProperty Name="CertificatePavillionAngle" ColumnName="CertificatePavillionAngle" />
+          <ScalarProperty Name="CertificatePavillion" ColumnName="CertificatePavillion" />
+          <ScalarProperty Name="CertificateCrownAngle" ColumnName="CertificateCrownAngle" />
+          <ScalarProperty Name="CertificateCrown" ColumnName="CertificateCrown" />
+          <ScalarProperty Name="CertificateMeasurement" ColumnName="CertificateMeasurement" />
+          <ScalarProperty Name="CertificateFlouresenceId" ColumnName="CertificateFlouresenceId" />
+          <ScalarProperty Name="CertificateCuletId" ColumnName="CertificateCuletId" />
+          <ScalarProperty Name="CertificatePolishId" ColumnName="CertificatePolishId" />
+          <ScalarProperty Name="CertificateSymmetryId" ColumnName="CertificateSymmetryId" />
+          <ScalarProperty Name="CertificateGridleId" ColumnName="CertificateGridleId" />
+          <ScalarProperty Name="CertificateTable" ColumnName="CertificateTable" />
+          <ScalarProperty Name="CertificateDepth" ColumnName="CertificateDepth" />
+          <ScalarProperty Name="StonePrice" ColumnName="StonePrice" />
+          <ScalarProperty Name="StoneCarate" ColumnName="StoneCarate" />
+          <ScalarProperty Name="StoneTypeId" ColumnName="StoneTypeId" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="StoneClarityId" ColumnName="StoneClarityId" />
+          <ScalarProperty Name="StoneColorId" ColumnName="StoneColorId" />
+          <ScalarProperty Name="StoneCutId" ColumnName="StoneCutId" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="CenterStoneId" ColumnName="CenterStoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CenterStoneImage">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CenterStoneImage">
+        <MappingFragment StoreEntitySet="ej_CenterStoneImage">
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CenterStoneId" ColumnName="CenterStoneId" />
+          <ScalarProperty Name="CenterstoneImageID" ColumnName="CenterstoneImageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CenterStoneRapnet">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CenterStoneRapnet">
+        <MappingFragment StoreEntitySet="ej_CenterStoneRapnet">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificationFile" ColumnName="CertificationFile" />
+          <ScalarProperty Name="CertificateCertificationLabId" ColumnName="CertificateCertificationLabId" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+          <ScalarProperty Name="CertificatePavillionAngle" ColumnName="CertificatePavillionAngle" />
+          <ScalarProperty Name="CertificatePavillion" ColumnName="CertificatePavillion" />
+          <ScalarProperty Name="CertificateCrownAngle" ColumnName="CertificateCrownAngle" />
+          <ScalarProperty Name="CertificateCrown" ColumnName="CertificateCrown" />
+          <ScalarProperty Name="CertificateMeasurement" ColumnName="CertificateMeasurement" />
+          <ScalarProperty Name="CertificateFlouresenceId" ColumnName="CertificateFlouresenceId" />
+          <ScalarProperty Name="CertificateCuletId" ColumnName="CertificateCuletId" />
+          <ScalarProperty Name="CertificatePolishId" ColumnName="CertificatePolishId" />
+          <ScalarProperty Name="CertificateSymmetryId" ColumnName="CertificateSymmetryId" />
+          <ScalarProperty Name="CertificateGridleId" ColumnName="CertificateGridleId" />
+          <ScalarProperty Name="CertificateTable" ColumnName="CertificateTable" />
+          <ScalarProperty Name="CertificateDepth" ColumnName="CertificateDepth" />
+          <ScalarProperty Name="StonePrice" ColumnName="StonePrice" />
+          <ScalarProperty Name="StoneCarate" ColumnName="StoneCarate" />
+          <ScalarProperty Name="StoneTypeId" ColumnName="StoneTypeId" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="StoneClarityId" ColumnName="StoneClarityId" />
+          <ScalarProperty Name="StoneColorId" ColumnName="StoneColorId" />
+          <ScalarProperty Name="StoneCutId" ColumnName="StoneCutId" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="RapnetStoneId" ColumnName="RapnetStoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificateCulet">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificateCulet">
+        <MappingFragment StoreEntitySet="ej_CertificateCulet">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificateCuletName" ColumnName="CertificateCuletName" />
+          <ScalarProperty Name="CertificateCuletId" ColumnName="CertificateCuletId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificateFlouresence">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificateFlouresence">
+        <MappingFragment StoreEntitySet="ej_CertificateFlouresence">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificateFlouresenceName" ColumnName="CertificateFlouresenceName" />
+          <ScalarProperty Name="CertificateFlouresenceId" ColumnName="CertificateFlouresenceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificateGridle">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificateGridle">
+        <MappingFragment StoreEntitySet="ej_CertificateGridle">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificateGridleName" ColumnName="CertificateGridleName" />
+          <ScalarProperty Name="CertificateGridleId" ColumnName="CertificateGridleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificatePolish">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificatePolish">
+        <MappingFragment StoreEntitySet="ej_CertificatePolish">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificatePolishName" ColumnName="CertificatePolishName" />
+          <ScalarProperty Name="CertificatePolishId" ColumnName="CertificatePolishId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificateSymmetry">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificateSymmetry">
+        <MappingFragment StoreEntitySet="ej_CertificateSymmetry">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificateSymmetryName" ColumnName="CertificateSymmetryName" />
+          <ScalarProperty Name="CertificateSymmetryId" ColumnName="CertificateSymmetryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CertificationLab">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CertificationLab">
+        <MappingFragment StoreEntitySet="ej_CertificationLab">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificateLabName" ColumnName="CertificateLabName" />
+          <ScalarProperty Name="CertificateLabId" ColumnName="CertificateLabId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ChainClasp">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ChainClasp">
+        <MappingFragment StoreEntitySet="ej_ChainClasp">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChainClasp" ColumnName="ChainClasp" />
+          <ScalarProperty Name="ChainClaspId" ColumnName="ChainClaspId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ChainLength">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ChainLength">
+        <MappingFragment StoreEntitySet="ej_ChainLength">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChainLength" ColumnName="ChainLength" />
+          <ScalarProperty Name="ChainLengthID" ColumnName="ChainLengthID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ChainStyle">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ChainStyle">
+        <MappingFragment StoreEntitySet="ej_ChainStyle">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChainStyle" ColumnName="ChainStyle" />
+          <ScalarProperty Name="ChainStyleID" ColumnName="ChainStyleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_City">
+      <EntityTypeMapping TypeName="ejewelModel.ej_City">
+        <MappingFragment StoreEntitySet="ej_City">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ContactDetails">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ContactDetails">
+        <MappingFragment StoreEntitySet="ej_ContactDetails">
+          <ScalarProperty Name="ContactDate" ColumnName="ContactDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ContactDetailsId" ColumnName="ContactDetailsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Country">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Country">
+        <MappingFragment StoreEntitySet="ej_Country">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsPostalCodeRequired" ColumnName="IsPostalCodeRequired" />
+          <ScalarProperty Name="PostalCodeDisplayName" ColumnName="PostalCodeDisplayName" />
+          <ScalarProperty Name="HasMultipleState" ColumnName="HasMultipleState" />
+          <ScalarProperty Name="StateDisplayName" ColumnName="StateDisplayName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Currency">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Currency">
+        <MappingFragment StoreEntitySet="ej_Currency">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DefaultCurrency" ColumnName="DefaultCurrency" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="DecimalPlaces" ColumnName="DecimalPlaces" />
+          <ScalarProperty Name="CurrencySymbole" ColumnName="CurrencySymbole" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="CurrencyTitle" ColumnName="CurrencyTitle" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_CustomDesign_RingPopUp">
+      <EntityTypeMapping TypeName="ejewelModel.ej_CustomDesign_RingPopUp">
+        <MappingFragment StoreEntitySet="ej_CustomDesign_RingPopUp">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="BestTimeToCall" ColumnName="BestTimeToCall" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LinkstoDesign" ColumnName="LinkstoDesign" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="RingSizeId" ColumnName="RingSizeId" />
+          <ScalarProperty Name="MetalTypeId" ColumnName="MetalTypeId" />
+          <ScalarProperty Name="SideStones" ColumnName="SideStones" />
+          <ScalarProperty Name="DiamondItem" ColumnName="DiamondItem" />
+          <ScalarProperty Name="CustomDesignRequestID" ColumnName="CustomDesignRequestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Customer_Account">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Customer_Account">
+        <MappingFragment StoreEntitySet="ej_Customer_Account">
+          <ScalarProperty Name="CustomerStatus" ColumnName="CustomerStatus" />
+          <ScalarProperty Name="CustomerAccountModifiedDateTime" ColumnName="CustomerAccountModifiedDateTime" />
+          <ScalarProperty Name="CustomerPassword" ColumnName="CustomerPassword" />
+          <ScalarProperty Name="CustomerEmailID" ColumnName="CustomerEmailID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Customer_Account_Details">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Customer_Account_Details">
+        <MappingFragment StoreEntitySet="ej_Customer_Account_Details">
+          <ScalarProperty Name="CustomerAccountModifiedDateTime" ColumnName="CustomerAccountModifiedDateTime" />
+          <ScalarProperty Name="IsDefaultAddress" ColumnName="IsDefaultAddress" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="ZipCodeID" ColumnName="ZipCodeID" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerFaxNumber" ColumnName="CustomerFaxNumber" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+          <ScalarProperty Name="CustomerMiddleName" ColumnName="CustomerMiddleName" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerDetailsID" ColumnName="CustomerDetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Customer_Order">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Customer_Order">
+        <MappingFragment StoreEntitySet="ej_Customer_Order">
+          <ScalarProperty Name="OrderDateTime" ColumnName="OrderDateTime" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Customer_Order_Billing_Details">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Customer_Order_Billing_Details">
+        <MappingFragment StoreEntitySet="ej_Customer_Order_Billing_Details">
+          <ScalarProperty Name="CustomerBillingEmailID" ColumnName="CustomerBillingEmailID" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="ZipCodeID" ColumnName="ZipCodeID" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerFaxNumber" ColumnName="CustomerFaxNumber" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomeLastName" ColumnName="CustomeLastName" />
+          <ScalarProperty Name="CustomerMiddleName" ColumnName="CustomerMiddleName" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerOrderBillingID" ColumnName="CustomerOrderBillingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Customer_Order_Shipping_Details">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Customer_Order_Shipping_Details">
+        <MappingFragment StoreEntitySet="ej_Customer_Order_Shipping_Details">
+          <ScalarProperty Name="CustomerShippingEmailID" ColumnName="CustomerShippingEmailID" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="ZipCodeID" ColumnName="ZipCodeID" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CustomerFaxNumber" ColumnName="CustomerFaxNumber" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomeLastName" ColumnName="CustomeLastName" />
+          <ScalarProperty Name="CustomerMiddleName" ColumnName="CustomerMiddleName" />
+          <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerOrderShippingID" ColumnName="CustomerOrderShippingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_DiscountCoupon">
+      <EntityTypeMapping TypeName="ejewelModel.ej_DiscountCoupon">
+        <MappingFragment StoreEntitySet="ej_DiscountCoupon">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UsedDate" ColumnName="UsedDate" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="CoupunDetails" ColumnName="CoupunDetails" />
+          <ScalarProperty Name="CouponCode" ColumnName="CouponCode" />
+          <ScalarProperty Name="DiscountCouponId" ColumnName="DiscountCouponId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_EngravingFont">
+      <EntityTypeMapping TypeName="ejewelModel.ej_EngravingFont">
+        <MappingFragment StoreEntitySet="ej_EngravingFont">
+          <ScalarProperty Name="font_name" ColumnName="font_name" />
+          <ScalarProperty Name="font_id" ColumnName="font_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_EnquiryDetails">
+      <EntityTypeMapping TypeName="ejewelModel.ej_EnquiryDetails">
+        <MappingFragment StoreEntitySet="ej_EnquiryDetails">
+          <ScalarProperty Name="EnquiryDate" ColumnName="EnquiryDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="EnquiryID" ColumnName="EnquiryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ErrorLog">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ErrorLog">
+        <MappingFragment StoreEntitySet="ej_ErrorLog">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="InnerException" ColumnName="InnerException" />
+          <ScalarProperty Name="ErrorSource" ColumnName="ErrorSource" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="ErrorLogId" ColumnName="ErrorLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_LengthSizeMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_LengthSizeMaster">
+        <MappingFragment StoreEntitySet="ej_LengthSizeMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="MetalWeight" ColumnName="MetalWeight" />
+          <ScalarProperty Name="LengthSize" ColumnName="LengthSize" />
+          <ScalarProperty Name="MetalId" ColumnName="MetalId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="LengthSizeId" ColumnName="LengthSizeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_LoggedCustomer">
+      <EntityTypeMapping TypeName="ejewelModel.ej_LoggedCustomer">
+        <MappingFragment StoreEntitySet="ej_LoggedCustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="LoggedCustomerIP" ColumnName="LoggedCustomerIP" />
+          <ScalarProperty Name="LoggedDatetime" ColumnName="LoggedDatetime" />
+          <ScalarProperty Name="LoggedCustomerID" ColumnName="LoggedCustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_LoggedUser">
+      <EntityTypeMapping TypeName="ejewelModel.ej_LoggedUser">
+        <MappingFragment StoreEntitySet="ej_LoggedUser">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="LoggedUserIP" ColumnName="LoggedUserIP" />
+          <ScalarProperty Name="LoggedDatetime" ColumnName="LoggedDatetime" />
+          <ScalarProperty Name="LoggedUserID" ColumnName="LoggedUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_LooseDiamondShape">
+      <EntityTypeMapping TypeName="ejewelModel.ej_LooseDiamondShape">
+        <MappingFragment StoreEntitySet="ej_LooseDiamondShape">
+          <ScalarProperty Name="ShapeVideo" ColumnName="ShapeVideo" />
+          <ScalarProperty Name="ShapeOrginalImage2" ColumnName="ShapeOrginalImage2" />
+          <ScalarProperty Name="ShapeOrginalImage1" ColumnName="ShapeOrginalImage1" />
+          <ScalarProperty Name="ShapeScreechImage2Large" ColumnName="ShapeScreechImage2Large" />
+          <ScalarProperty Name="ShapeScreechImage2Small" ColumnName="ShapeScreechImage2Small" />
+          <ScalarProperty Name="ShapeScreechImage1Large" ColumnName="ShapeScreechImage1Large" />
+          <ScalarProperty Name="ShapeScreechImage1Small" ColumnName="ShapeScreechImage1Small" />
+          <ScalarProperty Name="ShapeSmallIcon" ColumnName="ShapeSmallIcon" />
+          <ScalarProperty Name="ShapeId" ColumnName="ShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MetalNameMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MetalNameMaster">
+        <MappingFragment StoreEntitySet="ej_MetalNameMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MetalName" ColumnName="MetalName" />
+          <ScalarProperty Name="MetalNameId" ColumnName="MetalNameId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MetalTypeMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MetalTypeMaster">
+        <MappingFragment StoreEntitySet="ej_MetalTypeMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="MetalNameId" ColumnName="MetalNameId" />
+          <ScalarProperty Name="MetalWeightId" ColumnName="MetalWeightId" />
+          <ScalarProperty Name="MetaTypeId" ColumnName="MetaTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MetalWeightMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MetalWeightMaster">
+        <MappingFragment StoreEntitySet="ej_MetalWeightMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MetalWeight" ColumnName="MetalWeight" />
+          <ScalarProperty Name="MetalWeightId" ColumnName="MetalWeightId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MultiStore">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MultiStore">
+        <MappingFragment StoreEntitySet="ej_MultiStore">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DefaultCurrency" ColumnName="DefaultCurrency" />
+          <ScalarProperty Name="StoreUrl" ColumnName="StoreUrl" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MultiStoreCategory">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MultiStoreCategory">
+        <MappingFragment StoreEntitySet="ej_MultiStoreCategory">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="StoreCategoryId" ColumnName="StoreCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_MultiStoreProduct">
+      <EntityTypeMapping TypeName="ejewelModel.ej_MultiStoreProduct">
+        <MappingFragment StoreEntitySet="ej_MultiStoreProduct">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="StoreProductId" ColumnName="StoreProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_NewProduct">
+      <EntityTypeMapping TypeName="ejewelModel.ej_NewProduct">
+        <MappingFragment StoreEntitySet="ej_NewProduct">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="NewProductId" ColumnName="NewProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_News">
+      <EntityTypeMapping TypeName="ejewelModel.ej_News">
+        <MappingFragment StoreEntitySet="ej_News">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="NewsDescription" ColumnName="NewsDescription" />
+          <ScalarProperty Name="NewsHeading" ColumnName="NewsHeading" />
+          <ScalarProperty Name="NewsCategory" ColumnName="NewsCategory" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_NewsCategory">
+      <EntityTypeMapping TypeName="ejewelModel.ej_NewsCategory">
+        <MappingFragment StoreEntitySet="ej_NewsCategory">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="NewsCategoryID" ColumnName="NewsCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Order">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Order">
+        <MappingFragment StoreEntitySet="ej_Order">
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="DiscountCouponId" ColumnName="DiscountCouponId" />
+          <ScalarProperty Name="TaxPrice" ColumnName="TaxPrice" />
+          <ScalarProperty Name="TaxClassId" ColumnName="TaxClassId" />
+          <ScalarProperty Name="ShippingPrice" ColumnName="ShippingPrice" />
+          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="PaymentDetails" ColumnName="PaymentDetails" />
+          <ScalarProperty Name="PaymentVia" ColumnName="PaymentVia" />
+          <ScalarProperty Name="OrderUser" ColumnName="OrderUser" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_OrderStatus">
+      <EntityTypeMapping TypeName="ejewelModel.ej_OrderStatus">
+        <MappingFragment StoreEntitySet="ej_OrderStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderStatusName" ColumnName="OrderStatusName" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_PaymentStatus">
+      <EntityTypeMapping TypeName="ejewelModel.ej_PaymentStatus">
+        <MappingFragment StoreEntitySet="ej_PaymentStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="PaymentStatusId" ColumnName="PaymentStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_PaymentVia">
+      <EntityTypeMapping TypeName="ejewelModel.ej_PaymentVia">
+        <MappingFragment StoreEntitySet="ej_PaymentVia">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PaymentVia" ColumnName="PaymentVia" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_PrimaryCategory">
+      <EntityTypeMapping TypeName="ejewelModel.ej_PrimaryCategory">
+        <MappingFragment StoreEntitySet="ej_PrimaryCategory">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_Product">
+      <EntityTypeMapping TypeName="ejewelModel.ej_Product">
+        <MappingFragment StoreEntitySet="ej_Product">
+          <ScalarProperty Name="Publish" ColumnName="Publish" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsExtraOrdinary" ColumnName="IsExtraOrdinary" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="OnSale" ColumnName="OnSale" />
+          <ScalarProperty Name="ChildrenGift" ColumnName="ChildrenGift" />
+          <ScalarProperty Name="ManGift" ColumnName="ManGift" />
+          <ScalarProperty Name="WomenGift" ColumnName="WomenGift" />
+          <ScalarProperty Name="OtherGift" ColumnName="OtherGift" />
+          <ScalarProperty Name="NewProduct" ColumnName="NewProduct" />
+          <ScalarProperty Name="BestSelling" ColumnName="BestSelling" />
+          <ScalarProperty Name="ProductWidth" ColumnName="ProductWidth" />
+          <ScalarProperty Name="ProductWeight" ColumnName="ProductWeight" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductTitle" ColumnName="ProductTitle" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductAttribute">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductAttribute">
+        <MappingFragment StoreEntitySet="ej_ProductAttribute">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="AttributePrice" ColumnName="AttributePrice" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="AttributeTitleId" ColumnName="AttributeTitleId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="AttributeId" ColumnName="AttributeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductCenterStone">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductCenterStone">
+        <MappingFragment StoreEntitySet="ej_ProductCenterStone">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneCategorySettingTypeId" ColumnName="StoneCategorySettingTypeId" />
+          <ScalarProperty Name="StoneMaxCarat" ColumnName="StoneMaxCarat" />
+          <ScalarProperty Name="StoneMinCarat" ColumnName="StoneMinCarat" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductCenterStoneId" ColumnName="ProductCenterStoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductCenterStoneShape">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductCenterStoneShape">
+        <MappingFragment StoreEntitySet="ej_ProductCenterStoneShape">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="DefaultShape" ColumnName="DefaultShape" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="ProductCenterStoneId" ColumnName="ProductCenterStoneId" />
+          <ScalarProperty Name="ProductCenterStoneShapeId" ColumnName="ProductCenterStoneShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductChain">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductChain">
+        <MappingFragment StoreEntitySet="ej_ProductChain">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ChainClaspId" ColumnName="ChainClaspId" />
+          <ScalarProperty Name="ChainStyleId" ColumnName="ChainStyleId" />
+          <ScalarProperty Name="ChainLengthId" ColumnName="ChainLengthId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductChainId" ColumnName="ProductChainId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductDiscount">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductDiscount">
+        <MappingFragment StoreEntitySet="ej_ProductDiscount">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="DiscountPercent" ColumnName="DiscountPercent" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductDiscountId" ColumnName="ProductDiscountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductFilter">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductFilter">
+        <MappingFragment StoreEntitySet="ej_ProductFilter">
+          <ScalarProperty Name="PriceDiff" ColumnName="PriceDiff" />
+          <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+          <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+          <ScalarProperty Name="GemStoneType" ColumnName="GemStoneType" />
+          <ScalarProperty Name="GemStoneColor" ColumnName="GemStoneColor" />
+          <ScalarProperty Name="SideStoneSetting" ColumnName="SideStoneSetting" />
+          <ScalarProperty Name="CenterStoneSetting" ColumnName="CenterStoneSetting" />
+          <ScalarProperty Name="SideStoneShape" ColumnName="SideStoneShape" />
+          <ScalarProperty Name="CenterStoneShape" ColumnName="CenterStoneShape" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductImage">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductImage">
+        <MappingFragment StoreEntitySet="ej_ProductImage">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Angle" ColumnName="Angle" />
+          <ScalarProperty Name="ImageAlt" ColumnName="ImageAlt" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductMatchingBand">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductMatchingBand">
+        <MappingFragment StoreEntitySet="ej_ProductMatchingBand">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsCustomize" ColumnName="IsCustomize" />
+          <ScalarProperty Name="DesignTypeId" ColumnName="DesignTypeId" />
+          <ScalarProperty Name="StoneCategorySettingTypeId" ColumnName="StoneCategorySettingTypeId" />
+          <ScalarProperty Name="NoOfStone" ColumnName="NoOfStone" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductMatchingBandId" ColumnName="ProductMatchingBandId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductMatchingBandAvialableStoneType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductMatchingBandAvialableStoneType">
+        <MappingFragment StoreEntitySet="ej_ProductMatchingBandAvialableStoneType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="ProductMatchingBandId" ColumnName="ProductMatchingBandId" />
+          <ScalarProperty Name="ProductMatchingBandSideStoneAvialableId" ColumnName="ProductMatchingBandSideStoneAvialableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductMatchingBandRange">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductMatchingBandRange">
+        <MappingFragment StoreEntitySet="ej_ProductMatchingBandRange">
+          <ScalarProperty Name="StoneMaxCarat" ColumnName="StoneMaxCarat" />
+          <ScalarProperty Name="StoneMinCarat" ColumnName="StoneMinCarat" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductMatchingBandRangeId" ColumnName="ProductMatchingBandRangeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductMatchingBandShape">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductMatchingBandShape">
+        <MappingFragment StoreEntitySet="ej_ProductMatchingBandShape">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="ProductMatchingBandRangeId" ColumnName="ProductMatchingBandRangeId" />
+          <ScalarProperty Name="ProductMatchingBandShapeId" ColumnName="ProductMatchingBandShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductMetalType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductMetalType">
+        <MappingFragment StoreEntitySet="ej_ProductMetalType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DefaultMetal" ColumnName="DefaultMetal" />
+          <ScalarProperty Name="MetalTypeId" ColumnName="MetalTypeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductMetalId" ColumnName="ProductMetalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductReview">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductReview">
+        <MappingFragment StoreEntitySet="ej_ProductReview">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ReviewId" ColumnName="ReviewId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductSideStone">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductSideStone">
+        <MappingFragment StoreEntitySet="ej_ProductSideStone">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsCustomize" ColumnName="IsCustomize" />
+          <ScalarProperty Name="DesignTypeId" ColumnName="DesignTypeId" />
+          <ScalarProperty Name="StoneCategorySettingTypeId" ColumnName="StoneCategorySettingTypeId" />
+          <ScalarProperty Name="NoOfStone" ColumnName="NoOfStone" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductSideStoneId" ColumnName="ProductSideStoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductSideStoneAvialableStoneType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductSideStoneAvialableStoneType">
+        <MappingFragment StoreEntitySet="ej_ProductSideStoneAvialableStoneType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="ProductSideStoneId" ColumnName="ProductSideStoneId" />
+          <ScalarProperty Name="ProductSideStoneAvialableId" ColumnName="ProductSideStoneAvialableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductSideStoneRange">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductSideStoneRange">
+        <MappingFragment StoreEntitySet="ej_ProductSideStoneRange">
+          <ScalarProperty Name="StoneMaxCarat" ColumnName="StoneMaxCarat" />
+          <ScalarProperty Name="StoneMinCarat" ColumnName="StoneMinCarat" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductSideStoneRangeId" ColumnName="ProductSideStoneRangeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductSideStoneShape">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductSideStoneShape">
+        <MappingFragment StoreEntitySet="ej_ProductSideStoneShape">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="ProductSideStoneRangeId" ColumnName="ProductSideStoneRangeId" />
+          <ScalarProperty Name="ProductSideStoneShapeId" ColumnName="ProductSideStoneShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProductVideo">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProductVideo">
+        <MappingFragment StoreEntitySet="ej_ProductVideo">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VideoPhotoURL" ColumnName="VideoPhotoURL" />
+          <ScalarProperty Name="VideoPathURL" ColumnName="VideoPathURL" />
+          <ScalarProperty Name="CenterStoneShapeId" ColumnName="CenterStoneShapeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductVideoId" ColumnName="ProductVideoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_PromocodeType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_PromocodeType">
+        <MappingFragment StoreEntitySet="ej_PromocodeType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PromocodeTypeName" ColumnName="PromocodeTypeName" />
+          <ScalarProperty Name="PromocodeTypeID" ColumnName="PromocodeTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_PromotionalcodeManagement">
+      <EntityTypeMapping TypeName="ejewelModel.ej_PromotionalcodeManagement">
+        <MappingFragment StoreEntitySet="ej_PromotionalcodeManagement">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductValidTo" ColumnName="ProductValidTo" />
+          <ScalarProperty Name="ProductValidFrom" ColumnName="ProductValidFrom" />
+          <ScalarProperty Name="ProductDiscountValue" ColumnName="ProductDiscountValue" />
+          <ScalarProperty Name="ProductDiscountType" ColumnName="ProductDiscountType" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="PromotionalcodeTypeID" ColumnName="PromotionalcodeTypeID" />
+          <ScalarProperty Name="PromotionalCode" ColumnName="PromotionalCode" />
+          <ScalarProperty Name="PromotionalCodeId" ColumnName="PromotionalCodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ProposalStory">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ProposalStory">
+        <MappingFragment StoreEntitySet="ej_ProposalStory">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoryDate" ColumnName="StoryDate" />
+          <ScalarProperty Name="StoryImage" ColumnName="StoryImage" />
+          <ScalarProperty Name="StoryDescription" ColumnName="StoryDescription" />
+          <ScalarProperty Name="StoryHeader" ColumnName="StoryHeader" />
+          <ScalarProperty Name="ProposalStoryID" ColumnName="ProposalStoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_QueriesOnProduct">
+      <EntityTypeMapping TypeName="ejewelModel.ej_QueriesOnProduct">
+        <MappingFragment StoreEntitySet="ej_QueriesOnProduct">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductQueriesId" ColumnName="ProductQueriesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_RingSize">
+      <EntityTypeMapping TypeName="ejewelModel.ej_RingSize">
+        <MappingFragment StoreEntitySet="ej_RingSize">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RingSize" ColumnName="RingSize" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="RingSizeId" ColumnName="RingSizeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_RingSizeMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_RingSizeMaster">
+        <MappingFragment StoreEntitySet="ej_RingSizeMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RingSize" ColumnName="RingSize" />
+          <ScalarProperty Name="RingSizeId" ColumnName="RingSizeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SetterPrice">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SetterPrice">
+        <MappingFragment StoreEntitySet="ej_SetterPrice">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SetterPriceId" ColumnName="SetterPriceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SettingPrice">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SettingPrice">
+        <MappingFragment StoreEntitySet="ej_SettingPrice">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="SettingPriceId" ColumnName="SettingPriceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SettingType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SettingType">
+        <MappingFragment StoreEntitySet="ej_SettingType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SettingTypeName" ColumnName="SettingTypeName" />
+          <ScalarProperty Name="SettingTypeId" ColumnName="SettingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ShippingMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ShippingMaster">
+        <MappingFragment StoreEntitySet="ej_ShippingMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ShippingTypeId" ColumnName="ShippingTypeId" />
+          <ScalarProperty Name="ShippingNameId" ColumnName="ShippingNameId" />
+          <ScalarProperty Name="ShippingId" ColumnName="ShippingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ShippingMethod">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ShippingMethod">
+        <MappingFragment StoreEntitySet="ej_ShippingMethod">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ShippingMethodName" ColumnName="ShippingMethodName" />
+          <ScalarProperty Name="ShippingMethodId" ColumnName="ShippingMethodId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ShippingName">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ShippingName">
+        <MappingFragment StoreEntitySet="ej_ShippingName">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShippingName" ColumnName="ShippingName" />
+          <ScalarProperty Name="ShippingNameId" ColumnName="ShippingNameId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ShippingType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ShippingType">
+        <MappingFragment StoreEntitySet="ej_ShippingType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShippingType" ColumnName="ShippingType" />
+          <ScalarProperty Name="ShippingTypeId" ColumnName="ShippingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SideStone">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SideStone">
+        <MappingFragment StoreEntitySet="ej_SideStone">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StonePrice" ColumnName="StonePrice" />
+          <ScalarProperty Name="StoneCarate" ColumnName="StoneCarate" />
+          <ScalarProperty Name="StoneTypeId" ColumnName="StoneTypeId" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+          <ScalarProperty Name="StoneClarityId" ColumnName="StoneClarityId" />
+          <ScalarProperty Name="StoneColorId" ColumnName="StoneColorId" />
+          <ScalarProperty Name="StoneCutId" ColumnName="StoneCutId" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="SideStoneId" ColumnName="SideStoneId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_State">
+      <EntityTypeMapping TypeName="ejewelModel.ej_State">
+        <MappingFragment StoreEntitySet="ej_State">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneCategory">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneCategory">
+        <MappingFragment StoreEntitySet="ej_StoneCategory">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StoneCategoryName" ColumnName="StoneCategoryName" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneCategorySettingType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneCategorySettingType">
+        <MappingFragment StoreEntitySet="ej_StoneCategorySettingType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="SettingTypeId" ColumnName="SettingTypeId" />
+          <ScalarProperty Name="StoneCategoryTypeId" ColumnName="StoneCategoryTypeId" />
+          <ScalarProperty Name="StoneCategorySettingTypeId" ColumnName="StoneCategorySettingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneCategoryType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneCategoryType">
+        <MappingFragment StoreEntitySet="ej_StoneCategoryType">
+          <ScalarProperty Name="StoneCategoryTypeName" ColumnName="StoneCategoryTypeName" />
+          <ScalarProperty Name="StoneCategoryTypeId" ColumnName="StoneCategoryTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneCertificate">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneCertificate">
+        <MappingFragment StoreEntitySet="ej_StoneCertificate">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CertificationFile" ColumnName="CertificationFile" />
+          <ScalarProperty Name="CertificateCertificationLabId" ColumnName="CertificateCertificationLabId" />
+          <ScalarProperty Name="CertificateCertification" ColumnName="CertificateCertification" />
+          <ScalarProperty Name="CertificatePavillionAngle" ColumnName="CertificatePavillionAngle" />
+          <ScalarProperty Name="CertificatePavillion" ColumnName="CertificatePavillion" />
+          <ScalarProperty Name="CertificateCrownAngle" ColumnName="CertificateCrownAngle" />
+          <ScalarProperty Name="CertificateCrown" ColumnName="CertificateCrown" />
+          <ScalarProperty Name="CertificateMeasurement" ColumnName="CertificateMeasurement" />
+          <ScalarProperty Name="CertificateFlouresenceId" ColumnName="CertificateFlouresenceId" />
+          <ScalarProperty Name="CertificateCuletId" ColumnName="CertificateCuletId" />
+          <ScalarProperty Name="CertificatePolishId" ColumnName="CertificatePolishId" />
+          <ScalarProperty Name="CertificateSymmetryId" ColumnName="CertificateSymmetryId" />
+          <ScalarProperty Name="CertificateGridleId" ColumnName="CertificateGridleId" />
+          <ScalarProperty Name="CertificateTable" ColumnName="CertificateTable" />
+          <ScalarProperty Name="CertificateDepth" ColumnName="CertificateDepth" />
+          <ScalarProperty Name="StoneId" ColumnName="StoneId" />
+          <ScalarProperty Name="CertificateId" ColumnName="CertificateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneClarity">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneClarity">
+        <MappingFragment StoreEntitySet="ej_StoneClarity">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="StoneClarityName" ColumnName="StoneClarityName" />
+          <ScalarProperty Name="StoneClarityId" ColumnName="StoneClarityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneColor">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneColor">
+        <MappingFragment StoreEntitySet="ej_StoneColor">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="StoneColorName" ColumnName="StoneColorName" />
+          <ScalarProperty Name="StoneColorId" ColumnName="StoneColorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneCut">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneCut">
+        <MappingFragment StoreEntitySet="ej_StoneCut">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="StoneCutName" ColumnName="StoneCutName" />
+          <ScalarProperty Name="StoneCutId" ColumnName="StoneCutId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneShape">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneShape">
+        <MappingFragment StoreEntitySet="ej_StoneShape">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SideStoneVisible" ColumnName="SideStoneVisible" />
+          <ScalarProperty Name="CenterStoneVisible" ColumnName="CenterStoneVisible" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="ShapeId" ColumnName="ShapeId" />
+          <ScalarProperty Name="StoneShapeId" ColumnName="StoneShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneShapeMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneShapeMaster">
+        <MappingFragment StoreEntitySet="ej_StoneShapeMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="ShapeId" ColumnName="ShapeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_StoneType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_StoneType">
+        <MappingFragment StoreEntitySet="ej_StoneType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="StoneCategoryId" ColumnName="StoneCategoryId" />
+          <ScalarProperty Name="StoneTypeName" ColumnName="StoneTypeName" />
+          <ScalarProperty Name="StoneTypeId" ColumnName="StoneTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SubCategoryMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SubCategoryMaster">
+        <MappingFragment StoreEntitySet="ej_SubCategoryMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="HasEngraving" ColumnName="HasEngraving" />
+          <ScalarProperty Name="HasRing" ColumnName="HasRing" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_SubCategorySettingType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_SubCategorySettingType">
+        <MappingFragment StoreEntitySet="ej_SubCategorySettingType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SettingTypeId" ColumnName="SettingTypeId" />
+          <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+          <ScalarProperty Name="SubCategorySettingTypeId" ColumnName="SubCategorySettingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_TaxClass">
+      <EntityTypeMapping TypeName="ejewelModel.ej_TaxClass">
+        <MappingFragment StoreEntitySet="ej_TaxClass">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+          <ScalarProperty Name="TaxClass" ColumnName="TaxClass" />
+          <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_UnitMaster">
+      <EntityTypeMapping TypeName="ejewelModel.ej_UnitMaster">
+        <MappingFragment StoreEntitySet="ej_UnitMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_UserDetails">
+      <EntityTypeMapping TypeName="ejewelModel.ej_UserDetails">
+        <MappingFragment StoreEntitySet="ej_UserDetails">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserPassWord" ColumnName="UserPassWord" />
+          <ScalarProperty Name="UserMobNo" ColumnName="UserMobNo" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="UId" ColumnName="UId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_UserType">
+      <EntityTypeMapping TypeName="ejewelModel.ej_UserType">
+        <MappingFragment StoreEntitySet="ej_UserType">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ej_ZipCode">
+      <EntityTypeMapping TypeName="ejewelModel.ej_ZipCode">
+        <MappingFragment StoreEntitySet="ej_ZipCode">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="ZipCodeRegularExp" ColumnName="ZipCodeRegularExp" />
+          <ScalarProperty Name="ZipCodeToolTip" ColumnName="ZipCodeToolTip" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="ZipCodeID" ColumnName="ZipCodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

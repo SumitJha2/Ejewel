@@ -1,0 +1,141 @@
+﻿
+/***************** Side Stone **************************/
+    i[class^="swatch-stone-side"] {
+        background: url('../../img/sprite/sprite_center_stone.png') no-repeat;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        margin: 0px -2px;
+        text-indent: -999999px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    i.swatch-stone-side-pink-sapphire {
+        background-position: 0px 0px;
+    }
+
+    i.swatch-stone-side-green-emerald {
+        background-position: 0px -40px;
+    }
+
+    i.swatch-stone-side-red-ruby {
+        background-position: 0px -80px;
+    }
+
+    i.swatch-stone-side-blue-sapphire {
+        background-position: 0px -120px;
+    }
+
+    i.swatch-stone-side-yellow-citrine {
+        background-position: 0px -160px;
+    }
+        
+    i.swatch-stone-side-white-diamond {
+        background-position: 0px -200px;
+    }
+
+
+
+/*Center Stone Swatches*/
+i[class^="swatch-stone-center"] {
+            background: url('../../img/sprite/swatch_center_stone.png') no-repeat;            
+            display: inline-block;
+            height: 36px;
+            width: 36px;
+            margin: 0px -2px;
+            text-indent: -999999px;
+            line-height: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        i.swatch-stone-center-round {
+            background-position: 0px 0px;
+        }
+
+        i.swatch-stone-center-cushion {
+            background-position: 0px -40px;
+        }
+
+        i.swatch-stone-center-princess {
+            background-position: 0px -80px;
+        }
+
+        i.swatch-stone-center-asscher {
+            background-position: 0px -120px;
+        }
+
+        i.swatch-stone-center-emerald {
+            background-position: 0px -160px;
+        }
+
+        i.swatch-stone-center-radiant {
+            background-position: 0px -200px;
+        }
+
+        i.swatch-stone-center-oval {
+            background-position: 0px -240px;
+        }
+
+        i.swatch-stone-center-pear {
+            background-position: 0px -280px;
+        }
+
+        i.swatch-stone-center-marquise {
+            background-position: 0px -320px;
+        }
+
+        i.swatch-stone-center-heart {
+            background-position: 0px -360px;
+        }
+        /*Metal*/
+         i[class^="swatch-stone-metal-"] {
+            background: url('../../img/sprite/swatches_metal.png') no-repeat;
+            display: inline-block;
+            height: 36px;
+            width: 36px;
+            text-indent: -999999px;
+            margin: 0px 8px;
+            margin: 0;
+            vertical-align: middle;
+            text-align: center;
+            background-position: 1px -291px;
+        }
+
+
+        i.swatch-stone-metal-950-paltinum {
+            background-position: 1px -291px;
+        }
+
+        i.swatch-stone-metal-18k-white-gold {
+            background-position: 1px -148px;
+        }
+
+        i.swatch-stone-metal-14k-white-gold {
+            background-position: 1px -220px;
+        }
+
+        i.swatch-stone-metal-palladium {
+            background-position: 1px -256px;
+        }
+
+        i.swatch-stone-metal-950-sterling-silver {
+            background-position: 1px -184px;
+        }
+
+        i.swatch-stone-metal-18k-yellow-gold {
+            background-position: 1px -3px;
+        }
+
+        i.swatch-stone-metal-14k-yellow-gold {
+            background-position: 1px -75px;
+        }
+
+        i.swatch-stone-metal-18k-rose-gold {
+            background-position: 1px -40px;
+        }
+
+        i.swatch-stone-metal-14k-rose-gold {
+            background-position: 1px -112px;
+        }

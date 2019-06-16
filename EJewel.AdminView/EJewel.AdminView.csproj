@@ -1,0 +1,1015 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC3FED8F-3826-421A-9DFF-885B2C937FAC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EJewel.AdminView</RootNamespace>
+    <AssemblyName>EJewel.AdminView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Project\EJewel\EJewel.AdminView\bin\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\themes\admin\images\icon\info_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\video_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\circle_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\correct_16.gif" />
+    <Content Include="assets\themes\admin\images\icon\product\setting_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\metal_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\detail_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\chain_16.png" />
+    <Content Include="assets\themes\admin\images\icon\product\image_16.png" />
+    <Content Include="assets\themes\admin\images\icon\chart_16.png" />
+    <Content Include="assets\themes\admin\images\icon\delete_16.png" />
+    <Content Include="assets\themes\admin\images\icon\edit_16.png" />
+    <Content Include="assets\themes\admin\images\icon\offline_16.png" />
+    <Content Include="assets\themes\admin\images\icon\online_16.png" />
+    <Content Include="assets\themes\admin\images\icon\question_16.png" />
+    <Content Include="assets\themes\admin\images\icon\save_16.png" />
+    <Content Include="assets\themes\admin\images\loader\ajax_loader_48.gif" />
+    <Content Include="assets\themes\admin\images\loader\ajax_loader_128.gif" />
+    <Content Include="assets\themes\admin\images\loader\squares.gif" />
+    <Content Include="assets\themes\admin\images\logohomepage.png" />
+    <Content Include="assets\themes\admin\javascripts\all.js" />
+    <Content Include="assets\themes\admin\javascripts\jquery-1.7.1.js" />
+    <Content Include="assets\themes\admin\javascripts\jquery-1.9.1.min.js" />
+    <Content Include="assets\themes\admin\javascripts\misc.js" />
+    <Content Include="assets\themes\admin\stylesheets\buttons.css" />
+    <Content Include="assets\themes\admin\stylesheets\login.css" />
+    <Content Include="assets\themes\admin\stylesheets\misc.css" />
+    <Content Include="assets\themes\admin\stylesheets\reset.css" />
+    <Content Include="assets\themes\admin\stylesheets\text.css" />
+    <Content Include="assets\themes\admin\stylesheets\theme-default.css" />
+    <Content Include="assets\webcontrols\fileupload\ajaxupload.3.5.js" />
+    <Content Include="assets\webcontrols\highlight_inline.js" />
+    <Content Include="assets\webcontrols\jquery.lazyload.js" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\animated-overlay.gif" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\jquery-ui-1.10.3.custom.css" />
+    <Content Include="assets\webcontrols\jquery_ui\css\cupertino\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="assets\themes\admin\images\bullet_black.png" />
+    <Content Include="assets\themes\admin\images\bullet_blue.png" />
+    <Content Include="assets\themes\admin\images\2logo.png" />
+    <Content Include="assets\themes\admin\images\logo.png" />
+    <Content Include="assets\themes\admin\images\search.png" />
+    <Content Include="assets\themes\admin\images\sidebarBg.png" />
+    <Content Include="assets\themes\admin\images\sprite-12-white.png" />
+    <Content Include="assets\themes\admin\images\sprite-16-black.png" />
+    <Content Include="assets\themes\admin\images\sprite.png" />
+    <Content Include="assets\themes\admin\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\themes\admin\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\themes\admin\stylesheets\all.css" />
+    <Content Include="assets\themes\admin\stylesheets\form.css" />
+    <Content Include="assets\themes\admin\stylesheets\ie8.css" />
+    <Content Include="assets\themes\admin\stylesheets\ie9.css" />
+    <Content Include="assets\themes\admin\stylesheets\message.css" />
+    <Content Include="assets\themes\admin\stylesheets\table.css" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="assets\webcontrols\jquery_ui\css\smoothness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="assets\webcontrols\jquery_ui\css\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="assets\webcontrols\jquery_ui\js\jquery-1.9.1.js" />
+    <Content Include="assets\webcontrols\jquery_ui\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="assets\webcontrols\jquery_ui\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="assets\webcontrols\paging\pagination.css" />
+    <Content Include="assets\webcontrols\paging\pagination.js" />
+    <Content Include="assets\webcontrols\scrollbar\jquery.nanoscroller.js" />
+    <Content Include="assets\webcontrols\scrollbar\nanoscroller.css" />
+    <Content Include="assets\webcontrols\table\fdtable.js" />
+    <Content Include="assets\themes\admin\images\icon\certificate_16.png" />
+    <Content Include="assets\themes\admin\javascripts\globalscript.js" />
+    <Content Include="Common\Sfm\Sfm.aspx" />
+    <Content Include="Common\Sfm\SfmList.aspx" />
+    <Content Include="Configuration\Currency\ListCurrency.aspx" />
+    <Content Include="Configuration\Currency\ManageCurrency.aspx" />
+    <Content Include="Configuration\Store\ListMultiStore.aspx" />
+    <Content Include="Configuration\Store\MultiStore.aspx" />
+    <Content Include="Customers\ContactUsQueries.aspx" />
+    <Content Include="Customers\CustomerAccounts.aspx" />
+    <Content Include="Customers\CustomerDesignRing.aspx" />
+    <Content Include="Customers\ManageProductReview.aspx" />
+    <Content Include="Customers\NewsletterSubscriptions.aspx" />
+    <Content Include="Customers\ProductReviewStatus.aspx" />
+    <Content Include="Customers\QueriesOnProduct.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Extras\ListContactDetails.aspx" />
+    <Content Include="Extras\ListNews.aspx" />
+    <Content Include="Extras\ListProposalStory.aspx" />
+    <Content Include="Extras\ManageAdminUser.aspx" />
+    <Content Include="Extras\ManageNews.aspx" />
+    <Content Include="Extras\ManageProposalStories.aspx" />
+    <Content Include="Master\Category\AddCategory.aspx" />
+    <Content Include="Master\Category\ListCategory.aspx" />
+    <Content Include="Master\Location\ListCity.aspx" />
+    <Content Include="Master\Location\ListCountry.aspx" />
+    <Content Include="Master\Location\ListState.aspx" />
+    <Content Include="Master\Location\ListZipCode.aspx" />
+    <Content Include="Master\Location\ManageCity.aspx" />
+    <Content Include="Master\Location\ManageCountry.aspx" />
+    <Content Include="Master\Location\ManageState.aspx" />
+    <Content Include="Master\Location\ManageZipCode.aspx" />
+    <Content Include="Master\Metal\--4c26310d-81d.jpg" />
+    <Content Include="Master\Metal\AddMetalType.aspx" />
+    <Content Include="Master\Metal\d6e14d3a-05c.jpg" />
+    <Content Include="Master\Metal\ListMetalType.aspx" />
+    <Content Include="Master\Payment\AddOrderStatus.aspx" />
+    <Content Include="Master\Payment\AddPaymentStatus.aspx" />
+    <Content Include="Master\Payment\AddPaymentVia.aspx" />
+    <Content Include="Master\Payment\AddShipmentMethod.aspx" />
+    <Content Include="Master\Payment\AddTax.aspx" />
+    <Content Include="Master\Payment\ListOrderStatus.aspx" />
+    <Content Include="Master\Payment\ListPaymentStatus.aspx" />
+    <Content Include="Master\Payment\ListPaymentVia.aspx" />
+    <Content Include="Master\Payment\ListShipmentMethod.aspx" />
+    <Content Include="Master\Payment\ListTax.aspx" />
+    <Content Include="Master\Setting\ListProductAttribute.aspx" />
+    <Content Include="Master\Setting\ListProductFilter.aspx" />
+    <Content Include="Master\Setting\ListRingSize.aspx" />
+    <Content Include="Master\Setting\ListStoneCategorySettingType.aspx" />
+    <Content Include="Master\Setting\ManageProductAttribute.aspx" />
+    <Content Include="Master\Setting\StoneCategorySettingType.aspx" />
+    <Content Include="Master\Stone\CenterstoneImage.aspx" />
+    <Content Include="Master\Stone\CenterStoneOverView.aspx" />
+    <Content Include="Master\Stone\ListCenterStone.aspx" />
+    <Content Include="Master\Stone\ListSideStone.aspx" />
+    <Content Include="Master\Stone\ListStoneCategory.aspx" />
+    <Content Include="Master\Stone\ListStoneShape.aspx" />
+    <Content Include="Master\Stone\ListStoneSpecification.aspx" />
+    <Content Include="Master\Stone\ManageCenterStone.aspx" />
+    <Content Include="Master\Stone\ManageCenterStoneRapnet.aspx" />
+    <Content Include="Master\Stone\ManageSideStone.aspx" />
+    <Content Include="Master\Stone\ManageStoneShape.aspx" />
+    <Content Include="Master\Stone\StoneSpecificationManagement.aspx" />
+    <Content Include="Order\ListPromotionalcodeManagement.aspx" />
+    <Content Include="Extras\ManageShipping.aspx" />
+    <Content Include="Order\OrderManagement.aspx" />
+    <Content Include="Order\PromotionalcodeManagement.aspx" />
+    <Content Include="Pagenotfound.aspx" />
+    <Content Include="Product\ProductCenterStone.aspx" />
+    <Content Include="Product\ProductChain.aspx" />
+    <Content Include="Product\ProductDetails.aspx" />
+    <Content Include="Product\ProductExport.aspx" />
+    <Content Include="Product\ProductImage.aspx" />
+    <Content Include="Product\ProductList.aspx" />
+    <Content Include="Product\ProductMetal.aspx" />
+    <Content Include="Product\ProductPrice.aspx" />
+    <Content Include="Product\ProductRing.aspx" />
+    <Content Include="Product\ProductSetting.aspx" />
+    <Content Include="Product\ProductSideStone.aspx" />
+    <Content Include="Product\ProductVideo.aspx" />
+    <Content Include="Product\ProductVideoPlayer.aspx" />
+    <Content Include="Product\ProductView.aspx" />
+    <Content Include="Services\AdminServices.asmx" />
+    <Content Include="SiteSetting\ChangePassword.aspx" />
+    <Content Include="SiteSetting\ListAdminUser.aspx" />
+    <Content Include="SiteSetting\LoggedUserDetails.aspx" />
+    <Content Include="SiteSetting\ManageAdminUsers.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="test\tab.htm" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <None Include="Web References\com.rapaport.technet\RapNetInventoryLink.disco" />
+    <Content Include="Usercontrol\adminusercontrol.ascx" />
+    <Content Include="Usercontrol\Menu.ascx" />
+    <Content Include="Usercontrol\UserMenuControl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Web References\com.rapaport.technet\RapNetInventoryLinkParameters.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.rapaport.technet\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Sfm\Sfm.aspx.cs">
+      <DependentUpon>Sfm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Sfm\Sfm.aspx.designer.cs">
+      <DependentUpon>Sfm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Sfm\SfmList.aspx.cs">
+      <DependentUpon>SfmList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Sfm\SfmList.aspx.designer.cs">
+      <DependentUpon>SfmList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Currency\ListCurrency.aspx.cs">
+      <DependentUpon>ListCurrency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Currency\ListCurrency.aspx.designer.cs">
+      <DependentUpon>ListCurrency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Currency\ManageCurrency.aspx.cs">
+      <DependentUpon>ManageCurrency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Currency\ManageCurrency.aspx.designer.cs">
+      <DependentUpon>ManageCurrency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Store\ListMultiStore.aspx.cs">
+      <DependentUpon>ListMultiStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Store\ListMultiStore.aspx.designer.cs">
+      <DependentUpon>ListMultiStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Store\MultiStore.aspx.cs">
+      <DependentUpon>MultiStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\Store\MultiStore.aspx.designer.cs">
+      <DependentUpon>MultiStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ContactUsQueries.aspx.cs">
+      <DependentUpon>ContactUsQueries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\ContactUsQueries.aspx.designer.cs">
+      <DependentUpon>ContactUsQueries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomerAccounts.aspx.cs">
+      <DependentUpon>CustomerAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerAccounts.aspx.designer.cs">
+      <DependentUpon>CustomerAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomerDesignRing.aspx.cs">
+      <DependentUpon>CustomerDesignRing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerDesignRing.aspx.designer.cs">
+      <DependentUpon>CustomerDesignRing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ManageProductReview.aspx.cs">
+      <DependentUpon>ManageProductReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\ManageProductReview.aspx.designer.cs">
+      <DependentUpon>ManageProductReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\NewsletterSubscriptions.aspx.cs">
+      <DependentUpon>NewsletterSubscriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\NewsletterSubscriptions.aspx.designer.cs">
+      <DependentUpon>NewsletterSubscriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ProductReviewStatus.aspx.cs">
+      <DependentUpon>ProductReviewStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\ProductReviewStatus.aspx.designer.cs">
+      <DependentUpon>ProductReviewStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\QueriesOnProduct.aspx.cs">
+      <DependentUpon>QueriesOnProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\QueriesOnProduct.aspx.designer.cs">
+      <DependentUpon>QueriesOnProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ListContactDetails.aspx.cs">
+      <DependentUpon>ListContactDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ListContactDetails.aspx.designer.cs">
+      <DependentUpon>ListContactDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ListNews.aspx.cs">
+      <DependentUpon>ListNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ListNews.aspx.designer.cs">
+      <DependentUpon>ListNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ListProposalStory.aspx.cs">
+      <DependentUpon>ListProposalStory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ListProposalStory.aspx.designer.cs">
+      <DependentUpon>ListProposalStory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ManageAdminUser.aspx.cs">
+      <DependentUpon>ManageAdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ManageAdminUser.aspx.designer.cs">
+      <DependentUpon>ManageAdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ManageNews.aspx.cs">
+      <DependentUpon>ManageNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ManageNews.aspx.designer.cs">
+      <DependentUpon>ManageNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ManageProposalStories.aspx.cs">
+      <DependentUpon>ManageProposalStories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ManageProposalStories.aspx.designer.cs">
+      <DependentUpon>ManageProposalStories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ExtraFileUploader.ashx.cs">
+      <DependentUpon>ExtraFileUploader.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ImageUploadHandler.ashx.cs">
+      <DependentUpon>ImageUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Category\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Category\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Category\ListCategory.aspx.cs">
+      <DependentUpon>ListCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Category\ListCategory.aspx.designer.cs">
+      <DependentUpon>ListCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ListCity.aspx.cs">
+      <DependentUpon>ListCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ListCity.aspx.designer.cs">
+      <DependentUpon>ListCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ListCountry.aspx.cs">
+      <DependentUpon>ListCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ListCountry.aspx.designer.cs">
+      <DependentUpon>ListCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ListState.aspx.cs">
+      <DependentUpon>ListState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ListState.aspx.designer.cs">
+      <DependentUpon>ListState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ListZipCode.aspx.cs">
+      <DependentUpon>ListZipCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ListZipCode.aspx.designer.cs">
+      <DependentUpon>ListZipCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ManageCity.aspx.cs">
+      <DependentUpon>ManageCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ManageCity.aspx.designer.cs">
+      <DependentUpon>ManageCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ManageCountry.aspx.cs">
+      <DependentUpon>ManageCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ManageCountry.aspx.designer.cs">
+      <DependentUpon>ManageCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ManageState.aspx.cs">
+      <DependentUpon>ManageState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ManageState.aspx.designer.cs">
+      <DependentUpon>ManageState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Location\ManageZipCode.aspx.cs">
+      <DependentUpon>ManageZipCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Location\ManageZipCode.aspx.designer.cs">
+      <DependentUpon>ManageZipCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Metal\AddMetalType.aspx.cs">
+      <DependentUpon>AddMetalType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Metal\AddMetalType.aspx.designer.cs">
+      <DependentUpon>AddMetalType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Metal\ListMetalType.aspx.cs">
+      <DependentUpon>ListMetalType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Metal\ListMetalType.aspx.designer.cs">
+      <DependentUpon>ListMetalType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\AddOrderStatus.aspx.cs">
+      <DependentUpon>AddOrderStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\AddOrderStatus.aspx.designer.cs">
+      <DependentUpon>AddOrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\AddPaymentStatus.aspx.cs">
+      <DependentUpon>AddPaymentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\AddPaymentStatus.aspx.designer.cs">
+      <DependentUpon>AddPaymentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\AddPaymentVia.aspx.cs">
+      <DependentUpon>AddPaymentVia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\AddPaymentVia.aspx.designer.cs">
+      <DependentUpon>AddPaymentVia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\AddShipmentMethod.aspx.cs">
+      <DependentUpon>AddShipmentMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\AddShipmentMethod.aspx.designer.cs">
+      <DependentUpon>AddShipmentMethod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\AddTax.aspx.cs">
+      <DependentUpon>AddTax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\AddTax.aspx.designer.cs">
+      <DependentUpon>AddTax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\ListOrderStatus.aspx.cs">
+      <DependentUpon>ListOrderStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\ListOrderStatus.aspx.designer.cs">
+      <DependentUpon>ListOrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\ListPaymentStatus.aspx.cs">
+      <DependentUpon>ListPaymentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\ListPaymentStatus.aspx.designer.cs">
+      <DependentUpon>ListPaymentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\ListPaymentVia.aspx.cs">
+      <DependentUpon>ListPaymentVia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\ListPaymentVia.aspx.designer.cs">
+      <DependentUpon>ListPaymentVia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\ListShipmentMethod.aspx.cs">
+      <DependentUpon>ListShipmentMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\ListShipmentMethod.aspx.designer.cs">
+      <DependentUpon>ListShipmentMethod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Payment\ListTax.aspx.cs">
+      <DependentUpon>ListTax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Payment\ListTax.aspx.designer.cs">
+      <DependentUpon>ListTax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\ListProductAttribute.aspx.cs">
+      <DependentUpon>ListProductAttribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\ListProductAttribute.aspx.designer.cs">
+      <DependentUpon>ListProductAttribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\ListProductFilter.aspx.cs">
+      <DependentUpon>ListProductFilter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\ListProductFilter.aspx.designer.cs">
+      <DependentUpon>ListProductFilter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\ListRingSize.aspx.cs">
+      <DependentUpon>ListRingSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\ListRingSize.aspx.designer.cs">
+      <DependentUpon>ListRingSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\ListStoneCategorySettingType.aspx.cs">
+      <DependentUpon>ListStoneCategorySettingType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\ListStoneCategorySettingType.aspx.designer.cs">
+      <DependentUpon>ListStoneCategorySettingType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\ManageProductAttribute.aspx.cs">
+      <DependentUpon>ManageProductAttribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\ManageProductAttribute.aspx.designer.cs">
+      <DependentUpon>ManageProductAttribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Setting\StoneCategorySettingType.aspx.cs">
+      <DependentUpon>StoneCategorySettingType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Setting\StoneCategorySettingType.aspx.designer.cs">
+      <DependentUpon>StoneCategorySettingType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\CenterstoneImage.aspx.cs">
+      <DependentUpon>CenterstoneImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\CenterstoneImage.aspx.designer.cs">
+      <DependentUpon>CenterstoneImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\CenterStoneOverView.aspx.cs">
+      <DependentUpon>CenterStoneOverView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\CenterStoneOverView.aspx.designer.cs">
+      <DependentUpon>CenterStoneOverView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ListCenterStone.aspx.cs">
+      <DependentUpon>ListCenterStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ListCenterStone.aspx.designer.cs">
+      <DependentUpon>ListCenterStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ListSideStone.aspx.cs">
+      <DependentUpon>ListSideStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ListSideStone.aspx.designer.cs">
+      <DependentUpon>ListSideStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneCategory.aspx.cs">
+      <DependentUpon>ListStoneCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneCategory.aspx.designer.cs">
+      <DependentUpon>ListStoneCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneShape.aspx.cs">
+      <DependentUpon>ListStoneShape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneShape.aspx.designer.cs">
+      <DependentUpon>ListStoneShape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneSpecification.aspx.cs">
+      <DependentUpon>ListStoneSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ListStoneSpecification.aspx.designer.cs">
+      <DependentUpon>ListStoneSpecification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ManageCenterStone.aspx.cs">
+      <DependentUpon>ManageCenterStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ManageCenterStone.aspx.designer.cs">
+      <DependentUpon>ManageCenterStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ManageCenterStoneRapnet.aspx.cs">
+      <DependentUpon>ManageCenterStoneRapnet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ManageCenterStoneRapnet.aspx.designer.cs">
+      <DependentUpon>ManageCenterStoneRapnet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ManageSideStone.aspx.cs">
+      <DependentUpon>ManageSideStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ManageSideStone.aspx.designer.cs">
+      <DependentUpon>ManageSideStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\ManageStoneShape.aspx.cs">
+      <DependentUpon>ManageStoneShape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\ManageStoneShape.aspx.designer.cs">
+      <DependentUpon>ManageStoneShape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Stone\StoneSpecificationManagement.aspx.cs">
+      <DependentUpon>StoneSpecificationManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Stone\StoneSpecificationManagement.aspx.designer.cs">
+      <DependentUpon>StoneSpecificationManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\ListPromotionalcodeManagement.aspx.cs">
+      <DependentUpon>ListPromotionalcodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\ListPromotionalcodeManagement.aspx.designer.cs">
+      <DependentUpon>ListPromotionalcodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extras\ManageShipping.aspx.cs">
+      <DependentUpon>ManageShipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Extras\ManageShipping.aspx.designer.cs">
+      <DependentUpon>ManageShipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\OrderManagement.aspx.cs">
+      <DependentUpon>OrderManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\OrderManagement.aspx.designer.cs">
+      <DependentUpon>OrderManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order\PromotionalcodeManagement.aspx.cs">
+      <DependentUpon>PromotionalcodeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order\PromotionalcodeManagement.aspx.designer.cs">
+      <DependentUpon>PromotionalcodeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagenotfound.aspx.cs">
+      <DependentUpon>Pagenotfound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagenotfound.aspx.designer.cs">
+      <DependentUpon>Pagenotfound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductCenterStone.aspx.cs">
+      <DependentUpon>ProductCenterStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductCenterStone.aspx.designer.cs">
+      <DependentUpon>ProductCenterStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductChain.aspx.cs">
+      <DependentUpon>ProductChain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductChain.aspx.designer.cs">
+      <DependentUpon>ProductChain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductExport.aspx.cs">
+      <DependentUpon>ProductExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductExport.aspx.designer.cs">
+      <DependentUpon>ProductExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductImage.aspx.cs">
+      <DependentUpon>ProductImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductImage.aspx.designer.cs">
+      <DependentUpon>ProductImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductMetal.aspx.cs">
+      <DependentUpon>ProductMetal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductMetal.aspx.designer.cs">
+      <DependentUpon>ProductMetal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductPrice.aspx.cs">
+      <DependentUpon>ProductPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductPrice.aspx.designer.cs">
+      <DependentUpon>ProductPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductRing.aspx.cs">
+      <DependentUpon>ProductRing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductRing.aspx.designer.cs">
+      <DependentUpon>ProductRing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductSetting.aspx.cs">
+      <DependentUpon>ProductSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductSetting.aspx.designer.cs">
+      <DependentUpon>ProductSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductSideStone.aspx.cs">
+      <DependentUpon>ProductSideStone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductSideStone.aspx.designer.cs">
+      <DependentUpon>ProductSideStone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductVideo.aspx.cs">
+      <DependentUpon>ProductVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductVideo.aspx.designer.cs">
+      <DependentUpon>ProductVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductVideoPlayer.aspx.cs">
+      <DependentUpon>ProductVideoPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductVideoPlayer.aspx.designer.cs">
+      <DependentUpon>ProductVideoPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\AdminServices.asmx.cs">
+      <DependentUpon>AdminServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteSetting\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSetting\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteSetting\ListAdminUser.aspx.cs">
+      <DependentUpon>ListAdminUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSetting\ListAdminUser.aspx.designer.cs">
+      <DependentUpon>ListAdminUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteSetting\LoggedUserDetails.aspx.cs">
+      <DependentUpon>LoggedUserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSetting\LoggedUserDetails.aspx.designer.cs">
+      <DependentUpon>LoggedUserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteSetting\ManageAdminUsers.aspx.cs">
+      <DependentUpon>ManageAdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteSetting\ManageAdminUsers.aspx.designer.cs">
+      <DependentUpon>ManageAdminUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\adminusercontrol.ascx.cs">
+      <DependentUpon>adminusercontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\adminusercontrol.ascx.designer.cs">
+      <DependentUpon>adminusercontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\UserMenuControl.ascx.cs">
+      <DependentUpon>UserMenuControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\UserMenuControl.ascx.designer.cs">
+      <DependentUpon>UserMenuControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.rapaport.technet\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="upload\files\" />
+    <Folder Include="upload\images\category\" />
+    <Folder Include="upload\images\metal_type\" />
+    <Folder Include="upload\images\news\" />
+    <Folder Include="upload\images\proposalstory\" />
+    <Folder Include="upload\images\stone\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handler\ExtraFileUploader.ashx" />
+    <Content Include="Handler\ImageUploadHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EJewel.Controller\EJewel.Controller.csproj">
+      <Project>{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}</Project>
+      <Name>EJewel.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EJewel.Model\EJewel.Model.csproj">
+      <Project>{618072C3-F40B-4CB9-A214-A954E82806FB}</Project>
+      <Name>EJewel.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.rapaport.technet\</RelPath>
+      <UpdateFromURL>https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EJewel_AdminView_com_rapaport_technet_RapNetInventoryLink</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\com.rapaport.technet\RapNetInventoryLink.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1689</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

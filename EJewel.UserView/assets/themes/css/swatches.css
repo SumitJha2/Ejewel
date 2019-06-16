@@ -1,0 +1,21 @@
+
+i[class^='swatch-stone-']
+{   display:inline-block; 
+    height: 36px;
+    width: 36px;
+    text-indent:-999999px;
+  
+}
+i[class^='swatch-stone']{ background:url('../img/swatch.png') no-repeat; }
+
+    
+.swatch-stone-1 {background-position: 0 -720px;}
+.swatch-stone-2 {background-position: 0 -620px;}
+.swatch-stone-3 {background-position: 0 -520px;}
+.swatch-stone-4 {background-position: 0 -420px;}
+.swatch-stone-5 {background-position: 0 -320px;}
+.swatch-stone-6 {background-position: 0 -220px;}
+.swatch-stone-7 {background-position: 0 -120px;}
+.swatch-stone-8 {background-position: 0 -720px;}
+.swatch-stone-9 {background-position: 0 -720px;}
+.swatch-stone-10 {background-position: 0 -720px;}

@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C28F2562-129A-4547-A1FA-7C4A46806EE1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EJewel.UserView</RootNamespace>
+    <AssemblyName>EJewel.UserView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EJewel.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EJewel.DAL\bin\Debug\EJewel.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\controls\accordian.js" />
+    <Content Include="assets\controls\centerstone_fillter.js" />
+    <Content Include="assets\controls\dom.js" />
+    <Content Include="assets\controls\fdtable.js" />
+    <Content Include="assets\controls\jquery.lazyload.js" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="assets\controls\jquery_ui\css\smoothness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\jquery-ui-1.10.2.custom.css" />
+    <Content Include="assets\controls\jquery_ui\css\ui-lightness\jquery-ui-1.10.2.custom.min.css" />
+    <Content Include="assets\controls\jquery_ui\js\jquery-1.9.1.js" />
+    <Content Include="assets\controls\jquery_ui\js\jquery-ui-1.10.2.custom.js" />
+    <Content Include="assets\controls\jquery_ui\js\jquery-ui-1.10.2.custom.min.js" />
+    <Content Include="assets\controls\loose_diamonds.js" />
+    <Content Include="assets\controls\loose_diamond_overview_script.js" />
+    <Content Include="assets\controls\pagination.js" />
+    <Content Include="assets\controls\productfdtable.js" />
+    <Content Include="assets\Diamond\01.png" />
+    <Content Include="assets\Diamond\02.png" />
+    <Content Include="assets\Diamond\03.png" />
+    <Content Include="assets\Diamond\04.png" />
+    <Content Include="assets\Diamond\05.png" />
+    <Content Include="assets\Diamond\06.png" />
+    <Content Include="assets\Diamond\07.png" />
+    <Content Include="assets\Diamond\08.png" />
+    <Content Include="assets\Diamond\09.png" />
+    <Content Include="assets\Diamond\10.png" />
+    <Content Include="assets\Diamond\a.png" />
+    <Content Include="assets\Diamond\asscher.png" />
+    <Content Include="assets\Diamond\band.PNG" />
+    <Content Include="assets\Diamond\braceletsicon.png" />
+    <Content Include="assets\Diamond\cushion.png" />
+    <Content Include="assets\Diamond\drop.png" />
+    <Content Include="assets\Diamond\earring02.PNG" />
+    <Content Include="assets\Diamond\earringicon.png" />
+    <Content Include="assets\Diamond\Earrings.png" />
+    <Content Include="assets\Diamond\Earrings_Dangle.png" />
+    <Content Include="assets\Diamond\Earrings_Drop.png" />
+    <Content Include="assets\Diamond\emerald.png" />
+    <Content Include="assets\Diamond\Eternity_Band.png" />
+    <Content Include="assets\Diamond\Fancy.png" />
+    <Content Include="assets\Diamond\Halo_Ring.png" />
+    <Content Include="assets\Diamond\heart.png" />
+    <Content Include="assets\Diamond\Heart_Pendants.png" />
+    <Content Include="assets\Diamond\hoop.png" />
+    <Content Include="assets\Diamond\marquse.png" />
+    <Content Include="assets\Diamond\Mens_Ring.png" />
+    <Content Include="assets\Diamond\Mens_Wedding_Band.png" />
+    <Content Include="assets\Diamond\ovel.png" />
+    <Content Include="assets\Diamond\pandent.PNG" />
+    <Content Include="assets\Diamond\pear.png" />
+    <Content Include="assets\Diamond\pendanticon.png" />
+    <Content Include="assets\Diamond\pendent-icon.png" />
+    <Content Include="assets\Diamond\princess.png" />
+    <Content Include="assets\Diamond\radiant.png" />
+    <Content Include="assets\Diamond\Religious.png" />
+    <Content Include="assets\Diamond\ring-icon.png" />
+    <Content Include="assets\Diamond\ring.PNG" />
+    <Content Include="assets\Diamond\ring02.PNG" />
+    <Content Include="assets\Diamond\RingIcon.png" />
+    <Content Include="assets\Diamond\ringicons.png" />
+    <Content Include="assets\Diamond\ringlogo.png" />
+    <Content Include="assets\Diamond\Ring_With_Side_Stone.png" />
+    <Content Include="assets\Diamond\round.png" />
+    <Content Include="assets\Diamond\slide-diamond.png" />
+    <Content Include="assets\Diamond\smallshape\asscher.png" />
+    <Content Include="assets\Diamond\smallshape\cushion.png" />
+    <Content Include="assets\Diamond\smallshape\emerald.png" />
+    <Content Include="assets\Diamond\smallshape\heart.png" />
+    <Content Include="assets\Diamond\smallshape\marquse.png" />
+    <Content Include="assets\Diamond\smallshape\ovel.png" />
+    <Content Include="assets\Diamond\smallshape\pear.png" />
+    <Content Include="assets\Diamond\smallshape\princess.png" />
+    <Content Include="assets\Diamond\smallshape\radiant.png" />
+    <Content Include="assets\Diamond\smallshape\round.png" />
+    <Content Include="assets\Diamond\Solitaire_Pendants.png" />
+    <Content Include="assets\Diamond\Solitaire_ring.png" />
+    <Content Include="assets\Diamond\Studs.png" />
+    <Content Include="assets\Diamond\Three_Stone_Ring.png" />
+    <Content Include="assets\Diamond\Vintage_Ring.png" />
+    <Content Include="assets\Diamond\Wedding_Band.png" />
+    <Content Include="assets\Diamond\Wedding_Sets.png" />
+    <Content Include="assets\themes\css\bootstrap.css" />
+    <Content Include="assets\themes\css\bootstrap.min.css" />
+    <Content Include="assets\themes\css\extra\loose_diamond.css" />
+    <Content Include="assets\themes\css\pagination.css" />
+    <Content Include="assets\themes\css\extra\swatch_stone.css" />
+    <Content Include="assets\themes\css\ie8.css" />
+    <Content Include="assets\themes\css\menu.css" />
+    <Content Include="assets\themes\css\nouislider.css" />
+    <Content Include="assets\themes\css\style.css" />
+    <Content Include="assets\themes\extra\amazoncom.jpg" />
+    <Content Include="assets\themes\extra\amazoncom.png" />
+    <Content Include="assets\themes\extra\b1.png" />
+    <Content Include="assets\themes\extra\b2.png" />
+    <Content Include="assets\themes\extra\b3.png" />
+    <Content Include="assets\themes\extra\b4.png" />
+    <Content Include="assets\themes\extra\b400.png" />
+    <Content Include="assets\themes\extra\buycom.jpg" />
+    <Content Include="assets\themes\extra\buycom.png" />
+    <Content Include="assets\themes\extra\chat-icon.png" />
+    <Content Include="assets\themes\extra\chat_box.PNG" />
+    <Content Include="assets\themes\extra\diamond.jpg" />
+    <Content Include="assets\themes\extra\drop.png" />
+    <Content Include="assets\themes\extra\ebay.jpg" />
+    <Content Include="assets\themes\extra\ebay.png" />
+    <Content Include="assets\themes\extra\email.png" />
+    <Content Include="assets\themes\extra\gia.jpg" />
+    <Content Include="assets\themes\extra\gia.PNG" />
+    <Content Include="assets\themes\extra\ivouch.jpg" />
+    <Content Include="assets\themes\extra\ivouch.png" />
+    <Content Include="assets\themes\extra\jvc.jpg" />
+    <Content Include="assets\themes\extra\jvc.png" />
+    <Content Include="assets\themes\extra\paypal.jpg" />
+    <Content Include="assets\themes\extra\paypal.png" />
+    <Content Include="assets\themes\extra\Telephone.png" />
+    <Content Include="assets\themes\extra\ups.jpg" />
+    <Content Include="assets\themes\extra\ups.png" />
+    <Content Include="assets\themes\font\Apostrophic Labs License.txt" />
+    <Content Include="assets\themes\font\Raleway OFL Font License.txt" />
+    <Content Include="assets\themes\img\bag-big%402x.png" />
+    <Content Include="assets\themes\img\bag-big.png" />
+    <Content Include="assets\themes\img\bag-mid.png" />
+    <Content Include="assets\themes\img\chat.png" />
+    <Content Include="assets\themes\img\check-off.png" />
+    <Content Include="assets\themes\img\check-on.png" />
+    <Content Include="assets\themes\img\de-flag.gif" />
+    <Content Include="assets\themes\img\facebook.png" />
+    <Content Include="assets\themes\img\footer-logo.png" />
+    <Content Include="assets\themes\img\fr-flag.gif" />
+    <Content Include="assets\themes\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\themes\img\glyphicons-halflings.png" />
+    <Content Include="assets\themes\img\google-plus.png" />
+    <Content Include="assets\themes\img\icon\fd_list.png" />
+    <Content Include="assets\themes\img\icon\icon_email.png" />
+    <Content Include="assets\themes\img\icon\icon_heart.png" />
+    <Content Include="assets\themes\img\icon\icon_phone.png" />
+    <Content Include="assets\themes\img\icon\loading_220.gif" />
+    <Content Include="assets\themes\img\icon\close_grey_16.png" />
+    <Content Include="assets\themes\img\icon\delete_16.png" />
+    <Content Include="assets\themes\img\icon\diamonds\diamond_16.png" />
+    <Content Include="assets\themes\img\icon\diamonds\diamond_24.png" />
+    <Content Include="assets\themes\img\icon\loading_55.gif" />
+    <Content Include="assets\themes\img\icon\mail.png" />
+    <Content Include="assets\themes\img\icon\refresh_24.png" />
+    <Content Include="assets\themes\img\icon\shop_cart.png" />
+    <Content Include="assets\themes\img\icon\Telephone.png" />
+    <Content Include="assets\themes\img\logo.png" />
+    <Content Include="assets\themes\img\loosediamonds\back.gif" />
+    <Content Include="assets\themes\img\loosediamonds\bar.gif" />
+    <Content Include="assets\themes\img\loosediamonds\left_slider.gif" />
+    <Content Include="assets\themes\img\loosediamonds\right_slider.gif" />
+    <Content Include="assets\themes\img\mail-icon.png" />
+    <Content Include="assets\themes\img\payment.png" />
+    <Content Include="assets\themes\img\pin-name.png" />
+    <Content Include="assets\themes\img\pin.png" />
+    <Content Include="assets\themes\img\product-add.png" />
+    <Content Include="assets\themes\img\product-facebook.png" />
+    <Content Include="assets\themes\img\product-gplus.png" />
+    <Content Include="assets\themes\img\product-print.png" />
+    <Content Include="assets\themes\img\radio-off.png" />
+    <Content Include="assets\themes\img\radio-on.png" />
+    <Content Include="assets\themes\img\search.png" />
+    <Content Include="assets\themes\img\shadow-separator.png" />
+    <Content Include="assets\themes\img\shopping-bag-white.png" />
+    <Content Include="assets\themes\img\shopping-bag.png" />
+    <Content Include="assets\themes\img\sprite\1diamond_sprite.png" />
+    <Content Include="assets\themes\img\sprite\1metal.png" />
+    <Content Include="assets\themes\img\sprite\2metal.png" />
+    <Content Include="assets\themes\img\sprite\sprite_center_stone.png" />
+    <Content Include="assets\themes\img\sprite\side_stone.png" />
+    <Content Include="assets\themes\img\sprite\swatch_center_stone.png" />
+    <Content Include="assets\themes\img\sprite\diamond_shapes_extra_large.png" />
+    <Content Include="assets\themes\img\sprite\diamond_sprite.png" />
+    <Content Include="assets\themes\img\sprite\metal.png" />
+    <Content Include="assets\themes\img\sprite\next-prev.png" />
+    <Content Include="assets\themes\img\sprite\swatch_center_stone_small.png" />
+    <Content Include="assets\themes\img\sprite\sprite_center_stone_.png" />
+    <Content Include="assets\themes\img\sprite\123swatches-metal.png" />
+    <Content Include="assets\themes\img\sprite\swatches_metal.png" />
+    <Content Include="assets\themes\img\sprite\swatches.png" />
+    <Content Include="assets\themes\img\star-off.png" />
+    <Content Include="assets\themes\img\star-on.png" />
+    <Content Include="assets\themes\img\tumblr.png" />
+    <Content Include="assets\themes\img\twitter-logo-small.png" />
+    <Content Include="assets\themes\img\twitter-logo.png" />
+    <Content Include="assets\themes\img\twitter.png" />
+    <Content Include="assets\themes\img\uk-flag.png" />
+    <Content Include="assets\themes\img\us-flag.png" />
+    <Content Include="assets\themes\img\us_flag.gif" />
+    <Content Include="assets\themes\img\vimeo.png" />
+    <Content Include="assets\themes\img\wishlist.png" />
+    <Content Include="assets\themes\img\youtube.png" />
+    <Content Include="assets\themes\js\extra\loose_diamond.js" />
+    <Content Include="assets\themes\js\header.js" />
+    <Content Include="assets\themes\js\hover.intent.js" />
+    <Content Include="assets\themes\js\jquery-1.9.1.min.js" />
+    <Content Include="assets\themes\js\jquery.carouFredSel-6.2.1-packed.js" />
+    <Content Include="assets\themes\js\jquery.cycle.all.js" />
+    <Content Include="assets\themes\js\jquery.easing.min.js" />
+    <Content Include="assets\themes\js\jquery.min.js" />
+    <Content Include="assets\themes\js\jquery.nouislider.min.js" />
+    <Content Include="assets\themes\js\jquery.zoom-min.js" />
+    <Content Include="assets\themes\js\map.js" />
+    <Content Include="assets\themes\js\products.js" />
+    <Content Include="assets\themes\js\range-slider.js" />
+    <Content Include="assets\themes\js\respond.min.js" />
+    <Content Include="assets\themes\js\slider.js" />
+    <Content Include="assets\themes\js\tabcontent.js" />
+    <Content Include="assets\themes\js\utils.js" />
+    <Content Include="assets\themes\media\01.jpg" />
+    <Content Include="assets\themes\media\02.jpg" />
+    <Content Include="assets\themes\media\03.jpg" />
+    <Content Include="assets\themes\media\04.jpg" />
+    <Content Include="assets\themes\media\104.jpg" />
+    <Content Include="assets\themes\media\1.jpg" />
+    <Content Include="assets\themes\media\2.jpg" />
+    <Content Include="assets\themes\media\20.jpg" />
+    <Content Include="assets\themes\media\202.jpg" />
+    <Content Include="assets\themes\media\222.jpg" />
+    <Content Include="assets\themes\media\3.jpg" />
+    <Content Include="assets\themes\media\30.JPG" />
+    <Content Include="assets\themes\media\303.jpg" />
+    <Content Include="assets\themes\media\3333.jpg" />
+    <Content Include="assets\themes\media\author.png" />
+    <Content Include="assets\themes\media\banner.png" />
+    <Content Include="assets\themes\media\blog-1.png" />
+    <Content Include="assets\themes\media\blog-2.png" />
+    <Content Include="assets\themes\media\blog-3.png" />
+    <Content Include="assets\themes\media\blog-4.png" />
+    <Content Include="assets\themes\media\blog-5.png" />
+    <Content Include="assets\themes\media\blog-6.png" />
+    <Content Include="assets\themes\media\blog-single.png" />
+    <Content Include="assets\themes\media\brand1.png" />
+    <Content Include="assets\themes\media\category.jpg" />
+    <Content Include="assets\themes\media\drop-down.png" />
+    <Content Include="assets\themes\media\main-category.jpg" />
+    <Content Include="assets\themes\media\mid-thumb.png" />
+    <Content Include="assets\themes\media\preview.jpg" />
+    <Content Include="assets\themes\media\product-big.jpg" />
+    <Content Include="assets\themes\media\product-image-1.png" />
+    <Content Include="assets\themes\media\product-image-2.png" />
+    <Content Include="assets\themes\media\product-image-3.png" />
+    <Content Include="assets\themes\media\product-image-4.png" />
+    <Content Include="assets\themes\media\product-small-1.png" />
+    <Content Include="assets\themes\media\product-small-2.pg.png" />
+    <Content Include="assets\themes\media\product-small-2.png" />
+    <Content Include="assets\themes\media\product-small-3.png" />
+    <Content Include="assets\themes\media\product-small-4.png" />
+    <Content Include="assets\themes\media\product-zoom.jpg" />
+    <Content Include="assets\themes\media\product.jpg" />
+    <Content Include="assets\themes\media\slider1.jpg" />
+    <Content Include="assets\themes\media\slider2.jpg" />
+    <Content Include="assets\themes\media\slider3.jpg" />
+    <Content Include="assets\themes\media\tile1.png" />
+    <Content Include="assets\themes\media\tile2.png" />
+    <Content Include="assets\themes\media\tile3.png" />
+    <Content Include="assets\themes\media\tw-avatar-small.png" />
+    <Content Include="assets\themes\media\tw-avatar.png" />
+    <Content Include="assets\themes\tabs\tabbg.gif" />
+    <Content Include="assets\themes\tabs\tabcontent.css" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="controls\FooterControl.ascx" />
+    <Content Include="controls\LoginContainer.ascx" />
+    <Content Include="controls\LooseDiamondContent.ascx" />
+    <Content Include="controls\LooseDiamondFilter.ascx" />
+    <Content Include="controls\MenuControls.ascx" />
+    <Content Include="controls\ProductFilterCategory.ascx" />
+    <Content Include="controls\ProductFilterSubCategory.ascx" />
+    <Content Include="Custom-Design-Ring-Pop-Up.aspx" />
+    <Content Include="CustomerDetailsEditView.aspx" />
+    <Content Include="CustomRingDesign.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="GiftIdeas.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="LooseDiamondDetails.aspx" />
+    <Content Include="LooseDiamonds.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="OrderStatus.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="ProductCustomize.aspx" />
+    <Content Include="ProductReview.aspx" />
+    <Content Include="ProposalStory.aspx" />
+    <Content Include="QuickView.aspx" />
+    <Content Include="RegisterAccount.aspx" />
+    <Content Include="Services\Service.asmx" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="StaticContent\AboutUs.aspx" />
+    <Content Include="StaticContent\AffiliateProgram.aspx" />
+    <Content Include="StaticContent\Cities-A-K.aspx" />
+    <Content Include="StaticContent\Cities-L-Z.aspx" />
+    <Content Include="StaticContent\CustomerService.aspx" />
+    <Content Include="StaticContent\DiamondEducation.aspx" />
+    <Content Include="StaticContent\Faq.aspx" />
+    <Content Include="StaticContent\FindYourRingSize.aspx" />
+    <Content Include="StaticContent\GlossaryOfTerms.aspx" />
+    <Content Include="StaticContent\InternationalShipping.aspx" />
+    <Content Include="StaticContent\JeweleryEducation.aspx" />
+    <Content Include="StaticContent\MetalEducation.aspx" />
+    <Content Include="StaticContent\PaymentMethods.aspx" />
+    <Content Include="StaticContent\PrivacyPolicy.aspx" />
+    <Content Include="StaticContent\ReturnPolicy.aspx" />
+    <Content Include="StaticContent\SecureShopping.aspx" />
+    <Content Include="StaticContent\ShippingPolicy.aspx" />
+    <Content Include="StaticContent\SiteMap.aspx" />
+    <Content Include="StaticContent\TermsofUse.aspx" />
+    <Content Include="StaticContent\Testimonials.aspx" />
+    <Content Include="StaticContent\Warranty.aspx" />
+    <Content Include="StaticContent\WhyBuyFromUs.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="upload\diamond\shape\round-shape-screech-large1.png" />
+    <Content Include="upload\diamond\shape\round-shape-screech-large2.png" />
+    <Content Include="upload\diamond\shape\round-shape-screech-small1.png" />
+    <Content Include="upload\diamond\shape\round-shape-screech-small2.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\FooterControl.ascx.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\FooterControl.ascx.designer.cs">
+      <DependentUpon>FooterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LoginContainer.ascx.cs">
+      <DependentUpon>LoginContainer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LoginContainer.ascx.designer.cs">
+      <DependentUpon>LoginContainer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LooseDiamondContent.ascx.cs">
+      <DependentUpon>LooseDiamondContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LooseDiamondContent.ascx.designer.cs">
+      <DependentUpon>LooseDiamondContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LooseDiamondFilter.ascx.cs">
+      <DependentUpon>LooseDiamondFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LooseDiamondFilter.ascx.designer.cs">
+      <DependentUpon>LooseDiamondFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MenuControls.ascx.cs">
+      <DependentUpon>MenuControls.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\MenuControls.ascx.designer.cs">
+      <DependentUpon>MenuControls.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ProductFilterCategory.ascx.cs">
+      <DependentUpon>ProductFilterCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ProductFilterCategory.ascx.designer.cs">
+      <DependentUpon>ProductFilterCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ProductFilterSubCategory.ascx.cs">
+      <DependentUpon>ProductFilterSubCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ProductFilterSubCategory.ascx.designer.cs">
+      <DependentUpon>ProductFilterSubCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom-Design-Ring-Pop-Up.aspx.cs">
+      <DependentUpon>Custom-Design-Ring-Pop-Up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom-Design-Ring-Pop-Up.aspx.designer.cs">
+      <DependentUpon>Custom-Design-Ring-Pop-Up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetailsEditView.aspx.cs">
+      <DependentUpon>CustomerDetailsEditView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDetailsEditView.aspx.designer.cs">
+      <DependentUpon>CustomerDetailsEditView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomRingDesign.aspx.cs">
+      <DependentUpon>CustomRingDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomRingDesign.aspx.designer.cs">
+      <DependentUpon>CustomRingDesign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiftIdeas.aspx.cs">
+      <DependentUpon>GiftIdeas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiftIdeas.aspx.designer.cs">
+      <DependentUpon>GiftIdeas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ImageManager.ashx.cs">
+      <DependentUpon>ImageManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ImageResizer.ashx.cs">
+      <DependentUpon>ImageResizer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\LooseDiamondDrawing.ashx.cs">
+      <DependentUpon>LooseDiamondDrawing.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LooseDiamondDetails.aspx.cs">
+      <DependentUpon>LooseDiamondDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooseDiamondDetails.aspx.designer.cs">
+      <DependentUpon>LooseDiamondDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LooseDiamonds.aspx.cs">
+      <DependentUpon>LooseDiamonds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LooseDiamonds.aspx.designer.cs">
+      <DependentUpon>LooseDiamonds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatus.aspx.cs">
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderStatus.aspx.designer.cs">
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCustomize.aspx.cs">
+      <DependentUpon>ProductCustomize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductCustomize.aspx.designer.cs">
+      <DependentUpon>ProductCustomize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductReview.aspx.cs">
+      <DependentUpon>ProductReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductReview.aspx.designer.cs">
+      <DependentUpon>ProductReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProposalStory.aspx.cs">
+      <DependentUpon>ProposalStory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProposalStory.aspx.designer.cs">
+      <DependentUpon>ProposalStory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuickView.aspx.cs">
+      <DependentUpon>QuickView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuickView.aspx.designer.cs">
+      <DependentUpon>QuickView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAccount.aspx.cs">
+      <DependentUpon>RegisterAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterAccount.aspx.designer.cs">
+      <DependentUpon>RegisterAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Service.asmx.cs">
+      <DependentUpon>Service.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\AffiliateProgram.aspx.cs">
+      <DependentUpon>AffiliateProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\AffiliateProgram.aspx.designer.cs">
+      <DependentUpon>AffiliateProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\Cities-A-K.aspx.cs">
+      <DependentUpon>Cities-A-K.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\Cities-A-K.aspx.designer.cs">
+      <DependentUpon>Cities-A-K.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\Cities-L-Z.aspx.cs">
+      <DependentUpon>Cities-L-Z.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\Cities-L-Z.aspx.designer.cs">
+      <DependentUpon>Cities-L-Z.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\CustomerService.aspx.cs">
+      <DependentUpon>CustomerService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\CustomerService.aspx.designer.cs">
+      <DependentUpon>CustomerService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\DiamondEducation.aspx.cs">
+      <DependentUpon>DiamondEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\DiamondEducation.aspx.designer.cs">
+      <DependentUpon>DiamondEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\FindYourRingSize.aspx.cs">
+      <DependentUpon>FindYourRingSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\FindYourRingSize.aspx.designer.cs">
+      <DependentUpon>FindYourRingSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\GlossaryOfTerms.aspx.cs">
+      <DependentUpon>GlossaryOfTerms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\GlossaryOfTerms.aspx.designer.cs">
+      <DependentUpon>GlossaryOfTerms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\InternationalShipping.aspx.cs">
+      <DependentUpon>InternationalShipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\InternationalShipping.aspx.designer.cs">
+      <DependentUpon>InternationalShipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\JeweleryEducation.aspx.cs">
+      <DependentUpon>JeweleryEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\JeweleryEducation.aspx.designer.cs">
+      <DependentUpon>JeweleryEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\MetalEducation.aspx.cs">
+      <DependentUpon>MetalEducation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\MetalEducation.aspx.designer.cs">
+      <DependentUpon>MetalEducation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\PaymentMethods.aspx.cs">
+      <DependentUpon>PaymentMethods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\PaymentMethods.aspx.designer.cs">
+      <DependentUpon>PaymentMethods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\ReturnPolicy.aspx.cs">
+      <DependentUpon>ReturnPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\ReturnPolicy.aspx.designer.cs">
+      <DependentUpon>ReturnPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\SecureShopping.aspx.cs">
+      <DependentUpon>SecureShopping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\SecureShopping.aspx.designer.cs">
+      <DependentUpon>SecureShopping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\ShippingPolicy.aspx.cs">
+      <DependentUpon>ShippingPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\ShippingPolicy.aspx.designer.cs">
+      <DependentUpon>ShippingPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\TermsofUse.aspx.cs">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\TermsofUse.aspx.designer.cs">
+      <DependentUpon>TermsofUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\Testimonials.aspx.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\Testimonials.aspx.designer.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\Warranty.aspx.cs">
+      <DependentUpon>Warranty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\Warranty.aspx.designer.cs">
+      <DependentUpon>Warranty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaticContent\WhyBuyFromUs.aspx.cs">
+      <DependentUpon>WhyBuyFromUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaticContent\WhyBuyFromUs.aspx.designer.cs">
+      <DependentUpon>WhyBuyFromUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Customize\" />
+    <Folder Include="upload\customdesign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handler\ImageResizer.ashx" />
+    <Content Include="Handler\LooseDiamondDrawing.ashx" />
+    <Content Include="Handler\ImageManager.ashx" />
+    <None Include="assets\themes\font\LANENAR_-webfont.eot" />
+    <None Include="assets\themes\font\LANENAR_-webfont.svg" />
+    <None Include="assets\themes\font\LANENAR_-webfont.ttf" />
+    <None Include="assets\themes\font\LANENAR_-webfont.woff" />
+    <None Include="assets\themes\font\raleway_thin-webfont.eot" />
+    <None Include="assets\themes\font\raleway_thin-webfont.svg" />
+    <None Include="assets\themes\font\raleway_thin-webfont.ttf" />
+    <None Include="assets\themes\font\raleway_thin-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EJewel.Controller\EJewel.Controller.csproj">
+      <Project>{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}</Project>
+      <Name>EJewel.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EJewel.Model\EJewel.Model.csproj">
+      <Project>{618072C3-F40B-4CB9-A214-A954E82806FB}</Project>
+      <Name>EJewel.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1686</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+.small_error
+{
+	color:#F00;
+}
+.small_success
+{
+	color:#0C0;
+}
+.medium_error
+{
+	color:#F00;
+	font-size:14px;
+}

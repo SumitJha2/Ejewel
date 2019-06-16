@@ -1,0 +1,26 @@
+
+/*******************css for search buttons - Pravin ***********************/
+
+
+
+#left-side, #right-side{outline:0px solid #ccc;}
+
+#search-panel{font-size:8pt; box-sizing:border-box;}
+#search-panel span{line-height:32px;}
+
+.shape-group img{width:16px; height:16px;}
+
+.shape-group .btn{ margin:1px; border-right:0px solid #ccc;}
+.shape-group .btn:last-child{border-right:1px solid #ccc;}
+
+.shape-group .active{
+	/*box-shadow: inset 0 0px 4px rgba(0,0,0,.15), 0 10px 2px rgba(0,0,0,.05);
+	background-color:#ff6460;*/
+	}
+
+.color-group{}	
+.color-group .btn {font-size:8pt; padding:4px 22px;}
+.clarity-group .btn {font-size:8pt; padding:4px 17px;}
+.cut-group .btn {font-size:8pt; padding:4px 17px;}
+
+.shape-group,.color-group,.clarity-group, .cut-group {margin-bottom:5px;}

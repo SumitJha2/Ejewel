@@ -1,0 +1,35 @@
+﻿/*
+Partha Ranjan Nayak
+@ 14-03-13
+This css used for more design and colorful in application
+*/
+/*message overlay*/
+#message_popup {
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:30px;
+	width:100%;
+	font-size:20px;
+}
+.message_success
+{
+    color:#7fce6d;
+}
+.message_error
+{
+    color:#ea8f85;
+}
+.message_warning
+{
+    color:#ead685;
+}
+.message_loading
+{
+   color:#000;
+}
+* html #message_popup { /* ie6 hack */
+     position: absolute;
+     height: 30px;
+}

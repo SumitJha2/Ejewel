@@ -1,0 +1,2048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ejewelModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EJewelEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_GetStoneCategory" />
+    <FunctionImport Name="SP_GetStoneClarity" />
+    <FunctionImport Name="GetCustomerListByCustomerID" ReturnType="Collection(ejewelModel.GetCustomerListByCustomerID_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetCustomerDetailsByCustomerID" ReturnType="Collection(ejewelModel.GetCustomerDetailsByCustomerID_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="ej_AttributeTitle" EntityType="ejewelModel.ej_AttributeTitle" />
+    <EntitySet Name="ej_BestSelling" EntityType="ejewelModel.ej_BestSelling" />
+    <EntitySet Name="ej_CenterStone" EntityType="ejewelModel.ej_CenterStone" />
+    <EntitySet Name="ej_CenterStoneImage" EntityType="ejewelModel.ej_CenterStoneImage" />
+    <EntitySet Name="ej_CenterStoneRapnet" EntityType="ejewelModel.ej_CenterStoneRapnet" />
+    <EntitySet Name="ej_CertificateCulet" EntityType="ejewelModel.ej_CertificateCulet" />
+    <EntitySet Name="ej_CertificateFlouresence" EntityType="ejewelModel.ej_CertificateFlouresence" />
+    <EntitySet Name="ej_CertificateGridle" EntityType="ejewelModel.ej_CertificateGridle" />
+    <EntitySet Name="ej_CertificatePolish" EntityType="ejewelModel.ej_CertificatePolish" />
+    <EntitySet Name="ej_CertificateSymmetry" EntityType="ejewelModel.ej_CertificateSymmetry" />
+    <EntitySet Name="ej_CertificationLab" EntityType="ejewelModel.ej_CertificationLab" />
+    <EntitySet Name="ej_ChainClasp" EntityType="ejewelModel.ej_ChainClasp" />
+    <EntitySet Name="ej_ChainLength" EntityType="ejewelModel.ej_ChainLength" />
+    <EntitySet Name="ej_ChainStyle" EntityType="ejewelModel.ej_ChainStyle" />
+    <EntitySet Name="ej_City" EntityType="ejewelModel.ej_City" />
+    <EntitySet Name="ej_ContactDetails" EntityType="ejewelModel.ej_ContactDetails" />
+    <EntitySet Name="ej_Country" EntityType="ejewelModel.ej_Country" />
+    <EntitySet Name="ej_Currency" EntityType="ejewelModel.ej_Currency" />
+    <EntitySet Name="ej_CustomDesign_RingPopUp" EntityType="ejewelModel.ej_CustomDesign_RingPopUp" />
+    <EntitySet Name="ej_Customer_Account" EntityType="ejewelModel.ej_Customer_Account" />
+    <EntitySet Name="ej_Customer_Account_Details" EntityType="ejewelModel.ej_Customer_Account_Details" />
+    <EntitySet Name="ej_Customer_Order" EntityType="ejewelModel.ej_Customer_Order" />
+    <EntitySet Name="ej_Customer_Order_Billing_Details" EntityType="ejewelModel.ej_Customer_Order_Billing_Details" />
+    <EntitySet Name="ej_Customer_Order_Shipping_Details" EntityType="ejewelModel.ej_Customer_Order_Shipping_Details" />
+    <EntitySet Name="ej_DiscountCoupon" EntityType="ejewelModel.ej_DiscountCoupon" />
+    <EntitySet Name="ej_EngravingFont" EntityType="ejewelModel.ej_EngravingFont" />
+    <EntitySet Name="ej_EnquiryDetails" EntityType="ejewelModel.ej_EnquiryDetails" />
+    <EntitySet Name="ej_ErrorLog" EntityType="ejewelModel.ej_ErrorLog" />
+    <EntitySet Name="ej_LengthSizeMaster" EntityType="ejewelModel.ej_LengthSizeMaster" />
+    <EntitySet Name="ej_LoggedCustomer" EntityType="ejewelModel.ej_LoggedCustomer" />
+    <EntitySet Name="ej_LoggedUser" EntityType="ejewelModel.ej_LoggedUser" />
+    <EntitySet Name="ej_LooseDiamondShape" EntityType="ejewelModel.ej_LooseDiamondShape" />
+    <EntitySet Name="ej_MetalNameMaster" EntityType="ejewelModel.ej_MetalNameMaster" />
+    <EntitySet Name="ej_MetalTypeMaster" EntityType="ejewelModel.ej_MetalTypeMaster" />
+    <EntitySet Name="ej_MetalWeightMaster" EntityType="ejewelModel.ej_MetalWeightMaster" />
+    <EntitySet Name="ej_MultiStore" EntityType="ejewelModel.ej_MultiStore" />
+    <EntitySet Name="ej_MultiStoreCategory" EntityType="ejewelModel.ej_MultiStoreCategory" />
+    <EntitySet Name="ej_MultiStoreProduct" EntityType="ejewelModel.ej_MultiStoreProduct" />
+    <EntitySet Name="ej_NewProduct" EntityType="ejewelModel.ej_NewProduct" />
+    <EntitySet Name="ej_News" EntityType="ejewelModel.ej_News" />
+    <EntitySet Name="ej_NewsCategory" EntityType="ejewelModel.ej_NewsCategory" />
+    <EntitySet Name="ej_Order" EntityType="ejewelModel.ej_Order" />
+    <EntitySet Name="ej_OrderStatus" EntityType="ejewelModel.ej_OrderStatus" />
+    <EntitySet Name="ej_PaymentStatus" EntityType="ejewelModel.ej_PaymentStatus" />
+    <EntitySet Name="ej_PaymentVia" EntityType="ejewelModel.ej_PaymentVia" />
+    <EntitySet Name="ej_PrimaryCategory" EntityType="ejewelModel.ej_PrimaryCategory" />
+    <EntitySet Name="ej_Product" EntityType="ejewelModel.ej_Product" />
+    <EntitySet Name="ej_ProductAttribute" EntityType="ejewelModel.ej_ProductAttribute" />
+    <EntitySet Name="ej_ProductCenterStone" EntityType="ejewelModel.ej_ProductCenterStone" />
+    <EntitySet Name="ej_ProductCenterStoneShape" EntityType="ejewelModel.ej_ProductCenterStoneShape" />
+    <EntitySet Name="ej_ProductChain" EntityType="ejewelModel.ej_ProductChain" />
+    <EntitySet Name="ej_ProductDiscount" EntityType="ejewelModel.ej_ProductDiscount" />
+    <EntitySet Name="ej_ProductFilter" EntityType="ejewelModel.ej_ProductFilter" />
+    <EntitySet Name="ej_ProductImage" EntityType="ejewelModel.ej_ProductImage" />
+    <EntitySet Name="ej_ProductMatchingBand" EntityType="ejewelModel.ej_ProductMatchingBand" />
+    <EntitySet Name="ej_ProductMatchingBandAvialableStoneType" EntityType="ejewelModel.ej_ProductMatchingBandAvialableStoneType" />
+    <EntitySet Name="ej_ProductMatchingBandRange" EntityType="ejewelModel.ej_ProductMatchingBandRange" />
+    <EntitySet Name="ej_ProductMatchingBandShape" EntityType="ejewelModel.ej_ProductMatchingBandShape" />
+    <EntitySet Name="ej_ProductMetalType" EntityType="ejewelModel.ej_ProductMetalType" />
+    <EntitySet Name="ej_ProductReview" EntityType="ejewelModel.ej_ProductReview" />
+    <EntitySet Name="ej_ProductSideStone" EntityType="ejewelModel.ej_ProductSideStone" />
+    <EntitySet Name="ej_ProductSideStoneAvialableStoneType" EntityType="ejewelModel.ej_ProductSideStoneAvialableStoneType" />
+    <EntitySet Name="ej_ProductSideStoneRange" EntityType="ejewelModel.ej_ProductSideStoneRange" />
+    <EntitySet Name="ej_ProductSideStoneShape" EntityType="ejewelModel.ej_ProductSideStoneShape" />
+    <EntitySet Name="ej_ProductVideo" EntityType="ejewelModel.ej_ProductVideo" />
+    <EntitySet Name="ej_PromocodeType" EntityType="ejewelModel.ej_PromocodeType" />
+    <EntitySet Name="ej_PromotionalcodeManagement" EntityType="ejewelModel.ej_PromotionalcodeManagement" />
+    <EntitySet Name="ej_ProposalStory" EntityType="ejewelModel.ej_ProposalStory" />
+    <EntitySet Name="ej_QueriesOnProduct" EntityType="ejewelModel.ej_QueriesOnProduct" />
+    <EntitySet Name="ej_RingSize" EntityType="ejewelModel.ej_RingSize" />
+    <EntitySet Name="ej_RingSizeMaster" EntityType="ejewelModel.ej_RingSizeMaster" />
+    <EntitySet Name="ej_SetterPrice" EntityType="ejewelModel.ej_SetterPrice" />
+    <EntitySet Name="ej_SettingPrice" EntityType="ejewelModel.ej_SettingPrice" />
+    <EntitySet Name="ej_SettingType" EntityType="ejewelModel.ej_SettingType" />
+    <EntitySet Name="ej_ShippingMaster" EntityType="ejewelModel.ej_ShippingMaster" />
+    <EntitySet Name="ej_ShippingMethod" EntityType="ejewelModel.ej_ShippingMethod" />
+    <EntitySet Name="ej_ShippingName" EntityType="ejewelModel.ej_ShippingName" />
+    <EntitySet Name="ej_ShippingType" EntityType="ejewelModel.ej_ShippingType" />
+    <EntitySet Name="ej_SideStone" EntityType="ejewelModel.ej_SideStone" />
+    <EntitySet Name="ej_State" EntityType="ejewelModel.ej_State" />
+    <EntitySet Name="ej_StoneCategory" EntityType="ejewelModel.ej_StoneCategory" />
+    <EntitySet Name="ej_StoneCategorySettingType" EntityType="ejewelModel.ej_StoneCategorySettingType" />
+    <EntitySet Name="ej_StoneCategoryType" EntityType="ejewelModel.ej_StoneCategoryType" />
+    <EntitySet Name="ej_StoneCertificate" EntityType="ejewelModel.ej_StoneCertificate" />
+    <EntitySet Name="ej_StoneClarity" EntityType="ejewelModel.ej_StoneClarity" />
+    <EntitySet Name="ej_StoneColor" EntityType="ejewelModel.ej_StoneColor" />
+    <EntitySet Name="ej_StoneCut" EntityType="ejewelModel.ej_StoneCut" />
+    <EntitySet Name="ej_StoneShape" EntityType="ejewelModel.ej_StoneShape" />
+    <EntitySet Name="ej_StoneShapeMaster" EntityType="ejewelModel.ej_StoneShapeMaster" />
+    <EntitySet Name="ej_StoneType" EntityType="ejewelModel.ej_StoneType" />
+    <EntitySet Name="ej_SubCategoryMaster" EntityType="ejewelModel.ej_SubCategoryMaster" />
+    <EntitySet Name="ej_SubCategorySettingType" EntityType="ejewelModel.ej_SubCategorySettingType" />
+    <EntitySet Name="ej_TaxClass" EntityType="ejewelModel.ej_TaxClass" />
+    <EntitySet Name="ej_UnitMaster" EntityType="ejewelModel.ej_UnitMaster" />
+    <EntitySet Name="ej_UserDetails" EntityType="ejewelModel.ej_UserDetails" />
+    <EntitySet Name="ej_UserType" EntityType="ejewelModel.ej_UserType" />
+    <EntitySet Name="ej_ZipCode" EntityType="ejewelModel.ej_ZipCode" />
+    <AssociationSet Name="FK_ej_ProductAttribute_ej_AttributeTitle" Association="ejewelModel.FK_ej_ProductAttribute_ej_AttributeTitle">
+      <End Role="ej_AttributeTitle" EntitySet="ej_AttributeTitle" />
+      <End Role="ej_ProductAttribute" EntitySet="ej_ProductAttribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_CenterStone_ej_StoneClarity" Association="ejewelModel.FK_ej_CenterStone_ej_StoneClarity">
+      <End Role="ej_StoneClarity" EntitySet="ej_StoneClarity" />
+      <End Role="ej_CenterStone" EntitySet="ej_CenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_CenterStone_ej_StoneColor" Association="ejewelModel.FK_ej_CenterStone_ej_StoneColor">
+      <End Role="ej_StoneColor" EntitySet="ej_StoneColor" />
+      <End Role="ej_CenterStone" EntitySet="ej_CenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_CenterStone_ej_StoneCut" Association="ejewelModel.FK_ej_CenterStone_ej_StoneCut">
+      <End Role="ej_StoneCut" EntitySet="ej_StoneCut" />
+      <End Role="ej_CenterStone" EntitySet="ej_CenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductChain_ej_ChainClasp" Association="ejewelModel.FK_ej_ProductChain_ej_ChainClasp">
+      <End Role="ej_ChainClasp" EntitySet="ej_ChainClasp" />
+      <End Role="ej_ProductChain" EntitySet="ej_ProductChain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductChain_ej_ChainLength" Association="ejewelModel.FK_ej_ProductChain_ej_ChainLength">
+      <End Role="ej_ChainLength" EntitySet="ej_ChainLength" />
+      <End Role="ej_ProductChain" EntitySet="ej_ProductChain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductChain_ej_ChainStyle" Association="ejewelModel.FK_ej_ProductChain_ej_ChainStyle">
+      <End Role="ej_ChainStyle" EntitySet="ej_ChainStyle" />
+      <End Role="ej_ProductChain" EntitySet="ej_ProductChain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMetalType_ej_MetalTypeMaster" Association="ejewelModel.FK_ej_ProductMetalType_ej_MetalTypeMaster">
+      <End Role="ej_MetalTypeMaster" EntitySet="ej_MetalTypeMaster" />
+      <End Role="ej_ProductMetalType" EntitySet="ej_ProductMetalType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_Product_ej_SubCategoryMaster" Association="ejewelModel.FK_ej_Product_ej_SubCategoryMaster">
+      <End Role="ej_SubCategoryMaster" EntitySet="ej_SubCategoryMaster" />
+      <End Role="ej_Product" EntitySet="ej_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductCenterStone_ej_Product" Association="ejewelModel.FK_ej_ProductCenterStone_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductCenterStone" EntitySet="ej_ProductCenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductChain_ej_Product" Association="ejewelModel.FK_ej_ProductChain_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductChain" EntitySet="ej_ProductChain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductImage_ej_Product" Association="ejewelModel.FK_ej_ProductImage_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductImage" EntitySet="ej_ProductImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBand_ej_Product" Association="ejewelModel.FK_ej_ProductMatchingBand_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductMatchingBand" EntitySet="ej_ProductMatchingBand" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBandRange_ej_Product" Association="ejewelModel.FK_ej_ProductMatchingBandRange_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductMatchingBandRange" EntitySet="ej_ProductMatchingBandRange" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMetalType_ej_Product" Association="ejewelModel.FK_ej_ProductMetalType_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductMetalType" EntitySet="ej_ProductMetalType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductReview_ej_Product" Association="ejewelModel.FK_ej_ProductReview_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductReview" EntitySet="ej_ProductReview" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStone_ej_Product" Association="ejewelModel.FK_ej_ProductSideStone_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductSideStone" EntitySet="ej_ProductSideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStoneRange_ej_Product" Association="ejewelModel.FK_ej_ProductSideStoneRange_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductSideStoneRange" EntitySet="ej_ProductSideStoneRange" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductVideo_ej_Product" Association="ejewelModel.FK_ej_ProductVideo_ej_Product">
+      <End Role="ej_Product" EntitySet="ej_Product" />
+      <End Role="ej_ProductVideo" EntitySet="ej_ProductVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductAttribute_ej_SubCategoryMaster" Association="ejewelModel.FK_ej_ProductAttribute_ej_SubCategoryMaster">
+      <End Role="ej_SubCategoryMaster" EntitySet="ej_SubCategoryMaster" />
+      <End Role="ej_ProductAttribute" EntitySet="ej_ProductAttribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductCenterStone_ej_StoneCategory" Association="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategory">
+      <End Role="ej_StoneCategory" EntitySet="ej_StoneCategory" />
+      <End Role="ej_ProductCenterStone" EntitySet="ej_ProductCenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductCenterStone_ej_StoneCategorySettingType" Association="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategorySettingType">
+      <End Role="ej_StoneCategorySettingType" EntitySet="ej_StoneCategorySettingType" />
+      <End Role="ej_ProductCenterStone" EntitySet="ej_ProductCenterStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductCenterStoneShape_ej_ProductCenterStone" Association="ejewelModel.FK_ej_ProductCenterStoneShape_ej_ProductCenterStone">
+      <End Role="ej_ProductCenterStone" EntitySet="ej_ProductCenterStone" />
+      <End Role="ej_ProductCenterStoneShape" EntitySet="ej_ProductCenterStoneShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductCenterStoneShape_ej_StoneShape" Association="ejewelModel.FK_ej_ProductCenterStoneShape_ej_StoneShape">
+      <End Role="ej_StoneShape" EntitySet="ej_StoneShape" />
+      <End Role="ej_ProductCenterStoneShape" EntitySet="ej_ProductCenterStoneShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductFilter_ej_SubCategoryMaster" Association="ejewelModel.FK_ej_ProductFilter_ej_SubCategoryMaster">
+      <End Role="ej_SubCategoryMaster" EntitySet="ej_SubCategoryMaster" />
+      <End Role="ej_ProductFilter" EntitySet="ej_ProductFilter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBand_ej_StoneCategory" Association="ejewelModel.FK_ej_ProductMatchingBand_ej_StoneCategory">
+      <End Role="ej_StoneCategory" EntitySet="ej_StoneCategory" />
+      <End Role="ej_ProductMatchingBand" EntitySet="ej_ProductMatchingBand" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBandAvialableStoneType_ej_SideStone" Association="ejewelModel.FK_ej_ProductMatchingBandAvialableStoneType_ej_SideStone">
+      <End Role="ej_SideStone" EntitySet="ej_SideStone" />
+      <End Role="ej_ProductMatchingBandAvialableStoneType" EntitySet="ej_ProductMatchingBandAvialableStoneType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBandShape_ej_ProductMatchingBandRange" Association="ejewelModel.FK_ej_ProductMatchingBandShape_ej_ProductMatchingBandRange">
+      <End Role="ej_ProductMatchingBandRange" EntitySet="ej_ProductMatchingBandRange" />
+      <End Role="ej_ProductMatchingBandShape" EntitySet="ej_ProductMatchingBandShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductMatchingBandShape_ej_StoneShape" Association="ejewelModel.FK_ej_ProductMatchingBandShape_ej_StoneShape">
+      <End Role="ej_StoneShape" EntitySet="ej_StoneShape" />
+      <End Role="ej_ProductMatchingBandShape" EntitySet="ej_ProductMatchingBandShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStone_ej_StoneCategory" Association="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategory">
+      <End Role="ej_StoneCategory" EntitySet="ej_StoneCategory" />
+      <End Role="ej_ProductSideStone" EntitySet="ej_ProductSideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStone_ej_StoneCategorySettingType" Association="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategorySettingType">
+      <End Role="ej_StoneCategorySettingType" EntitySet="ej_StoneCategorySettingType" />
+      <End Role="ej_ProductSideStone" EntitySet="ej_ProductSideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStoneAvialableStoneType_ej_SideStone" Association="ejewelModel.FK_ej_ProductSideStoneAvialableStoneType_ej_SideStone">
+      <End Role="ej_SideStone" EntitySet="ej_SideStone" />
+      <End Role="ej_ProductSideStoneAvialableStoneType" EntitySet="ej_ProductSideStoneAvialableStoneType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStoneRange_ej_StoneCategory" Association="ejewelModel.FK_ej_ProductSideStoneRange_ej_StoneCategory">
+      <End Role="ej_StoneCategory" EntitySet="ej_StoneCategory" />
+      <End Role="ej_ProductSideStoneRange" EntitySet="ej_ProductSideStoneRange" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStoneShape_ej_ProductSideStoneRange" Association="ejewelModel.FK_ej_ProductSideStoneShape_ej_ProductSideStoneRange">
+      <End Role="ej_ProductSideStoneRange" EntitySet="ej_ProductSideStoneRange" />
+      <End Role="ej_ProductSideStoneShape" EntitySet="ej_ProductSideStoneShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_ProductSideStoneShape_ej_StoneShape" Association="ejewelModel.FK_ej_ProductSideStoneShape_ej_StoneShape">
+      <End Role="ej_StoneShape" EntitySet="ej_StoneShape" />
+      <End Role="ej_ProductSideStoneShape" EntitySet="ej_ProductSideStoneShape" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_RingSize_ej_SubCategoryMaster" Association="ejewelModel.FK_ej_RingSize_ej_SubCategoryMaster">
+      <End Role="ej_SubCategoryMaster" EntitySet="ej_SubCategoryMaster" />
+      <End Role="ej_RingSize" EntitySet="ej_RingSize" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_SettingPrice_ej_SubCategoryMaster" Association="ejewelModel.FK_ej_SettingPrice_ej_SubCategoryMaster">
+      <End Role="ej_SubCategoryMaster" EntitySet="ej_SubCategoryMaster" />
+      <End Role="ej_SettingPrice" EntitySet="ej_SettingPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_SideStone_ej_StoneClarity" Association="ejewelModel.FK_ej_SideStone_ej_StoneClarity">
+      <End Role="ej_StoneClarity" EntitySet="ej_StoneClarity" />
+      <End Role="ej_SideStone" EntitySet="ej_SideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_SideStone_ej_StoneColor" Association="ejewelModel.FK_ej_SideStone_ej_StoneColor">
+      <End Role="ej_StoneColor" EntitySet="ej_StoneColor" />
+      <End Role="ej_SideStone" EntitySet="ej_SideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_SideStone_ej_StoneCut" Association="ejewelModel.FK_ej_SideStone_ej_StoneCut">
+      <End Role="ej_StoneCut" EntitySet="ej_StoneCut" />
+      <End Role="ej_SideStone" EntitySet="ej_SideStone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_StoneType_ej_StoneCategory" Association="ejewelModel.FK_ej_StoneType_ej_StoneCategory">
+      <End Role="ej_StoneCategory" EntitySet="ej_StoneCategory" />
+      <End Role="ej_StoneType" EntitySet="ej_StoneType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ej_StoneShape_ej_StoneShapeMaster" Association="ejewelModel.FK_ej_StoneShape_ej_StoneShapeMaster">
+      <End Role="ej_StoneShapeMaster" EntitySet="ej_StoneShapeMaster" />
+      <End Role="ej_StoneShape" EntitySet="ej_StoneShape" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="GetCustomerListByCustomerID_Result">
+    <Property Type="Int64" Name="CustomerDetailsID" Nullable="false" />
+    <Property Type="Int64" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="CustomerFirstName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerMiddleName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerLastName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerAddress" Nullable="true" />
+    <Property Type="String" Name="CustomerFaxNumber" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="CityId" Nullable="true" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="true" />
+    <Property Type="String" Name="StateName" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="CountryId" Nullable="true" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="ZipCodeID" Nullable="true" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerPhoneNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDefaultAddress" Nullable="true" />
+    <Property Type="DateTime" Name="CustomerAccountModifiedDateTime" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="GetCustomerDetailsByCustomerID_Result">
+    <Property Type="Int64" Name="CustomerDetailsID" Nullable="false" />
+    <Property Type="Int64" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="CustomerFirstName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerMiddleName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerLastName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerAddress" Nullable="true" />
+    <Property Type="String" Name="CustomerFaxNumber" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="CityId" Nullable="true" />
+    <Property Type="String" Name="CityName" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="StateId" Nullable="true" />
+    <Property Type="String" Name="StateName" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="CountryId" Nullable="true" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="ZipCodeID" Nullable="true" />
+    <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CustomerPhoneNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDefaultAddress" Nullable="true" />
+    <Property Type="DateTime" Name="CustomerAccountModifiedDateTime" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="ej_AttributeTitle">
+    <Key>
+      <PropertyRef Name="AttributeTitleId" />
+    </Key>
+    <Property Type="Int32" Name="AttributeTitleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="AttributeTitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductAttribute" Relationship="ejewelModel.FK_ej_ProductAttribute_ej_AttributeTitle" FromRole="ej_AttributeTitle" ToRole="ej_ProductAttribute" />
+  </EntityType>
+  <EntityType Name="ej_BestSelling">
+    <Key>
+      <PropertyRef Name="BestSellingId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int64" Name="BestSellingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CenterStone">
+    <Key>
+      <PropertyRef Name="CenterStoneId" />
+    </Key>
+    <Property Type="Int64" Name="CenterStoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCutId" Nullable="false" />
+    <Property Type="Int32" Name="StoneColorId" Nullable="false" />
+    <Property Type="Int32" Name="StoneClarityId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneTypeId" Nullable="false" />
+    <Property Type="Double" Name="StoneCarate" Nullable="false" />
+    <Property Type="Double" Name="StonePrice" Nullable="false" />
+    <Property Type="Double" Name="CertificateDepth" Nullable="false" />
+    <Property Type="Double" Name="CertificateTable" Nullable="false" />
+    <Property Type="Int32" Name="CertificateGridleId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateSymmetryId" Nullable="false" />
+    <Property Type="Int32" Name="CertificatePolishId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateCuletId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateFlouresenceId" Nullable="false" />
+    <Property Type="String" Name="CertificateMeasurement" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="CertificateCrown" Nullable="false" />
+    <Property Type="Double" Name="CertificateCrownAngle" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillion" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillionAngle" Nullable="false" />
+    <Property Type="String" Name="Certification" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CertificateCertificationLabId" Nullable="false" />
+    <Property Type="String" Name="CertificationFile" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Discount" Nullable="false" />
+    <Property Type="Int32" Name="DiscountType" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_StoneClarity" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneClarity" FromRole="ej_CenterStone" ToRole="ej_StoneClarity" />
+    <NavigationProperty Name="ej_StoneColor" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneColor" FromRole="ej_CenterStone" ToRole="ej_StoneColor" />
+    <NavigationProperty Name="ej_StoneCut" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneCut" FromRole="ej_CenterStone" ToRole="ej_StoneCut" />
+  </EntityType>
+  <EntityType Name="ej_CenterStoneImage">
+    <Key>
+      <PropertyRef Name="CenterstoneImageID" />
+    </Key>
+    <Property Type="Int64" Name="CenterstoneImageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CenterStoneId" Nullable="false" />
+    <Property Type="String" Name="ImagePath" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ej_CenterStoneRapnet">
+    <Key>
+      <PropertyRef Name="RapnetStoneId" />
+    </Key>
+    <Property Type="Int64" Name="RapnetStoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCutId" Nullable="false" />
+    <Property Type="Int32" Name="StoneColorId" Nullable="false" />
+    <Property Type="Int32" Name="StoneClarityId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneTypeId" Nullable="false" />
+    <Property Type="Double" Name="StoneCarate" Nullable="false" />
+    <Property Type="Double" Name="StonePrice" Nullable="false" />
+    <Property Type="Double" Name="CertificateDepth" Nullable="false" />
+    <Property Type="Double" Name="CertificateTable" Nullable="false" />
+    <Property Type="Int32" Name="CertificateGridleId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateSymmetryId" Nullable="false" />
+    <Property Type="Int32" Name="CertificatePolishId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateCuletId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateFlouresenceId" Nullable="false" />
+    <Property Type="String" Name="CertificateMeasurement" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="CertificateCrown" Nullable="false" />
+    <Property Type="Double" Name="CertificateCrownAngle" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillion" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillionAngle" Nullable="false" />
+    <Property Type="String" Name="Certification" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CertificateCertificationLabId" Nullable="false" />
+    <Property Type="String" Name="CertificationFile" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificateCulet">
+    <Key>
+      <PropertyRef Name="CertificateCuletId" />
+    </Key>
+    <Property Type="Int32" Name="CertificateCuletId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificateCuletName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificateFlouresence">
+    <Key>
+      <PropertyRef Name="CertificateFlouresenceId" />
+    </Key>
+    <Property Type="Int32" Name="CertificateFlouresenceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificateFlouresenceName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificateGridle">
+    <Key>
+      <PropertyRef Name="CertificateGridleId" />
+    </Key>
+    <Property Type="Int32" Name="CertificateGridleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificateGridleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificatePolish">
+    <Key>
+      <PropertyRef Name="CertificatePolishId" />
+    </Key>
+    <Property Type="Int32" Name="CertificatePolishId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificatePolishName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificateSymmetry">
+    <Key>
+      <PropertyRef Name="CertificateSymmetryId" />
+    </Key>
+    <Property Type="Int32" Name="CertificateSymmetryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificateSymmetryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CertificationLab">
+    <Key>
+      <PropertyRef Name="CertificateLabId" />
+    </Key>
+    <Property Type="Int32" Name="CertificateLabId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CertificateLabName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ChainClasp">
+    <Key>
+      <PropertyRef Name="ChainClaspId" />
+    </Key>
+    <Property Type="Int32" Name="ChainClaspId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ChainClasp" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductChain" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainClasp" FromRole="ej_ChainClasp" ToRole="ej_ProductChain" />
+  </EntityType>
+  <EntityType Name="ej_ChainLength">
+    <Key>
+      <PropertyRef Name="ChainLengthID" />
+    </Key>
+    <Property Type="Int32" Name="ChainLengthID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Double" Name="ChainLength" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductChain" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainLength" FromRole="ej_ChainLength" ToRole="ej_ProductChain" />
+  </EntityType>
+  <EntityType Name="ej_ChainStyle">
+    <Key>
+      <PropertyRef Name="ChainStyleID" />
+    </Key>
+    <Property Type="Int32" Name="ChainStyleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ChainStyle" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductChain" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainStyle" FromRole="ej_ChainStyle" ToRole="ej_ProductChain" />
+  </EntityType>
+  <EntityType Name="ej_City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Type="Int32" Name="CityId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CountryId" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="String" Name="CityName" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CityCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+  <EntityType Name="ej_ContactDetails">
+    <Key>
+      <PropertyRef Name="ContactDetailsId" />
+    </Key>
+    <Property Type="Int32" Name="ContactDetailsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telephone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Message" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ContactDate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Type="Int32" Name="CountryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CountryCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StateDisplayName" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="HasMultipleState" />
+    <Property Type="String" Name="PostalCodeDisplayName" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsPostalCodeRequired" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+  <EntityType Name="ej_Currency">
+    <Key>
+      <PropertyRef Name="CurrencyId" />
+    </Key>
+    <Property Type="Int32" Name="CurrencyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CurrencyTitle" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CurrencyCode" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CurrencySymbole" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="DecimalPlaces" Nullable="false" />
+    <Property Type="Double" Name="Value" Nullable="false" />
+    <Property Type="Boolean" Name="DefaultCurrency" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_CustomDesign_RingPopUp">
+    <Key>
+      <PropertyRef Name="CustomDesignRequestID" />
+    </Key>
+    <Property Type="Int64" Name="CustomDesignRequestID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DiamondItem" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SideStones" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MetalTypeId" />
+    <Property Type="Int32" Name="RingSizeId" />
+    <Property Type="Double" Name="Budget" />
+    <Property Type="String" Name="LinkstoDesign" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comments" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FileExtension" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FullName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BestTimeToCall" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_Customer_Account">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Type="Int64" Name="CustomerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CustomerEmailID" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerPassword" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CustomerAccountModifiedDateTime" Nullable="false" />
+    <Property Type="Boolean" Name="CustomerStatus" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_Customer_Account_Details">
+    <Key>
+      <PropertyRef Name="CustomerDetailsID" />
+    </Key>
+    <Property Type="Int64" Name="CustomerDetailsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CustomerID" Nullable="false" />
+    <Property Type="String" Name="CustomerFirstName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerMiddleName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerLastName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerFaxNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CityId" />
+    <Property Type="Int32" Name="StateId" />
+    <Property Type="Int32" Name="CountryId" />
+    <Property Type="Int32" Name="ZipCodeID" />
+    <Property Type="String" Name="CustomerPhoneNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsDefaultAddress" />
+    <Property Type="DateTime" Name="CustomerAccountModifiedDateTime" />
+  </EntityType>
+  <EntityType Name="ej_Customer_Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Type="Int64" Name="OrderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OrderNumber" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="CustomerID" />
+    <Property Type="String" Name="SessionID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="OrderDateTime" />
+  </EntityType>
+  <EntityType Name="ej_Customer_Order_Billing_Details">
+    <Key>
+      <PropertyRef Name="CustomerOrderBillingID" />
+    </Key>
+    <Property Type="Int64" Name="CustomerOrderBillingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="OrderID" Nullable="false" />
+    <Property Type="String" Name="CustomerFirstName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerMiddleName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomeLastName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerAddress" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerFaxNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CountryId" Nullable="false" />
+    <Property Type="Int32" Name="ZipCodeID" Nullable="false" />
+    <Property Type="String" Name="CustomerPhoneNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerBillingEmailID" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ej_Customer_Order_Shipping_Details">
+    <Key>
+      <PropertyRef Name="CustomerOrderShippingID" />
+    </Key>
+    <Property Type="Int64" Name="CustomerOrderShippingID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="OrderID" Nullable="false" />
+    <Property Type="String" Name="CustomerFirstName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerMiddleName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomeLastName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerAddress" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerFaxNumber" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CityId" Nullable="false" />
+    <Property Type="Int32" Name="StateId" Nullable="false" />
+    <Property Type="Int32" Name="CountryId" Nullable="false" />
+    <Property Type="Int32" Name="ZipCodeID" Nullable="false" />
+    <Property Type="String" Name="CustomerPhoneNumber" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerShippingEmailID" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ej_DiscountCoupon">
+    <Key>
+      <PropertyRef Name="DiscountCouponId" />
+      <PropertyRef Name="CouponCode" />
+      <PropertyRef Name="CoupunDetails" />
+      <PropertyRef Name="DiscountPercent" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="CreatedDate" />
+      <PropertyRef Name="OrderId" />
+      <PropertyRef Name="UsedDate" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int32" Name="DiscountCouponId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CouponCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CoupunDetails" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="DiscountPercent" Nullable="false" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="false" />
+    <Property Type="Int64" Name="OrderId" Nullable="false" />
+    <Property Type="DateTime" Name="UsedDate" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_EngravingFont">
+    <Key>
+      <PropertyRef Name="font_id" />
+    </Key>
+    <Property Type="Int32" Name="font_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="font_name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ej_EnquiryDetails">
+    <Key>
+      <PropertyRef Name="EnquiryID" />
+    </Key>
+    <Property Type="Int32" Name="EnquiryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="FirstName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="EnquiryDate" />
+  </EntityType>
+  <EntityType Name="ej_ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorLogId" />
+    </Key>
+    <Property Type="Int64" Name="ErrorLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ErrorMessage" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ErrorSource" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InnerException" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LogTime" Nullable="false" />
+    <Property Type="String" Name="StackTrace" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserID" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ej_LengthSizeMaster">
+    <Key>
+      <PropertyRef Name="LengthSizeId" />
+    </Key>
+    <Property Type="Int32" Name="LengthSizeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="Int32" Name="MetalId" Nullable="false" />
+    <Property Type="Double" Name="LengthSize" Nullable="false" />
+    <Property Type="Double" Name="MetalWeight" Nullable="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_LoggedCustomer">
+    <Key>
+      <PropertyRef Name="LoggedCustomerID" />
+    </Key>
+    <Property Type="Int32" Name="LoggedCustomerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="LoggedDatetime" />
+    <Property Type="String" Name="LoggedCustomerIP" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CustomerID" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ej_LoggedUser">
+    <Key>
+      <PropertyRef Name="LoggedUserID" />
+    </Key>
+    <Property Type="Int32" Name="LoggedUserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="LoggedDatetime" />
+    <Property Type="String" Name="LoggedUserIP" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoginID" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ej_LooseDiamondShape">
+    <Key>
+      <PropertyRef Name="ShapeId" />
+    </Key>
+    <Property Type="Int32" Name="ShapeId" Nullable="false" />
+    <Property Type="String" Name="ShapeSmallIcon" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeScreechImage1Small" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeScreechImage1Large" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeScreechImage2Small" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeScreechImage2Large" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeOrginalImage1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeOrginalImage2" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShapeVideo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ej_MetalNameMaster">
+    <Key>
+      <PropertyRef Name="MetalNameId" />
+    </Key>
+    <Property Type="Int32" Name="MetalNameId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MetalName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_MetalTypeMaster">
+    <Key>
+      <PropertyRef Name="MetaTypeId" />
+    </Key>
+    <Property Type="Int32" Name="MetaTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MetalWeightId" Nullable="false" />
+    <Property Type="Int32" Name="MetalNameId" Nullable="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductMetalType" Relationship="ejewelModel.FK_ej_ProductMetalType_ej_MetalTypeMaster" FromRole="ej_MetalTypeMaster" ToRole="ej_ProductMetalType" />
+  </EntityType>
+  <EntityType Name="ej_MetalWeightMaster">
+    <Key>
+      <PropertyRef Name="MetalWeightId" />
+    </Key>
+    <Property Type="Int32" Name="MetalWeightId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MetalWeight" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_MultiStore">
+    <Key>
+      <PropertyRef Name="StoreUrl" />
+    </Key>
+    <Property Type="Int32" Name="StoreId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoreName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StoreUrl" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DefaultCurrency" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_MultiStoreCategory">
+    <Key>
+      <PropertyRef Name="StoreCategoryId" />
+      <PropertyRef Name="StoreId" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int32" Name="StoreCategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StoreId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_MultiStoreProduct">
+    <Key>
+      <PropertyRef Name="StoreProductId" />
+      <PropertyRef Name="StoreId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int64" Name="StoreProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StoreId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_NewProduct">
+    <Key>
+      <PropertyRef Name="NewProductId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int64" Name="NewProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Type="Int32" Name="NewsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="NewsCategory" Nullable="false" />
+    <Property Type="String" Name="NewsHeading" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NewsDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PublishDate" Nullable="false" />
+    <Property Type="String" Name="Image" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_NewsCategory">
+    <Key>
+      <PropertyRef Name="NewsCategoryID" />
+    </Key>
+    <Property Type="Int32" Name="NewsCategoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+      <PropertyRef Name="OrderNo" />
+      <PropertyRef Name="OrderDate" />
+      <PropertyRef Name="OrderUser" />
+      <PropertyRef Name="PaymentVia" />
+      <PropertyRef Name="PaymentDetails" />
+      <PropertyRef Name="PaymentStatus" />
+      <PropertyRef Name="ShippingMethod" />
+      <PropertyRef Name="ShippingPrice" />
+      <PropertyRef Name="TaxClassId" />
+      <PropertyRef Name="TaxPrice" />
+      <PropertyRef Name="DiscountCouponId" />
+      <PropertyRef Name="DiscountPercent" />
+      <PropertyRef Name="OrderStatus" />
+    </Key>
+    <Property Type="Int64" Name="OrderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OrderNo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="false" />
+    <Property Type="Int64" Name="OrderUser" Nullable="false" />
+    <Property Type="Int32" Name="PaymentVia" Nullable="false" />
+    <Property Type="String" Name="PaymentDetails" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PaymentStatus" Nullable="false" />
+    <Property Type="Int32" Name="ShippingMethod" Nullable="false" />
+    <Property Type="Double" Name="ShippingPrice" Nullable="false" />
+    <Property Type="Int32" Name="TaxClassId" Nullable="false" />
+    <Property Type="Double" Name="TaxPrice" Nullable="false" />
+    <Property Type="Int32" Name="DiscountCouponId" Nullable="false" />
+    <Property Type="Double" Name="DiscountPercent" Nullable="false" />
+    <Property Type="Int32" Name="OrderStatus" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_OrderStatus">
+    <Key>
+      <PropertyRef Name="OrderStatusId" />
+    </Key>
+    <Property Type="Int32" Name="OrderStatusId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OrderStatusName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_PaymentStatus">
+    <Key>
+      <PropertyRef Name="PaymentStatusId" />
+    </Key>
+    <Property Type="Int32" Name="PaymentStatusId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PaymentStatus" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_PaymentVia">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Type="Int32" Name="PaymentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PaymentVia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_PrimaryCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Type="Int32" Name="CategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PageTitle" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaKeyword" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Type="Int64" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SubCategoryID" Nullable="false" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductTitle" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProductDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PageTitle" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaDescription" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaKeywords" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CreateBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+    <Property Type="Double" Name="ProductWeight" Nullable="false" />
+    <Property Type="Double" Name="ProductWidth" Nullable="false" />
+    <Property Type="Boolean" Name="BestSelling" Nullable="false" />
+    <Property Type="Boolean" Name="NewProduct" Nullable="false" />
+    <Property Type="Boolean" Name="OtherGift" Nullable="false" />
+    <Property Type="Boolean" Name="WomenGift" Nullable="false" />
+    <Property Type="Boolean" Name="ManGift" Nullable="false" />
+    <Property Type="Boolean" Name="ChildrenGift" Nullable="false" />
+    <Property Type="Boolean" Name="OnSale" Nullable="false" />
+    <Property Type="Double" Name="Discount" Nullable="false" />
+    <Property Type="Int32" Name="DiscountType" Nullable="false" />
+    <Property Type="Boolean" Name="IsExtraOrdinary" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="Boolean" Name="Publish" Nullable="false" />
+    <NavigationProperty Name="ej_SubCategoryMaster" Relationship="ejewelModel.FK_ej_Product_ej_SubCategoryMaster" FromRole="ej_Product" ToRole="ej_SubCategoryMaster" />
+    <NavigationProperty Name="ej_ProductCenterStone" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_Product" FromRole="ej_Product" ToRole="ej_ProductCenterStone" />
+    <NavigationProperty Name="ej_ProductChain" Relationship="ejewelModel.FK_ej_ProductChain_ej_Product" FromRole="ej_Product" ToRole="ej_ProductChain" />
+    <NavigationProperty Name="ej_ProductImage" Relationship="ejewelModel.FK_ej_ProductImage_ej_Product" FromRole="ej_Product" ToRole="ej_ProductImage" />
+    <NavigationProperty Name="ej_ProductMatchingBand" Relationship="ejewelModel.FK_ej_ProductMatchingBand_ej_Product" FromRole="ej_Product" ToRole="ej_ProductMatchingBand" />
+    <NavigationProperty Name="ej_ProductMatchingBandRange" Relationship="ejewelModel.FK_ej_ProductMatchingBandRange_ej_Product" FromRole="ej_Product" ToRole="ej_ProductMatchingBandRange" />
+    <NavigationProperty Name="ej_ProductMetalType" Relationship="ejewelModel.FK_ej_ProductMetalType_ej_Product" FromRole="ej_Product" ToRole="ej_ProductMetalType" />
+    <NavigationProperty Name="ej_ProductReview" Relationship="ejewelModel.FK_ej_ProductReview_ej_Product" FromRole="ej_Product" ToRole="ej_ProductReview" />
+    <NavigationProperty Name="ej_ProductSideStone" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_Product" FromRole="ej_Product" ToRole="ej_ProductSideStone" />
+    <NavigationProperty Name="ej_ProductSideStoneRange" Relationship="ejewelModel.FK_ej_ProductSideStoneRange_ej_Product" FromRole="ej_Product" ToRole="ej_ProductSideStoneRange" />
+    <NavigationProperty Name="ej_ProductVideo" Relationship="ejewelModel.FK_ej_ProductVideo_ej_Product" FromRole="ej_Product" ToRole="ej_ProductVideo" />
+  </EntityType>
+  <EntityType Name="ej_ProductAttribute">
+    <Key>
+      <PropertyRef Name="AttributeId" />
+    </Key>
+    <Property Type="Int32" Name="AttributeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Int32" Name="AttributeTitleId" Nullable="false" />
+    <Property Type="String" Name="AttributeName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="AttributePrice" Nullable="false" />
+    <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_AttributeTitle" Relationship="ejewelModel.FK_ej_ProductAttribute_ej_AttributeTitle" FromRole="ej_ProductAttribute" ToRole="ej_AttributeTitle" />
+    <NavigationProperty Name="ej_SubCategoryMaster" Relationship="ejewelModel.FK_ej_ProductAttribute_ej_SubCategoryMaster" FromRole="ej_ProductAttribute" ToRole="ej_SubCategoryMaster" />
+  </EntityType>
+  <EntityType Name="ej_ProductCenterStone">
+    <Key>
+      <PropertyRef Name="ProductCenterStoneId" />
+    </Key>
+    <Property Type="Int64" Name="ProductCenterStoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Double" Name="StoneMinCarat" Nullable="false" />
+    <Property Type="Double" Name="StoneMaxCarat" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategorySettingTypeId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_Product" FromRole="ej_ProductCenterStone" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_StoneCategory" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategory" FromRole="ej_ProductCenterStone" ToRole="ej_StoneCategory" />
+    <NavigationProperty Name="ej_StoneCategorySettingType" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategorySettingType" FromRole="ej_ProductCenterStone" ToRole="ej_StoneCategorySettingType" />
+    <NavigationProperty Name="ej_ProductCenterStoneShape" Relationship="ejewelModel.FK_ej_ProductCenterStoneShape_ej_ProductCenterStone" FromRole="ej_ProductCenterStone" ToRole="ej_ProductCenterStoneShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductCenterStoneShape">
+    <Key>
+      <PropertyRef Name="ProductCenterStoneShapeId" />
+    </Key>
+    <Property Type="Int64" Name="ProductCenterStoneShapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductCenterStoneId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Boolean" Name="DefaultShape" Nullable="false" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductCenterStone" Relationship="ejewelModel.FK_ej_ProductCenterStoneShape_ej_ProductCenterStone" FromRole="ej_ProductCenterStoneShape" ToRole="ej_ProductCenterStone" />
+    <NavigationProperty Name="ej_StoneShape" Relationship="ejewelModel.FK_ej_ProductCenterStoneShape_ej_StoneShape" FromRole="ej_ProductCenterStoneShape" ToRole="ej_StoneShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductChain">
+    <Key>
+      <PropertyRef Name="ProductChainId" />
+    </Key>
+    <Property Type="Int64" Name="ProductChainId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="ChainLengthId" Nullable="false" />
+    <Property Type="Int32" Name="ChainStyleId" Nullable="false" />
+    <Property Type="Int32" Name="ChainClaspId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ChainClasp" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainClasp" FromRole="ej_ProductChain" ToRole="ej_ChainClasp" />
+    <NavigationProperty Name="ej_ChainLength" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainLength" FromRole="ej_ProductChain" ToRole="ej_ChainLength" />
+    <NavigationProperty Name="ej_ChainStyle" Relationship="ejewelModel.FK_ej_ProductChain_ej_ChainStyle" FromRole="ej_ProductChain" ToRole="ej_ChainStyle" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductChain_ej_Product" FromRole="ej_ProductChain" ToRole="ej_Product" />
+  </EntityType>
+  <EntityType Name="ej_ProductDiscount">
+    <Key>
+      <PropertyRef Name="ProductDiscountId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="DiscountPercent" />
+      <PropertyRef Name="StartDate" />
+      <PropertyRef Name="EndDate" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Type="Int32" Name="ProductDiscountId" Nullable="false" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Double" Name="DiscountPercent" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" />
+    <Property Type="DateTime" Name="EndDate" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ProductFilter">
+    <Key>
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Boolean" Name="CenterStoneShape" Nullable="false" />
+    <Property Type="Boolean" Name="SideStoneShape" Nullable="false" />
+    <Property Type="Boolean" Name="CenterStoneSetting" Nullable="false" />
+    <Property Type="Boolean" Name="SideStoneSetting" Nullable="false" />
+    <Property Type="Boolean" Name="GemStoneColor" Nullable="false" />
+    <Property Type="Boolean" Name="GemStoneType" Nullable="false" />
+    <Property Type="Double" Name="MinPrice" Nullable="false" />
+    <Property Type="Double" Name="MaxPrice" Nullable="false" />
+    <Property Type="Double" Name="PriceDiff" Nullable="false" />
+    <NavigationProperty Name="ej_SubCategoryMaster" Relationship="ejewelModel.FK_ej_ProductFilter_ej_SubCategoryMaster" FromRole="ej_ProductFilter" ToRole="ej_SubCategoryMaster" />
+  </EntityType>
+  <EntityType Name="ej_ProductImage">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Type="Int64" Name="ImageId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="GUID" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ImagePath" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ImageAlt" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Angle" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductImage_ej_Product" FromRole="ej_ProductImage" ToRole="ej_Product" />
+  </EntityType>
+  <EntityType Name="ej_ProductMatchingBand">
+    <Key>
+      <PropertyRef Name="ProductMatchingBandId" />
+    </Key>
+    <Property Type="Int64" Name="ProductMatchingBandId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Int32" Name="NoOfStone" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategorySettingTypeId" Nullable="false" />
+    <Property Type="Int32" Name="DesignTypeId" Nullable="false" />
+    <Property Type="Boolean" Name="IsCustomize" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductMatchingBand_ej_Product" FromRole="ej_ProductMatchingBand" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_StoneCategory" Relationship="ejewelModel.FK_ej_ProductMatchingBand_ej_StoneCategory" FromRole="ej_ProductMatchingBand" ToRole="ej_StoneCategory" />
+  </EntityType>
+  <EntityType Name="ej_ProductMatchingBandAvialableStoneType">
+    <Key>
+      <PropertyRef Name="ProductMatchingBandSideStoneAvialableId" />
+    </Key>
+    <Property Type="Int64" Name="ProductMatchingBandSideStoneAvialableId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductMatchingBandId" Nullable="false" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_SideStone" Relationship="ejewelModel.FK_ej_ProductMatchingBandAvialableStoneType_ej_SideStone" FromRole="ej_ProductMatchingBandAvialableStoneType" ToRole="ej_SideStone" />
+  </EntityType>
+  <EntityType Name="ej_ProductMatchingBandRange">
+    <Key>
+      <PropertyRef Name="ProductMatchingBandRangeId" />
+    </Key>
+    <Property Type="Int64" Name="ProductMatchingBandRangeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Double" Name="StoneMinCarat" Nullable="false" />
+    <Property Type="Double" Name="StoneMaxCarat" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductMatchingBandRange_ej_Product" FromRole="ej_ProductMatchingBandRange" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_ProductMatchingBandShape" Relationship="ejewelModel.FK_ej_ProductMatchingBandShape_ej_ProductMatchingBandRange" FromRole="ej_ProductMatchingBandRange" ToRole="ej_ProductMatchingBandShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductMatchingBandShape">
+    <Key>
+      <PropertyRef Name="ProductMatchingBandShapeId" />
+    </Key>
+    <Property Type="Int64" Name="ProductMatchingBandShapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductMatchingBandRangeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductMatchingBandRange" Relationship="ejewelModel.FK_ej_ProductMatchingBandShape_ej_ProductMatchingBandRange" FromRole="ej_ProductMatchingBandShape" ToRole="ej_ProductMatchingBandRange" />
+    <NavigationProperty Name="ej_StoneShape" Relationship="ejewelModel.FK_ej_ProductMatchingBandShape_ej_StoneShape" FromRole="ej_ProductMatchingBandShape" ToRole="ej_StoneShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductMetalType">
+    <Key>
+      <PropertyRef Name="ProductMetalId" />
+    </Key>
+    <Property Type="Int64" Name="ProductMetalId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="MetalTypeId" Nullable="false" />
+    <Property Type="Boolean" Name="DefaultMetal" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_MetalTypeMaster" Relationship="ejewelModel.FK_ej_ProductMetalType_ej_MetalTypeMaster" FromRole="ej_ProductMetalType" ToRole="ej_MetalTypeMaster" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductMetalType_ej_Product" FromRole="ej_ProductMetalType" ToRole="ej_Product" />
+  </EntityType>
+  <EntityType Name="ej_ProductReview">
+    <Key>
+      <PropertyRef Name="ReviewId" />
+    </Key>
+    <Property Type="Int64" Name="ReviewId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="Heading" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Review" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Rating" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductReview_ej_Product" FromRole="ej_ProductReview" ToRole="ej_Product" />
+  </EntityType>
+  <EntityType Name="ej_ProductSideStone">
+    <Key>
+      <PropertyRef Name="ProductSideStoneId" />
+    </Key>
+    <Property Type="Int64" Name="ProductSideStoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Int32" Name="NoOfStone" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategorySettingTypeId" Nullable="false" />
+    <Property Type="Int32" Name="DesignTypeId" Nullable="false" />
+    <Property Type="Boolean" Name="IsCustomize" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_Product" FromRole="ej_ProductSideStone" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_StoneCategory" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategory" FromRole="ej_ProductSideStone" ToRole="ej_StoneCategory" />
+    <NavigationProperty Name="ej_StoneCategorySettingType" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategorySettingType" FromRole="ej_ProductSideStone" ToRole="ej_StoneCategorySettingType" />
+  </EntityType>
+  <EntityType Name="ej_ProductSideStoneAvialableStoneType">
+    <Key>
+      <PropertyRef Name="ProductSideStoneAvialableId" />
+    </Key>
+    <Property Type="Int64" Name="ProductSideStoneAvialableId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductSideStoneId" Nullable="false" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_SideStone" Relationship="ejewelModel.FK_ej_ProductSideStoneAvialableStoneType_ej_SideStone" FromRole="ej_ProductSideStoneAvialableStoneType" ToRole="ej_SideStone" />
+  </EntityType>
+  <EntityType Name="ej_ProductSideStoneRange">
+    <Key>
+      <PropertyRef Name="ProductSideStoneRangeId" />
+    </Key>
+    <Property Type="Int64" Name="ProductSideStoneRangeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Double" Name="StoneMinCarat" Nullable="false" />
+    <Property Type="Double" Name="StoneMaxCarat" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductSideStoneRange_ej_Product" FromRole="ej_ProductSideStoneRange" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_StoneCategory" Relationship="ejewelModel.FK_ej_ProductSideStoneRange_ej_StoneCategory" FromRole="ej_ProductSideStoneRange" ToRole="ej_StoneCategory" />
+    <NavigationProperty Name="ej_ProductSideStoneShape" Relationship="ejewelModel.FK_ej_ProductSideStoneShape_ej_ProductSideStoneRange" FromRole="ej_ProductSideStoneRange" ToRole="ej_ProductSideStoneShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductSideStoneShape">
+    <Key>
+      <PropertyRef Name="ProductSideStoneShapeId" />
+    </Key>
+    <Property Type="Int64" Name="ProductSideStoneShapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductSideStoneRangeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductSideStoneRange" Relationship="ejewelModel.FK_ej_ProductSideStoneShape_ej_ProductSideStoneRange" FromRole="ej_ProductSideStoneShape" ToRole="ej_ProductSideStoneRange" />
+    <NavigationProperty Name="ej_StoneShape" Relationship="ejewelModel.FK_ej_ProductSideStoneShape_ej_StoneShape" FromRole="ej_ProductSideStoneShape" ToRole="ej_StoneShape" />
+  </EntityType>
+  <EntityType Name="ej_ProductVideo">
+    <Key>
+      <PropertyRef Name="ProductVideoId" />
+    </Key>
+    <Property Type="Int64" Name="ProductVideoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="CenterStoneShapeId" Nullable="false" />
+    <Property Type="String" Name="VideoPathURL" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VideoPhotoURL" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_ProductVideo_ej_Product" FromRole="ej_ProductVideo" ToRole="ej_Product" />
+  </EntityType>
+  <EntityType Name="ej_PromocodeType">
+    <Key>
+      <PropertyRef Name="PromocodeTypeID" />
+    </Key>
+    <Property Type="Int32" Name="PromocodeTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PromocodeTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+  <EntityType Name="ej_PromotionalcodeManagement">
+    <Key>
+      <PropertyRef Name="PromotionalCodeId" />
+    </Key>
+    <Property Type="Int32" Name="PromotionalCodeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PromotionalCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="PromotionalcodeTypeID" Nullable="false" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+    <Property Type="Int32" Name="SubCategoryID" Nullable="false" />
+    <Property Type="Int64" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductDiscountType" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Double" Name="ProductDiscountValue" Nullable="false" />
+    <Property Type="DateTime" Name="ProductValidFrom" Nullable="false" />
+    <Property Type="DateTime" Name="ProductValidTo" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ProposalStory">
+    <Key>
+      <PropertyRef Name="ProposalStoryID" />
+    </Key>
+    <Property Type="Int32" Name="ProposalStoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoryHeader" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StoryDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StoryImage" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="StoryDate" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_QueriesOnProduct">
+    <Key>
+      <PropertyRef Name="ProductQueriesId" />
+    </Key>
+    <Property Type="Int64" Name="ProductQueriesId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="FirstName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelePhone" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_RingSize">
+    <Key>
+      <PropertyRef Name="RingSizeId" />
+    </Key>
+    <Property Type="Int32" Name="RingSizeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Double" Name="RingSize" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_SubCategoryMaster" Relationship="ejewelModel.FK_ej_RingSize_ej_SubCategoryMaster" FromRole="ej_RingSize" ToRole="ej_SubCategoryMaster" />
+  </EntityType>
+  <EntityType Name="ej_RingSizeMaster">
+    <Key>
+      <PropertyRef Name="RingSizeId" />
+    </Key>
+    <Property Type="Int32" Name="RingSizeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Double" Name="RingSize" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_SetterPrice">
+    <Key>
+      <PropertyRef Name="SetterPriceId" />
+    </Key>
+    <Property Type="Int32" Name="SetterPriceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_SettingPrice">
+    <Key>
+      <PropertyRef Name="SettingPriceId" />
+    </Key>
+    <Property Type="Int32" Name="SettingPriceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_SubCategoryMaster" Relationship="ejewelModel.FK_ej_SettingPrice_ej_SubCategoryMaster" FromRole="ej_SettingPrice" ToRole="ej_SubCategoryMaster" />
+  </EntityType>
+  <EntityType Name="ej_SettingType">
+    <Key>
+      <PropertyRef Name="SettingTypeId" />
+    </Key>
+    <Property Type="Int32" Name="SettingTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SettingTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ShippingMaster">
+    <Key>
+      <PropertyRef Name="ShippingId" />
+    </Key>
+    <Property Type="Int32" Name="ShippingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ShippingNameId" Nullable="false" />
+    <Property Type="Int32" Name="ShippingTypeId" Nullable="false" />
+    <Property Type="Int32" Name="CountryId" Nullable="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ShippingMethod">
+    <Key>
+      <PropertyRef Name="ShippingMethodId" />
+    </Key>
+    <Property Type="Int32" Name="ShippingMethodId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShippingMethodName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ShippingName">
+    <Key>
+      <PropertyRef Name="ShippingNameId" />
+    </Key>
+    <Property Type="Int32" Name="ShippingNameId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShippingName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ShippingType">
+    <Key>
+      <PropertyRef Name="ShippingTypeId" />
+    </Key>
+    <Property Type="Int32" Name="ShippingTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShippingType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_SideStone">
+    <Key>
+      <PropertyRef Name="SideStoneId" />
+    </Key>
+    <Property Type="Int64" Name="SideStoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCutId" Nullable="false" />
+    <Property Type="Int32" Name="StoneColorId" Nullable="false" />
+    <Property Type="Int32" Name="StoneClarityId" Nullable="false" />
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneTypeId" Nullable="false" />
+    <Property Type="Double" Name="StoneCarate" Nullable="false" />
+    <Property Type="Double" Name="StonePrice" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductMatchingBandAvialableStoneType" Relationship="ejewelModel.FK_ej_ProductMatchingBandAvialableStoneType_ej_SideStone" FromRole="ej_SideStone" ToRole="ej_ProductMatchingBandAvialableStoneType" />
+    <NavigationProperty Name="ej_ProductSideStoneAvialableStoneType" Relationship="ejewelModel.FK_ej_ProductSideStoneAvialableStoneType_ej_SideStone" FromRole="ej_SideStone" ToRole="ej_ProductSideStoneAvialableStoneType" />
+    <NavigationProperty Name="ej_StoneClarity" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneClarity" FromRole="ej_SideStone" ToRole="ej_StoneClarity" />
+    <NavigationProperty Name="ej_StoneColor" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneColor" FromRole="ej_SideStone" ToRole="ej_StoneColor" />
+    <NavigationProperty Name="ej_StoneCut" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneCut" FromRole="ej_SideStone" ToRole="ej_StoneCut" />
+  </EntityType>
+  <EntityType Name="ej_State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Type="Int32" Name="StateId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CountryId" Nullable="false" />
+    <Property Type="String" Name="StateName" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StateCode" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+  <EntityType Name="ej_StoneCategory">
+    <Key>
+      <PropertyRef Name="StoneCategoryId" />
+    </Key>
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoneCategoryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductCenterStone" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategory" FromRole="ej_StoneCategory" ToRole="ej_ProductCenterStone" />
+    <NavigationProperty Name="ej_ProductMatchingBand" Relationship="ejewelModel.FK_ej_ProductMatchingBand_ej_StoneCategory" FromRole="ej_StoneCategory" ToRole="ej_ProductMatchingBand" />
+    <NavigationProperty Name="ej_ProductSideStone" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategory" FromRole="ej_StoneCategory" ToRole="ej_ProductSideStone" />
+    <NavigationProperty Name="ej_ProductSideStoneRange" Relationship="ejewelModel.FK_ej_ProductSideStoneRange_ej_StoneCategory" FromRole="ej_StoneCategory" ToRole="ej_ProductSideStoneRange" />
+    <NavigationProperty Name="ej_StoneType" Relationship="ejewelModel.FK_ej_StoneType_ej_StoneCategory" FromRole="ej_StoneCategory" ToRole="ej_StoneType" />
+  </EntityType>
+  <EntityType Name="ej_StoneCategorySettingType">
+    <Key>
+      <PropertyRef Name="StoneCategorySettingTypeId" />
+    </Key>
+    <Property Type="Int32" Name="StoneCategorySettingTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StoneCategoryTypeId" Nullable="false" />
+    <Property Type="Int32" Name="SettingTypeId" Nullable="false" />
+    <Property Type="Double" Name="Price" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductCenterStone" Relationship="ejewelModel.FK_ej_ProductCenterStone_ej_StoneCategorySettingType" FromRole="ej_StoneCategorySettingType" ToRole="ej_ProductCenterStone" />
+    <NavigationProperty Name="ej_ProductSideStone" Relationship="ejewelModel.FK_ej_ProductSideStone_ej_StoneCategorySettingType" FromRole="ej_StoneCategorySettingType" ToRole="ej_ProductSideStone" />
+  </EntityType>
+  <EntityType Name="ej_StoneCategoryType">
+    <Key>
+      <PropertyRef Name="StoneCategoryTypeId" />
+      <PropertyRef Name="StoneCategoryTypeName" />
+    </Key>
+    <Property Type="Int32" Name="StoneCategoryTypeId" Nullable="false" />
+    <Property Type="String" Name="StoneCategoryTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ej_StoneCertificate">
+    <Key>
+      <PropertyRef Name="CertificateId" />
+    </Key>
+    <Property Type="Int64" Name="CertificateId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="StoneId" Nullable="false" />
+    <Property Type="Double" Name="CertificateDepth" Nullable="false" />
+    <Property Type="Double" Name="CertificateTable" Nullable="false" />
+    <Property Type="Int32" Name="CertificateGridleId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateSymmetryId" Nullable="false" />
+    <Property Type="Int32" Name="CertificatePolishId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateCuletId" Nullable="false" />
+    <Property Type="Int32" Name="CertificateFlouresenceId" Nullable="false" />
+    <Property Type="String" Name="CertificateMeasurement" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="CertificateCrown" Nullable="false" />
+    <Property Type="Double" Name="CertificateCrownAngle" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillion" Nullable="false" />
+    <Property Type="Double" Name="CertificatePavillionAngle" Nullable="false" />
+    <Property Type="String" Name="CertificateCertification" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CertificateCertificationLabId" Nullable="false" />
+    <Property Type="String" Name="CertificationFile" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_StoneClarity">
+    <Key>
+      <PropertyRef Name="StoneClarityId" />
+    </Key>
+    <Property Type="Int32" Name="StoneClarityId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoneClarityName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="String" Name="ShortDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_CenterStone" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneClarity" FromRole="ej_StoneClarity" ToRole="ej_CenterStone" />
+    <NavigationProperty Name="ej_SideStone" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneClarity" FromRole="ej_StoneClarity" ToRole="ej_SideStone" />
+  </EntityType>
+  <EntityType Name="ej_StoneColor">
+    <Key>
+      <PropertyRef Name="StoneColorId" />
+    </Key>
+    <Property Type="Int32" Name="StoneColorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoneColorName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="String" Name="ShortDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_CenterStone" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneColor" FromRole="ej_StoneColor" ToRole="ej_CenterStone" />
+    <NavigationProperty Name="ej_SideStone" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneColor" FromRole="ej_StoneColor" ToRole="ej_SideStone" />
+  </EntityType>
+  <EntityType Name="ej_StoneCut">
+    <Key>
+      <PropertyRef Name="StoneCutId" />
+    </Key>
+    <Property Type="Int32" Name="StoneCutId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoneCutName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="String" Name="ShortDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_CenterStone" Relationship="ejewelModel.FK_ej_CenterStone_ej_StoneCut" FromRole="ej_StoneCut" ToRole="ej_CenterStone" />
+    <NavigationProperty Name="ej_SideStone" Relationship="ejewelModel.FK_ej_SideStone_ej_StoneCut" FromRole="ej_StoneCut" ToRole="ej_SideStone" />
+  </EntityType>
+  <EntityType Name="ej_StoneShape">
+    <Key>
+      <PropertyRef Name="StoneShapeId" />
+    </Key>
+    <Property Type="Int32" Name="StoneShapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ShapeId" Nullable="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="Boolean" Name="CenterStoneVisible" Nullable="false" />
+    <Property Type="Boolean" Name="SideStoneVisible" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_ProductCenterStoneShape" Relationship="ejewelModel.FK_ej_ProductCenterStoneShape_ej_StoneShape" FromRole="ej_StoneShape" ToRole="ej_ProductCenterStoneShape" />
+    <NavigationProperty Name="ej_ProductMatchingBandShape" Relationship="ejewelModel.FK_ej_ProductMatchingBandShape_ej_StoneShape" FromRole="ej_StoneShape" ToRole="ej_ProductMatchingBandShape" />
+    <NavigationProperty Name="ej_ProductSideStoneShape" Relationship="ejewelModel.FK_ej_ProductSideStoneShape_ej_StoneShape" FromRole="ej_StoneShape" ToRole="ej_ProductSideStoneShape" />
+    <NavigationProperty Name="ej_StoneShapeMaster" Relationship="ejewelModel.FK_ej_StoneShape_ej_StoneShapeMaster" FromRole="ej_StoneShape" ToRole="ej_StoneShapeMaster" />
+  </EntityType>
+  <EntityType Name="ej_StoneShapeMaster">
+    <Key>
+      <PropertyRef Name="ShapeId" />
+    </Key>
+    <Property Type="Int32" Name="ShapeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Shape" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ShortDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LongDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_StoneShape" Relationship="ejewelModel.FK_ej_StoneShape_ej_StoneShapeMaster" FromRole="ej_StoneShapeMaster" ToRole="ej_StoneShape" />
+  </EntityType>
+  <EntityType Name="ej_StoneType">
+    <Key>
+      <PropertyRef Name="StoneTypeId" />
+    </Key>
+    <Property Type="Int32" Name="StoneTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoneTypeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="StoneCategoryId" Nullable="false" />
+    <Property Type="String" Name="ShortDescription" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_StoneCategory" Relationship="ejewelModel.FK_ej_StoneType_ej_StoneCategory" FromRole="ej_StoneType" ToRole="ej_StoneCategory" />
+  </EntityType>
+  <EntityType Name="ej_SubCategoryMaster">
+    <Key>
+      <PropertyRef Name="SubCategoryId" />
+    </Key>
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CategoryId" Nullable="false" />
+    <Property Type="String" Name="SubCategoryName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PageTitle" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaDescription" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MetaKeywords" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CreateBy" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="false" />
+    <Property Type="Boolean" Name="HasRing" Nullable="false" />
+    <Property Type="Boolean" Name="HasEngraving" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <NavigationProperty Name="ej_Product" Relationship="ejewelModel.FK_ej_Product_ej_SubCategoryMaster" FromRole="ej_SubCategoryMaster" ToRole="ej_Product" />
+    <NavigationProperty Name="ej_ProductAttribute" Relationship="ejewelModel.FK_ej_ProductAttribute_ej_SubCategoryMaster" FromRole="ej_SubCategoryMaster" ToRole="ej_ProductAttribute" />
+    <NavigationProperty Name="ej_ProductFilter" Relationship="ejewelModel.FK_ej_ProductFilter_ej_SubCategoryMaster" FromRole="ej_SubCategoryMaster" ToRole="ej_ProductFilter" />
+    <NavigationProperty Name="ej_RingSize" Relationship="ejewelModel.FK_ej_RingSize_ej_SubCategoryMaster" FromRole="ej_SubCategoryMaster" ToRole="ej_RingSize" />
+    <NavigationProperty Name="ej_SettingPrice" Relationship="ejewelModel.FK_ej_SettingPrice_ej_SubCategoryMaster" FromRole="ej_SubCategoryMaster" ToRole="ej_SettingPrice" />
+  </EntityType>
+  <EntityType Name="ej_SubCategorySettingType">
+    <Key>
+      <PropertyRef Name="SubCategorySettingTypeId" />
+    </Key>
+    <Property Type="Int32" Name="SubCategorySettingTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+    <Property Type="Int32" Name="SettingTypeId" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_TaxClass">
+    <Key>
+      <PropertyRef Name="TaxId" />
+    </Key>
+    <Property Type="Int32" Name="TaxId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TaxClass" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="TaxPercent" Nullable="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_UnitMaster">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Type="Int32" Name="UnitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UnitName" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_UserDetails">
+    <Key>
+      <PropertyRef Name="UId" />
+    </Key>
+    <Property Type="Int32" Name="UId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserTypeId" Nullable="false" />
+    <Property Type="String" Name="UserId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserEmail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserMobNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserPassWord" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_UserType">
+    <Key>
+      <PropertyRef Name="UserTypeId" />
+    </Key>
+    <Property Type="Int32" Name="UserTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ej_ZipCode">
+    <Key>
+      <PropertyRef Name="ZipCodeID" />
+    </Key>
+    <Property Type="Int32" Name="ZipCodeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ZipCode" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZipCodeToolTip" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZipCodeRegularExp" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CountryId" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+  <Association Name="FK_ej_ProductAttribute_ej_AttributeTitle">
+    <End Type="ejewelModel.ej_AttributeTitle" Role="ej_AttributeTitle" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductAttribute" Role="ej_ProductAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_AttributeTitle">
+        <PropertyRef Name="AttributeTitleId" />
+      </Principal>
+      <Dependent Role="ej_ProductAttribute">
+        <PropertyRef Name="AttributeTitleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_CenterStone_ej_StoneClarity">
+    <End Type="ejewelModel.ej_StoneClarity" Role="ej_StoneClarity" Multiplicity="1" />
+    <End Type="ejewelModel.ej_CenterStone" Role="ej_CenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneClarity">
+        <PropertyRef Name="StoneClarityId" />
+      </Principal>
+      <Dependent Role="ej_CenterStone">
+        <PropertyRef Name="StoneClarityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_CenterStone_ej_StoneColor">
+    <End Type="ejewelModel.ej_StoneColor" Role="ej_StoneColor" Multiplicity="1" />
+    <End Type="ejewelModel.ej_CenterStone" Role="ej_CenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneColor">
+        <PropertyRef Name="StoneColorId" />
+      </Principal>
+      <Dependent Role="ej_CenterStone">
+        <PropertyRef Name="StoneColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_CenterStone_ej_StoneCut">
+    <End Type="ejewelModel.ej_StoneCut" Role="ej_StoneCut" Multiplicity="1" />
+    <End Type="ejewelModel.ej_CenterStone" Role="ej_CenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCut">
+        <PropertyRef Name="StoneCutId" />
+      </Principal>
+      <Dependent Role="ej_CenterStone">
+        <PropertyRef Name="StoneCutId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductChain_ej_ChainClasp">
+    <End Type="ejewelModel.ej_ChainClasp" Role="ej_ChainClasp" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductChain" Role="ej_ProductChain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ChainClasp">
+        <PropertyRef Name="ChainClaspId" />
+      </Principal>
+      <Dependent Role="ej_ProductChain">
+        <PropertyRef Name="ChainClaspId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductChain_ej_ChainLength">
+    <End Type="ejewelModel.ej_ChainLength" Role="ej_ChainLength" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductChain" Role="ej_ProductChain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ChainLength">
+        <PropertyRef Name="ChainLengthID" />
+      </Principal>
+      <Dependent Role="ej_ProductChain">
+        <PropertyRef Name="ChainLengthId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductChain_ej_ChainStyle">
+    <End Type="ejewelModel.ej_ChainStyle" Role="ej_ChainStyle" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductChain" Role="ej_ProductChain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ChainStyle">
+        <PropertyRef Name="ChainStyleID" />
+      </Principal>
+      <Dependent Role="ej_ProductChain">
+        <PropertyRef Name="ChainStyleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMetalType_ej_MetalTypeMaster">
+    <End Type="ejewelModel.ej_MetalTypeMaster" Role="ej_MetalTypeMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMetalType" Role="ej_ProductMetalType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_MetalTypeMaster">
+        <PropertyRef Name="MetaTypeId" />
+      </Principal>
+      <Dependent Role="ej_ProductMetalType">
+        <PropertyRef Name="MetalTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_Product_ej_SubCategoryMaster">
+    <End Type="ejewelModel.ej_SubCategoryMaster" Role="ej_SubCategoryMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SubCategoryMaster">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="ej_Product">
+        <PropertyRef Name="SubCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductCenterStone_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductCenterStone" Role="ej_ProductCenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductCenterStone">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductChain_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductChain" Role="ej_ProductChain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductChain">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductImage_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductImage" Role="ej_ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductImage">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBand_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBand" Role="ej_ProductMatchingBand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBand">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBandRange_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBandRange" Role="ej_ProductMatchingBandRange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBandRange">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMetalType_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMetalType" Role="ej_ProductMetalType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductMetalType">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductReview_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductReview" Role="ej_ProductReview" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductReview">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStone_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStone" Role="ej_ProductSideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStone">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStoneRange_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStoneRange" Role="ej_ProductSideStoneRange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStoneRange">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductVideo_ej_Product">
+    <End Type="ejewelModel.ej_Product" Role="ej_Product" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductVideo" Role="ej_ProductVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ej_ProductVideo">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductAttribute_ej_SubCategoryMaster">
+    <End Type="ejewelModel.ej_SubCategoryMaster" Role="ej_SubCategoryMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductAttribute" Role="ej_ProductAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SubCategoryMaster">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductAttribute">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductCenterStone_ej_StoneCategory">
+    <End Type="ejewelModel.ej_StoneCategory" Role="ej_StoneCategory" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductCenterStone" Role="ej_ProductCenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategory">
+        <PropertyRef Name="StoneCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductCenterStone">
+        <PropertyRef Name="StoneCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductCenterStone_ej_StoneCategorySettingType">
+    <End Type="ejewelModel.ej_StoneCategorySettingType" Role="ej_StoneCategorySettingType" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductCenterStone" Role="ej_ProductCenterStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategorySettingType">
+        <PropertyRef Name="StoneCategorySettingTypeId" />
+      </Principal>
+      <Dependent Role="ej_ProductCenterStone">
+        <PropertyRef Name="StoneCategorySettingTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductCenterStoneShape_ej_ProductCenterStone">
+    <End Type="ejewelModel.ej_ProductCenterStone" Role="ej_ProductCenterStone" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductCenterStoneShape" Role="ej_ProductCenterStoneShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ProductCenterStone">
+        <PropertyRef Name="ProductCenterStoneId" />
+      </Principal>
+      <Dependent Role="ej_ProductCenterStoneShape">
+        <PropertyRef Name="ProductCenterStoneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductCenterStoneShape_ej_StoneShape">
+    <End Type="ejewelModel.ej_StoneShape" Role="ej_StoneShape" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductCenterStoneShape" Role="ej_ProductCenterStoneShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Principal>
+      <Dependent Role="ej_ProductCenterStoneShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductFilter_ej_SubCategoryMaster">
+    <End Type="ejewelModel.ej_SubCategoryMaster" Role="ej_SubCategoryMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductFilter" Role="ej_ProductFilter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SubCategoryMaster">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductFilter">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBand_ej_StoneCategory">
+    <End Type="ejewelModel.ej_StoneCategory" Role="ej_StoneCategory" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBand" Role="ej_ProductMatchingBand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategory">
+        <PropertyRef Name="StoneCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBand">
+        <PropertyRef Name="StoneCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBandAvialableStoneType_ej_SideStone">
+    <End Type="ejewelModel.ej_SideStone" Role="ej_SideStone" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBandAvialableStoneType" Role="ej_ProductMatchingBandAvialableStoneType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SideStone">
+        <PropertyRef Name="SideStoneId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBandAvialableStoneType">
+        <PropertyRef Name="StoneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBandShape_ej_ProductMatchingBandRange">
+    <End Type="ejewelModel.ej_ProductMatchingBandRange" Role="ej_ProductMatchingBandRange" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBandShape" Role="ej_ProductMatchingBandShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ProductMatchingBandRange">
+        <PropertyRef Name="ProductMatchingBandRangeId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBandShape">
+        <PropertyRef Name="ProductMatchingBandRangeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductMatchingBandShape_ej_StoneShape">
+    <End Type="ejewelModel.ej_StoneShape" Role="ej_StoneShape" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductMatchingBandShape" Role="ej_ProductMatchingBandShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Principal>
+      <Dependent Role="ej_ProductMatchingBandShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStone_ej_StoneCategory">
+    <End Type="ejewelModel.ej_StoneCategory" Role="ej_StoneCategory" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStone" Role="ej_ProductSideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategory">
+        <PropertyRef Name="StoneCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStone">
+        <PropertyRef Name="StoneCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStone_ej_StoneCategorySettingType">
+    <End Type="ejewelModel.ej_StoneCategorySettingType" Role="ej_StoneCategorySettingType" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStone" Role="ej_ProductSideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategorySettingType">
+        <PropertyRef Name="StoneCategorySettingTypeId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStone">
+        <PropertyRef Name="StoneCategorySettingTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStoneAvialableStoneType_ej_SideStone">
+    <End Type="ejewelModel.ej_SideStone" Role="ej_SideStone" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStoneAvialableStoneType" Role="ej_ProductSideStoneAvialableStoneType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SideStone">
+        <PropertyRef Name="SideStoneId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStoneAvialableStoneType">
+        <PropertyRef Name="StoneId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStoneRange_ej_StoneCategory">
+    <End Type="ejewelModel.ej_StoneCategory" Role="ej_StoneCategory" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStoneRange" Role="ej_ProductSideStoneRange" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategory">
+        <PropertyRef Name="StoneCategoryId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStoneRange">
+        <PropertyRef Name="StoneCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStoneShape_ej_ProductSideStoneRange">
+    <End Type="ejewelModel.ej_ProductSideStoneRange" Role="ej_ProductSideStoneRange" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStoneShape" Role="ej_ProductSideStoneShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_ProductSideStoneRange">
+        <PropertyRef Name="ProductSideStoneRangeId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStoneShape">
+        <PropertyRef Name="ProductSideStoneRangeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_ProductSideStoneShape_ej_StoneShape">
+    <End Type="ejewelModel.ej_StoneShape" Role="ej_StoneShape" Multiplicity="1" />
+    <End Type="ejewelModel.ej_ProductSideStoneShape" Role="ej_ProductSideStoneShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Principal>
+      <Dependent Role="ej_ProductSideStoneShape">
+        <PropertyRef Name="StoneShapeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_RingSize_ej_SubCategoryMaster">
+    <End Type="ejewelModel.ej_SubCategoryMaster" Role="ej_SubCategoryMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_RingSize" Role="ej_RingSize" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SubCategoryMaster">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="ej_RingSize">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_SettingPrice_ej_SubCategoryMaster">
+    <End Type="ejewelModel.ej_SubCategoryMaster" Role="ej_SubCategoryMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_SettingPrice" Role="ej_SettingPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_SubCategoryMaster">
+        <PropertyRef Name="SubCategoryId" />
+      </Principal>
+      <Dependent Role="ej_SettingPrice">
+        <PropertyRef Name="SubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_SideStone_ej_StoneClarity">
+    <End Type="ejewelModel.ej_StoneClarity" Role="ej_StoneClarity" Multiplicity="1" />
+    <End Type="ejewelModel.ej_SideStone" Role="ej_SideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneClarity">
+        <PropertyRef Name="StoneClarityId" />
+      </Principal>
+      <Dependent Role="ej_SideStone">
+        <PropertyRef Name="StoneClarityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_SideStone_ej_StoneColor">
+    <End Type="ejewelModel.ej_StoneColor" Role="ej_StoneColor" Multiplicity="1" />
+    <End Type="ejewelModel.ej_SideStone" Role="ej_SideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneColor">
+        <PropertyRef Name="StoneColorId" />
+      </Principal>
+      <Dependent Role="ej_SideStone">
+        <PropertyRef Name="StoneColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_SideStone_ej_StoneCut">
+    <End Type="ejewelModel.ej_StoneCut" Role="ej_StoneCut" Multiplicity="1" />
+    <End Type="ejewelModel.ej_SideStone" Role="ej_SideStone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCut">
+        <PropertyRef Name="StoneCutId" />
+      </Principal>
+      <Dependent Role="ej_SideStone">
+        <PropertyRef Name="StoneCutId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_StoneType_ej_StoneCategory">
+    <End Type="ejewelModel.ej_StoneCategory" Role="ej_StoneCategory" Multiplicity="1" />
+    <End Type="ejewelModel.ej_StoneType" Role="ej_StoneType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneCategory">
+        <PropertyRef Name="StoneCategoryId" />
+      </Principal>
+      <Dependent Role="ej_StoneType">
+        <PropertyRef Name="StoneCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ej_StoneShape_ej_StoneShapeMaster">
+    <End Type="ejewelModel.ej_StoneShapeMaster" Role="ej_StoneShapeMaster" Multiplicity="1" />
+    <End Type="ejewelModel.ej_StoneShape" Role="ej_StoneShape" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ej_StoneShapeMaster">
+        <PropertyRef Name="ShapeId" />
+      </Principal>
+      <Dependent Role="ej_StoneShape">
+        <PropertyRef Name="ShapeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

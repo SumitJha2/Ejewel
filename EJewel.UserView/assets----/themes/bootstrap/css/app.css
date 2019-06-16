@@ -1,0 +1,62 @@
+body { background:#fff;}
+
+#site-header {background:url('../img/bg-header.gif');}
+#prod-customize{ outline:0px solid #888;}
+.page-header{padding-bottom:0;}
+
+#prod-angle-wrap{}
+#thumbs{}
+#thumbs img {
+				border: 0px solid #c9c9c9;
+				padding: 0px;
+				margin: 10px 0px 5px 0px;
+				cursor: pointer;
+                box-sizing:border-box;
+			}
+#thumbs img.selected, #thumbs img:hover {border:1px solid #888;}
+#thumbs img.selected:before{    
+    content: "2222";
+display: block;
+position: absolute;
+top: 53px;
+left: 100%;
+width: 0;
+height: 0;
+border-color: transparent transparent transparent #fff;
+border-style: solid;
+border-width: 7px;
+}
+
+#prev, #next{ 
+text-indent: -119988px;
+overflow: hidden;
+text-align: left;
+background: #fff url('../img/next-prev.png') 50% 0 no-repeat;
+width: 122px;
+height: 12px;
+display: block;
+cursor: pointer;
+}
+#prev{margin-bottom:3px;}
+#prev:hover{background-position: 50% -24px;}
+
+#next{background-position: 50% -12px; margin-top:3px;}
+#next:hover{background-position: 50% -36px;}
+
+/*******************customize widget*************************/
+#prod-customize .hdr{ background:#0088cc; color:#fff; font-weight:normal; margin-bottom:0px; border-radius:0px;}
+#prod-customize .accordion-heading, #prod-customize .accordion-toggle{background:#f6f6f6; border-radius:0px;}
+#prod-customize .accordion-group{ border-radius:0px; margin-bottom:1px;}
+#prod-customize .accordion-heading:hover, #prod-customize .accordion-toggle:hover{background:#c5faf3;}
+#prod-customize a{color:#333;}
+
+/*******************tabs*************************/
+#tabs-wrap .tab-content{min-height:200px; border:1px solid #ccc; border-top:0;}
+#tabs-wrap .nav{margin-bottom:0px; background:#ddd; padding:3px 3px 0 15px;}
+#tabs-wrap .nav a{color:#888;}
+
+
+.modal-backdrop, .modal-backdrop.fade.in {
+opacity: .5;
+filter: alpha(opacity=50);
+}

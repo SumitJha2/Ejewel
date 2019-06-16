@@ -1,0 +1,27 @@
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.dll
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.pdb
+E:\Project\EJewel\EJewel.Controller\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.dll
+E:\Project\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.pdb
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.dll
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.dll
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.pdb
+E:\Project\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.pdb
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.dll
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.pdb
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.dll
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.dll
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.pdb
+D:\live\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.pdb
+D:\live\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.csprojResolveAssemblyReference.cache
+D:\live\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.dll
+D:\live\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.Controller.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.DAL.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\bin\Debug\EJewel.Model.pdb
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.dll
+C:\Documents and Settings\Server-IT\Desktop\New Folder (17)\New Folder\EJewel\EJewel.Controller\obj\Debug\EJewel.Controller.pdb

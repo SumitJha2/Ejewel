@@ -1,0 +1,153 @@
+﻿/* Table Popup */
+
+/*Popup Over Large*/
+#static-popover {
+            display: block; position: relative;
+            min-height: 140px; width: 100%;
+            font-size: 11px;
+        }
+
+
+
+.popover.right {margin-left: 10px;}
+ .popover {
+    position: absolute; top: 0; left: 0;
+    z-index: 1010; display: none;
+    max-width: 100%;
+    padding: 1px; text-align: left;
+    background-color: #ffffff;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+}
+
+#static-popover .arrow {
+top: 20%;
+}
+.popover.right .arrow {
+top: 50%;
+left: -11px;
+margin-top: -11px;
+border-left-width: 0;
+border-right-color: #999;
+border-right-color: rgba(0, 0, 0, 0.25);
+}
+.popover .arrow {
+border-width: 11px;
+}
+.popover .arrow, .popover .arrow:after {
+position: absolute;
+display: block;
+width: 0;
+height: 0;
+border-color: transparent;
+border-style: solid;
+}
+
+.popover.right .arrow:after {
+left: 1px;
+bottom: -10px;
+border-left-width: 0;
+border-right-color: #ffffff;
+}
+.popover .arrow:after {
+border-width: 10px;
+content: "";
+}
+.popover .arrow, .popover .arrow:after {
+position: absolute;
+display: block;
+width: 0;
+height: 0;
+border-color: transparent;
+border-style: solid;
+}
+.popover-content {
+padding: 9px 14px;
+}
+
+/*Icon Shape Large*/
+i[class^='icon-shape-large-'] { 
+            background:url('../../img/sprite/swatch_center_stone_small.png') no-repeat; 
+            width:25px; height:25px; 
+            margin:0px 0px 0px 0px;
+            padding:10px;
+            box-sizing:border-box;
+            outline:1px solid #ccc;}
+        
+        i.icon-shape-large-round{background-position:0px 0px;}        
+        i.icon-shape-large-princess{background-position:-1px -70px;}        
+        i.icon-shape-large-emerald{background-position:-1px -146px;}  
+              
+        i.icon-shape-large-asscher{background-position:1px -478px; }   
+             
+        i.icon-shape-large-oval{background-position:0px -274px;}
+        i.icon-shape-large-radiant{background-position:-1px -203px;}
+
+        i.icon-shape-large-pear{background-position:2px -535px;}
+
+        i.icon-shape-large-heart{background-position:-1px -349px;}
+        i.icon-shape-large-marquise{background-position:-1px -407px;}
+        i.icon-shape-large-cushion{background-position:3px -606px;}
+        /**/
+        .clearfix{*zoom:1; overflow:hidden;} 
+        .clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+        .clearfix:after{clear:both;}
+        
+        /*Details*/
+        #shape-wrap, #color-wrap, #clarity-wrap, #cut-wrap{margin:3px 0px; padding:0px;}
+        
+        #centerStone-wrap i{text-indent:9999999px;}
+        #centerStone-wrap i:hover:not(.icon-reset) {outline:2px solid #999; cursor:pointer}
+        #centerStone-wrap i.selected{ outline:2px solid #333; cursor:pointer}
+        #centerStone-shape .centerStone-label{ line-height:25px;}
+       .centerStone-label {font-size:8pt; font-family:Arial;}
+
+        #centerStone-shape{margin:0px 0 10px 0; }
+        #centerStone-clarity{margin:5px 0; }
+        #centerStone-cut{margin:5px 0 0px 0; }
+        
+        #color-wrap i, #clarity-wrap i, #cut-wrap i{
+            font-style:normal; font-size:8pt;
+            width:25px; height:25px; margin:0px 0px 0px 0px;
+            box-sizing:border-box; outline:1px solid #ccc;
+        }
+
+        #color-wrap i{ padding:5px 15px;}
+       
+        #clarity-wrap i{padding:5px 5px;}
+        #clarity-wrap i:last-child { padding:5px 7px;}
+
+        #cut-wrap i{padding:5px 20px;}
+        #cut-wrap i:last-child { padding:5px 14px;}
+        #carat-wrap, #price-wrap{margin:0; padding:0 2px;}
+
+        .range-wrap{margin-top:7px;}
+        .range-wrap .range{background:#fff; color:Black; outline:1px solid #ddd; padding: 1px 8px 5px 8px; height:10px !important; font-size:10pt;}
+
+        dl#sel-filter dt, dl#sel-filter dd{float:left; display:inline-block;}
+        .icon-reset {              
+            background: url("../../img/icon/refresh_24.png") no-repeat;
+            width: 24px; height: 24px; margin-top:12px; margin-right:8px;
+        }
+        i.icon-reset:hover {outline:none;}
+        .shadow-separator{
+            background: url("../../img/shadow-separator.png") no-repeat;
+            height:24px;
+            padding-top:20px;
+        }
+
+        #knowmore a{font-size:8pt;}
+        
+        /********************* Jquery Slider Override ****************************/
+        #centerStone-wrap .ui-slider .ui-slider-handle {position: absolute; z-index: 2; width: 0.8em; height: 0.8em; cursor: default; }
+        #centerStone-wrap .ui-slider-horizontal { height: 0.3em;}

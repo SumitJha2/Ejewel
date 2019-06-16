@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{A596BCAA-89F4-430F-9DB4-3678274E51AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{C958C843-7C38-4A6A-99A9-2735361367FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{126FD67E-C866-482E-BEFF-B962C5E65AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJewel.Controller", "EJewel.Controller\EJewel.Controller.csproj", "{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJewel.Model", "EJewel.Model\EJewel.Model.csproj", "{618072C3-F40B-4CB9-A214-A954E82806FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJewel.AdminView", "EJewel.AdminView\EJewel.AdminView.csproj", "{EC3FED8F-3826-421A-9DFF-885B2C937FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJewel.DAL", "EJewel.DAL\EJewel.DAL.csproj", "{69A329C7-0AE2-4AA0-A912-C485191A96FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJewel.UserView", "EJewel.UserView\EJewel.UserView.csproj", "{C28F2562-129A-4547-A1FA-7C4A46806EE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618072C3-F40B-4CB9-A214-A954E82806FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618072C3-F40B-4CB9-A214-A954E82806FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618072C3-F40B-4CB9-A214-A954E82806FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618072C3-F40B-4CB9-A214-A954E82806FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3FED8F-3826-421A-9DFF-885B2C937FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3FED8F-3826-421A-9DFF-885B2C937FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3FED8F-3826-421A-9DFF-885B2C937FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3FED8F-3826-421A-9DFF-885B2C937FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A329C7-0AE2-4AA0-A912-C485191A96FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A329C7-0AE2-4AA0-A912-C485191A96FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A329C7-0AE2-4AA0-A912-C485191A96FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A329C7-0AE2-4AA0-A912-C485191A96FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28F2562-129A-4547-A1FA-7C4A46806EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28F2562-129A-4547-A1FA-7C4A46806EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28F2562-129A-4547-A1FA-7C4A46806EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28F2562-129A-4547-A1FA-7C4A46806EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{618072C3-F40B-4CB9-A214-A954E82806FB} = {A596BCAA-89F4-430F-9DB4-3678274E51AC}
+		{69A329C7-0AE2-4AA0-A912-C485191A96FB} = {A596BCAA-89F4-430F-9DB4-3678274E51AC}
+		{EC3FED8F-3826-421A-9DFF-885B2C937FAC} = {C958C843-7C38-4A6A-99A9-2735361367FC}
+		{C28F2562-129A-4547-A1FA-7C4A46806EE1} = {C958C843-7C38-4A6A-99A9-2735361367FC}
+		{0DD89AB4-C3FA-4B9B-802C-BF66A48219D2} = {126FD67E-C866-482E-BEFF-B962C5E65AC5}
+	EndGlobalSection
+EndGlobal

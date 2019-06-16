@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{618072C3-F40B-4CB9-A214-A954E82806FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EJewel.Model</RootNamespace>
+    <AssemblyName>EJewel.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Common\Sfm\SfmModel.cs" />
+    <Compile Include="Admin\Extras\ContactDetailsModel.cs" />
+    <Compile Include="Admin\Extras\CustomDesignRingModel.cs" />
+    <Compile Include="Admin\Extras\NewsModel.cs" />
+    <Compile Include="Admin\Extras\ProposalStoriesModel.cs" />
+    <Compile Include="Admin\Master\Setting\ProductAttributeModel.cs" />
+    <Compile Include="Admin\Master\Setting\ProductFilterModel.cs" />
+    <Compile Include="Admin\Master\Stone\CenterStoneImageModel.cs" />
+    <Compile Include="Admin\Master\Stone\CenterStoneModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneSpecificationModel.cs" />
+    <Compile Include="Admin\Order\PromocodeTypeModel.cs" />
+    <Compile Include="Admin\Order\PromotionalcodeManagementModel.cs" />
+    <Compile Include="Admin\Order\ShippingModel.cs" />
+    <Compile Include="Admin\Product\Chain\ProductChainModel.cs" />
+    <Compile Include="Admin\Product\Extras\ProductReviewModel.cs" />
+    <Compile Include="Admin\Product\Extras\QueriesOnProductModel.cs" />
+    <Compile Include="Admin\Product\ProductSideStoneDesignTypeModel.cs" />
+    <Compile Include="Admin\Product\ProductVideoModel.cs" />
+    <Compile Include="Admin\SiteSetting\CustomerLoginDetailsModel.cs" />
+    <Compile Include="Admin\SiteSetting\LoginDetailsModel.cs" />
+    <Compile Include="Admin\SiteSetting\UserDetailsModel.cs" />
+    <Compile Include="Admin\SiteSetting\UserTypeModel.cs" />
+    <Compile Include="Cart\CartProductModel.cs" />
+    <Compile Include="Common\CommonModel.cs" />
+    <Compile Include="Admin\Configuration\Currency\CurrencyModel.cs" />
+    <Compile Include="Admin\Configuration\Store\MultiStoreModel.cs" />
+    <Compile Include="Admin\Master\Category\SubCategoryModel.cs" />
+    <Compile Include="Admin\Master\Category\GetCategoryModel.cs" />
+    <Compile Include="Admin\Master\Category\PrimaryCategoryModel.cs" />
+    <Compile Include="Admin\Master\Category\ProductCategoryModel.cs" />
+    <Compile Include="Admin\Master\Location\CityModel.cs" />
+    <Compile Include="Admin\Master\Location\CountryModel.cs" />
+    <Compile Include="Admin\Master\Location\StateModel.cs" />
+    <Compile Include="Admin\Master\Location\ZipCodeModel.cs" />
+    <Compile Include="Admin\Master\Metal\ChainLengthModel.cs" />
+    <Compile Include="Admin\Master\Metal\ChainStyleModel.cs" />
+    <Compile Include="Admin\Master\Metal\GetRingSizeModel.cs" />
+    <Compile Include="Admin\Master\Metal\MetalTypeListModel.cs" />
+    <Compile Include="Admin\Master\Metal\MetalTypeModel.cs" />
+    <Compile Include="Admin\Master\Payment\OrderStatusModel.cs" />
+    <Compile Include="Admin\Master\Payment\PaymentModel.cs" />
+    <Compile Include="Admin\Master\Payment\PaymentViaModel.cs" />
+    <Compile Include="Admin\Master\Payment\ShipmentMethodModel.cs" />
+    <Compile Include="Admin\Master\Payment\TaxModel.cs" />
+    <Compile Include="Admin\Master\Setting\ListCategorySettingTypeModel.cs" />
+    <Compile Include="Admin\Master\Setting\LooseDiamondShapeModel.cs" />
+    <Compile Include="Admin\Master\Setting\PriceModel.cs" />
+    <Compile Include="Admin\Master\Setting\RingSizeModel.cs" />
+    <Compile Include="Admin\Master\Setting\StoneCategorySettingTypeModel.cs" />
+    <Compile Include="Admin\Master\Stone\SideStoneModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneCategoryModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneCategoryTypeModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneCertificateModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneModel.cs" />
+    <Compile Include="Admin\Master\Stone\StoneShapeModel.cs" />
+    <Compile Include="Admin\Product\ProductImageManagerModel.cs" />
+    <Compile Include="Admin\Product\CenterStone\CenterstoneMinMaxRangeModel.cs" />
+    <Compile Include="Admin\Product\CenterStone\ProductCenterStoneModel.cs" />
+    <Compile Include="Admin\Product\CenterStone\ProductCenterStoneRangeModel.cs" />
+    <Compile Include="Admin\Product\CenterStone\ProductCenterStoneShapeModel.cs" />
+    <Compile Include="Admin\Product\ProductImageModel.cs" />
+    <Compile Include="Admin\Product\ProductDetailsModel.cs" />
+    <Compile Include="Admin\Product\Metal\ProductMetalModel.cs" />
+    <Compile Include="Admin\Product\ProductPriceModel.cs" />
+    <Compile Include="Admin\Product\ProductRingModel.cs" />
+    <Compile Include="Admin\Product\ProductSettingTypeModel.cs" />
+    <Compile Include="Admin\Product\ProductSettingPriceModel.cs" />
+    <Compile Include="Admin\Product\SideStone\ProductSideStoneAvialableStoneTypeModel.cs" />
+    <Compile Include="Admin\Product\SideStone\ProductSideStoneDetailModel.cs" />
+    <Compile Include="Admin\Product\SideStone\ProductSideStoneModel.cs" />
+    <Compile Include="Admin\Product\SideStone\ProductSideStoneRangeModel.cs" />
+    <Compile Include="Admin\Product\SideStone\ProductSideStoneShapeModel.cs" />
+    <Compile Include="Admin\Product\SideStone\SideStoneActionModel.cs" />
+    <Compile Include="Common\ConstantHelper.cs" />
+    <Compile Include="Common\ErrorLogModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\CustomerAccountDetailsModel.cs" />
+    <Compile Include="User\RegisterCustomerModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

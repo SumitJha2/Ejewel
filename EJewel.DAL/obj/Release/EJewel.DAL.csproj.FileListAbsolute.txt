@@ -1,0 +1,8 @@
+E:\Project\EJewel\EJewel.DAL\bin\Release\EJewel.DAL.dll.config
+E:\Project\EJewel\EJewel.DAL\bin\Release\EJewel.DAL.dll
+E:\Project\EJewel\EJewel.DAL\bin\Release\EJewel.DAL.pdb
+E:\Project\EJewel\EJewel.DAL\bin\Release\EJewel.Model.dll
+E:\Project\EJewel\EJewel.DAL\bin\Release\EJewel.Model.pdb
+E:\Project\EJewel\EJewel.DAL\obj\Release\ResolveAssemblyReference.cache
+E:\Project\EJewel\EJewel.DAL\obj\Release\EJewel.DAL.dll
+E:\Project\EJewel\EJewel.DAL\obj\Release\EJewel.DAL.pdb

@@ -1,0 +1,79 @@
+﻿
+ul.tabs
+{
+    padding: 14px 0;
+    margin:0;
+    
+    width:100%;
+    line-height:20px;
+    font-size:0;        
+    list-style-type: none;
+    text-align: left; /*set to left, center, or right to align the tabs as desired*/
+}
+
+ul.tabs li
+{
+    display: inline; float:left;
+    margin: 0;
+    margin-right:0px;       
+}
+        
+ul.tabs li a
+{
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-family:'Cinzel Decorative',serif;
+     text-transform:lowercase;
+    
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    padding: 9px 35px;
+    color: #000;    
+    outline:none;
+    background: rgba(200,200,200,0.4);
+    transition:all ease-in-out 0.15s;
+}
+        
+ul.tabs li a:visited
+{
+    color: #000;
+}
+        
+ul.tabs li a:hover
+{
+    border: 1px solid #dbdbdb;    
+    background: rgba(200,200,200,0.1);
+}
+        
+ul.tabs li.selected a
+{
+    /*selected tab style */
+    position: relative;
+    top: 0px;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-bottom-color: white;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    /*selected tab style */
+    text-decoration: none;
+}
+        
+div.tabcontent 
+{
+    display: block; overflow:hidden;
+}
+
+div.tabcontents
+{
+    margin-top:14px;  min-height:200px;
+    border: 1px solid #dbdbdb; padding: 30px;
+    background-color:#FFF;
+    border-radius: 0 2px 2px 2px;
+}

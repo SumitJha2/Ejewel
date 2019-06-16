@@ -1,0 +1,72 @@
+#overview #slider {
+    /*width: 620px;*/
+    margin: 0 auto;
+    position: relative;
+}
+
+#overview .scroll {
+    height: 250px;    
+    height:auto; /*pravin*/
+    /*width: 620px;*/
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+    clear: left;
+    /*background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;*/
+    border:1px solid #ddd;
+    border-top:0px;
+}
+
+#overview .scroll-Container div.tb-panel {
+    padding: 20px;
+    height: 210px;
+    height:auto; /*pravin*/
+    /*width: 580px;*/
+    width:1300px;
+    background:#fcfcfc;
+    
+}
+
+
+
+#overview ul.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6px;
+    border-bottom:1px solid #ddd;
+}
+
+#overview ul.navigation li {
+    display: inline;
+    margin-right: 2px;
+}
+
+#overview ul.navigation a {
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    background-color:#ddd;
+    border:1px solid #eee;
+    border-bottom:0px; 
+    font-size:9pt;    
+}
+
+#overview ul.navigation a:hover {
+    background-color: #f6f6f6;
+}
+
+#overview ul.navigation a.selected {
+    background-color: #fff;
+    border:1px solid #ddd;
+    border-bottom:0px;   
+}
+
+#overview ul.navigation a:focus {
+    outline: none;
+}
+
+
+.hide {
+    display: none;
+}

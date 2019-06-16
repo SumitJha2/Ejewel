@@ -1,0 +1,76 @@
+div[class^="span"] {outline: 0px solid #ccc;}
+
+#search-panel {margin-top: 50px; font-size:8pt; font-family:arial; outline:0px solid #ddd;}
+
+.shape-btn-bg{background:#fb4949;}
+#search-panel .btn-toolbar{margin-top:1px;}
+/*
+#search-panel .btn-group .btn{padding:3px 15px;  font-size:8pt; font-family:arial;}
+#search-panel .btn-group .btn:hover #search-panel .btn-group .btn i {background:#fb4949;}
+#search-panel .btn-group .btn:hover{background:#fb4949;}
+#search-panel .btn-group .btn.active, #color-btn-group .btn.active, #clarity-btn-group .btn.active{background:#fb4949; color:#fff;}*/
+*/
+#search-panel .btn-toolbar{margin-top:1px;}
+#search-panel .btn-group .btn{padding:3px 15px;  font-size:8pt; font-family:arial;}
+
+#shape-btn-group{margin:0px;}
+#shape-btn-group-2{margin:3px 0px 0px 0px;}
+
+#color-btn-group .btn{padding:4px 15.6px !important; font-size:10pt; font-family:sans-serif;}
+#clarity-btn-group .btn {padding:4px 10.2px !important; font-size:10pt; font-family:sans-serif;}
+#cut-btn-group .btn {padding:4px 19.5px !important; font-size:10pt; font-family:sans-serif;}
+#color-btn-group .btn:hover, #clarity-btn-group .btn:hover, #cut-btn-group .btn:hover{color:#fff;}
+
+
+.lbl-tbar{line-height:36px;}
+.range-lbl{ border:1px solid #ddd; height:20px; width:35px; padding:0px 5px; margin:12px 0px; text-align:center;}      
+ 
+#static-popover{display:block; position:relative; min-height:140px; width:100%; height:100%; font-size:11px;}
+#static-popover .arrow{top:20%; }
+#static-popover h3{font-size:12px; line-height:16px; margin:0px 0px 5px 0px;}
+#static-popover p{line-height:16px; text-align:justify; }
+
+.separator{background-image: url("../img/jaSprite.png");
+background-position: -20px -298px;
+background-repeat:no-repeat;
+clear: both;
+height: 20px;
+margin-top: 10px;}
+
+#result-panel{padding-top:20px;}
+#result-tab{font-size:9pt; border-color:#888;}
+#result-tab.nav-tabs>li>a {background:#ddd; color:#888; border-color:#999; border-bottom-color:#888; z-index:-1; 
+                           text-shadow:1px 2px 3px #fcfcfc;}
+#result-tab.nav-tabs>li.active>a {background:#fff; color:#000; border-color:#888; border-bottom-color:#fff;}
+
+/****************SearchResultsTable**************************/
+.small_table{font-size:8pt;}
+
+.small_table.table .title{background:#ddd; color:#666; text-shadow: 1px 1px #fff; }
+.small_table.table th,.small_table.table td {text-align:center;}
+
+
+/**************************************** Shape icons *************************************************/
+i[class^="icon-shape-"] { width: 20px; height: 20px;}
+
+.icon-shape-round{background:url("../img/diashape/round.png") no-repeat;}
+
+.icon-shape-princess{background:url("../img/diashape/princess.png") no-repeat;}
+
+.icon-shape-emerald{background:url("../img/diashape/emerald.png") no-repeat;}
+
+.icon-shape-asscher{background:url("../img/diashape/asscher.png") no-repeat;}
+
+.icon-shape-oval{background:url("../img/diashape/oval.png") no-repeat;}
+
+.icon-shape-radiant{background:url("../img/diashape/radiant.png") no-repeat;}
+
+.icon-shape-pear{background:url("../img/diashape/pear.png") no-repeat;}
+
+.icon-shape-heart{background:url("../img/diashape/heart.png") no-repeat;}
+
+.icon-shape-marquise{background:url("../img/diashape/marquise.png") no-repeat;}
+
+.icon-shape-cushion{background:url("../img/diashape/cushion.png") no-repeat;}
+
+.icon-shape-baguette{background:url("../img/diashape/baguette.png") no-repeat;}

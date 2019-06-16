@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx?wsdl" docRef="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx" xmlns:q1="http://technet.rapaport.com/" binding="q1:RapNetInventoryLinkSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://technet.rapaport.com/WebServices/Feeds/RapNetInventoryLink.asmx" xmlns:q2="http://technet.rapaport.com/" binding="q2:RapNetInventoryLinkSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

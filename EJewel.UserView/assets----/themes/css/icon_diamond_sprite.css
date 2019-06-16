@@ -1,0 +1,59 @@
+﻿.icon-diamond-950-sterling-silver, 
+.icon-diamond-18k-white-gold, 
+.icon-diamond-18k-rose-gold, 
+.icon-diamond-14k-white-gold, 
+.icon-diamond-14k-rose-gold,
+.icon-diamond-14k-yellow-gold, 
+.icon-diamond-950-platinum, 
+.icon-diamond-18k-yellow-gold, 
+.icon-diamond-cushion, 
+.icon-diamond-asscher,
+.icon-diamond-blue-sapphire, 
+.icon-diamond-baguette, 
+.icon-diamond-round, 
+.icon-diamond-green-emerald, 
+.icon-diamond-radiant,
+.icon-diamond-yellow-citrine, 
+.icon-diamond-emerald, 
+.icon-diamond-red-ruby, 
+.icon-diamond-oval, 
+.icon-diamond-pear,
+.icon-diamond-pink-sapphire, 
+.icon-diamond-heart, 
+.icon-diamond-marquise, 
+.icon-diamond-trillian, 
+.icon-diamond-princess,
+.icon-diamond-white-diamond
+{ display: block; 
+  background: url('../img/sprite/diamond_sprite.png') no-repeat;
+  display:inline-block;
+  cursor:pointer;
+  padding-right:5px;
+}
+ 
+.icon-diamond-950-sterling-silver { background-position: -2px -0px; width: 38px; height: 38px; }
+.icon-diamond-18k-white-gold { background-position: -2px -40px; width: 38px; height: 38px; }
+.icon-diamond-18k-rose-gold { background-position: -2px -80px; width: 38px; height: 38px; }
+.icon-diamond-14k-white-gold { background-position: -2px -120px; width: 38px; height: 38px; }
+.icon-diamond-14k-rose-gold { background-position: -2px -160px; width: 38px; height: 38px; }
+.icon-diamond-14k-yellow-gold { background-position: -2px -200px; width: 38px; height: 38px; }
+.icon-diamond-950-platinum { background-position: -2px -240px; width: 38px; height: 38px; }
+.icon-diamond-18k-yellow-gold { background-position: -2px -280px; width: 38px; height: 38px; }
+.icon-diamond-cushion { background-position: -2px -320px; width: 36px; height: 36px; }
+.icon-diamond-asscher { background-position: -2px -358px; width: 36px; height: 36px; }
+.icon-diamond-blue-sapphire { background-position: -2px -396px; width: 36px; height: 36px; }
+.icon-diamond-baguette { background-position: -2px -434px; width: 36px; height: 36px; }
+.icon-diamond-round { background-position: -2px -472px; width: 36px; height: 36px; }
+.icon-diamond-green-emerald { background-position: -2px -510px; width: 36px; height: 36px; }
+.icon-diamond-radiant { background-position: -2px -548px; width: 36px; height: 36px; }
+.icon-diamond-yellow-citrine { background-position: -2px -586px; width: 36px; height: 36px; }
+.icon-diamond-emerald { background-position: -2px -624px; width: 36px; height: 36px; }
+.icon-diamond-red-ruby { background-position: -2px -662px; width: 36px; height: 36px; }
+.icon-diamond-oval { background-position: -2px -700px; width: 36px; height: 36px; }
+.icon-diamond-pear { background-position: -2px -738px; width: 36px; height: 36px; }
+.icon-diamond-pink-sapphire { background-position: -2px -776px; width: 36px; height: 36px; }
+.icon-diamond-heart { background-position: -2px -814px; width: 36px; height: 36px; }
+.icon-diamond-marquise { background-position: -2px -852px; width: 36px; height: 36px; }
+.icon-diamond-trillian { background-position: -2px -890px; width: 36px; height: 36px; }
+.icon-diamond-princess { background-position: -2px -928px; width: 36px; height: 36px; }
+.icon-diamond-white-diamond { background-position: -2px -966px; width: 36px; height: 36px; }
